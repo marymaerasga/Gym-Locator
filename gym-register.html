@@ -32,201 +32,195 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body style="background-color: hsl(0, 0%, 96%);">
-    <section class="">
-        <!-- Jumbotron -->
-        <div class="px-4 py-3 px-md-5 text-center text-lg-start d-flex justify-content-center align-items-center">
-            <div class="container">
-                <div class="col-lg-6 mx-auto mb-5 mb-lg-0">
-                    <div class="card" style="width: 500px;">
-                        <div class="card-body py-4 px-md-4">
-                            <form id="registration-form">
-                                <div class="row mb-2">
-                                    <h2>Welcome to <span style="color: #86B817;">GYM Locator</span></h2>
-                                    <p class="m-0 mt-2">Please sign in to continue</p>
+<body>
+    <div class="container-fluid bg-primary hero-header" style="height: 100vh;">
+        <div class="container d-flex justify-content-center align-items-center py-5 h-100">
+            <div class="card bg-transparent border-0">
+                <form id="registration-form">
+                    <div class="row mb-2">
+                        <h2 class="text-white">Welcome to <span style="color: #86B817;">GYM Locator</span></h2>
+                        <p class="m-0 mt-2">Please sign in to continue</p>
+                    </div>
+                    <hr>
+                    <!-- Step 1: Personal Details -->
+                    <div id="personal-details">
+                        <div class="row">
+                            <p>Personal Details</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control rounded-pill" id="floatingFirstname"
+                                        placeholder="Firstname">
+                                    <label for="floatingFirstname">First name</label>
                                 </div>
-                                <hr>
-                                <!-- Step 1: Personal Details -->
-                                <div id="personal-details">
-                                    <div class="row">
-                                        <p>Personal Details</p>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6 mb-3">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" id="floatingFirstname"
-                                                    placeholder="Firstname">
-                                                <label for="floatingFirstname">First name</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" id="floatingLastname"
-                                                    placeholder="Lastname">
-                                                <label for="floatingLastname">Last name</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="floatingUsername"
-                                            placeholder="Username">
-                                        <label for="floatingUsername">Username</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="email" class="form-control" id="floatingInput"
-                                            placeholder="name@example.com">
-                                        <label for="floatingInput">Email address</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="password" class="form-control" id="floatingPassword"
-                                            placeholder="Password">
-                                        <label for="floatingPassword">Password</label>
-                                    </div>
-                                    <button type="button" id="next-button-1"
-                                        class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill">
-                                        Next
-                                    </button>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control rounded-pill" id="floatingLastname"
+                                        placeholder="Lastname">
+                                    <label for="floatingLastname">Last name</label>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control rounded-pill" id="floatingUsername"
+                                placeholder="Username">
+                            <label for="floatingUsername">Username</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control rounded-pill" id="floatingInput"
+                                placeholder="name@example.com">
+                            <label for="floatingInput">Email address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control rounded-pill" id="floatingPassword"
+                                placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                        <button type="button" id="next-button-1"
+                            class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill">
+                            Next
+                        </button>
+                    </div>
 
-                                <!-- Step 2: Gym Details -->
-                                <div id="gym-details" style="display: none;">
-                                    <div class="row">
-                                        <p>Gym Details</p>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                        <label for="floatingInput">Gym Name</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                        <label for="floatingInput">Gym Contact Number</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                        <label for="floatingInput">Gym Location</label>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-6">
-                                            <label for="floatingInput">Longitude</label>
-                                            <input type="number" class="form-control" id="floatingInput" placeholder="">
-                                        </div>
-                                        <div class="col-6">
-                                            <label for="floatingInput">Latitude</label>
-                                            <input type="number" class="form-control" id="floatingInput" placeholder="">
-                                        </div>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <textarea class="form-control" id="gymDescription" rows="4" placeholder="Gym Description"></textarea>
-                                        <label for="gymDescription">Gym Description</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <select class="form-select" id="membershipOptions">
-                                            <option value="">Select Membership Option</option>
-                                            <option value="monthly">Monthly</option>
-                                            <option value="quarterly">Quarterly</option>
-                                            <option value="annual">Annual</option>
-                                        </select>
-                                        <label for="membershipOptions">Membership Options</label>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <button type="button" id="previous-button-1"
-                                            class="btn btn-secondary btn-block w-100 mx-auto mt-2 rounded-pill">
-                                            Previous
-                                            </button>
-                                        </div>
-                                        <div class="col">
-                                            <button type="button" id="next-button-2"
-                                            class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill">
-                                            Next
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Step 3: Gym Type -->
-                                <div id="gym-type" style="display: none;">
-                                    <div class="row">
-                                        <p>Type of Gym offered</p>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="personalTraining"
-                                                name="personalTraining">
-                                            <label class="form-check-label" for="personalTraining">
-                                                Personal Training
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="groupClasses"
-                                                name="groupClasses">
-                                            <label class="form-check-label" for="groupClasses">
-                                                Group Classes
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="sauna" name="sauna">
-                                            <label class="form-check-label" for="sauna">
-                                                Sauna
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="swimmingPool"
-                                                name="swimmingPool">
-                                            <label class="form-check-label" for="swimmingPool">
-                                                Swimming Pool
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <button type="button" id="previous-button-2"
-                                        class="btn btn-secondary btn-block w-100 mx-auto mt-2 rounded-pill">
-                                        Previous
-                                        </button>
-                                        </div>
-                                        <div class="col">
-                                            <button type="button" id="next-button-3"
-                                            class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill">
-                                            Next
-                                        </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Step 4: Business Permit Upload -->
-                                <div id="business-permit" style="display: none;">
-                                    
-                                    <div class="form-floating mb-3">
-                                        <textarea class="form-control" id="termsAndConditions" rows="4"
-                                            placeholder="Terms and Conditions"></textarea>
-                                        <label for="termsAndConditions">Terms and Conditions</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="url" class="form-control" id="privacyPolicyUrl"
-                                            placeholder="Privacy Policy URL">
-                                        <label for="privacyPolicyUrl">Privacy Policy</label>
-                                    </div>
-                                    <div class="row">
-                                        <p>Upload Business Permit</p>
-                                    </div>
-                                    <label for="businessPermit">Select a PDF, JPG, or PNG file:</label>
-                                    <input type="file" id="businessPermit" name="businessPermit" accept=".pdf, .jpg, .png"
-                                        required>
-                                    <br>
-                                    <br>
-                                    <button type="submit"
-                                        class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill">
-                                        Sign up
-                                    </button>
-                                </div>
-                            </form>
+                    <!-- Step 2: Gym Details -->
+                    <div id="gym-details" style="display: none;">
+                        <div class="row">
+                            <p>Gym Details</p>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Gym Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Gym Contact Number</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Gym Location</label>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-6">
+                                <label for="floatingInput">Longitude</label>
+                                <input type="number" class="form-control" id="floatingInput" placeholder="">
+                            </div>
+                            <div class="col-6">
+                                <label for="floatingInput">Latitude</label>
+                                <input type="number" class="form-control" id="floatingInput" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" id="gymDescription" rows="4" placeholder="Gym Description"></textarea>
+                            <label for="gymDescription">Gym Description</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <select class="form-select" id="membershipOptions">
+                                <option value="">Select Membership Option</option>
+                                <option value="monthly">Monthly</option>
+                                <option value="quarterly">Quarterly</option>
+                                <option value="annual">Annual</option>
+                            </select>
+                            <label for="membershipOptions">Membership Options</label>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button type="button" id="previous-button-1"
+                                class="btn btn-secondary btn-block w-100 mx-auto mt-2 rounded-pill">
+                                Previous
+                                </button>
+                            </div>
+                            <div class="col">
+                                <button type="button" id="next-button-2"
+                                class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill">
+                                Next
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
+
+                    <!-- Step 3: Gym Type -->
+                    <div id="gym-type" style="display: none;">
+                        <div class="row">
+                            <p>Type of Gym offered</p>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="personalTraining"
+                                    name="personalTraining">
+                                <label class="form-check-label" for="personalTraining">
+                                    Personal Training
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="groupClasses"
+                                    name="groupClasses">
+                                <label class="form-check-label" for="groupClasses">
+                                    Group Classes
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="sauna" name="sauna">
+                                <label class="form-check-label" for="sauna">
+                                    Sauna
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="swimmingPool"
+                                    name="swimmingPool">
+                                <label class="form-check-label" for="swimmingPool">
+                                    Swimming Pool
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button type="button" id="previous-button-2"
+                            class="btn btn-secondary btn-block w-100 mx-auto mt-2 rounded-pill">
+                            Previous
+                            </button>
+                            </div>
+                            <div class="col">
+                                <button type="button" id="next-button-3"
+                                class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill">
+                                Next
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Business Permit Upload -->
+                    <div id="business-permit" style="display: none;">
+                        
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" id="termsAndConditions" rows="4"
+                                placeholder="Terms and Conditions"></textarea>
+                            <label for="termsAndConditions">Terms and Conditions</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="url" class="form-control" id="privacyPolicyUrl"
+                                placeholder="Privacy Policy URL">
+                            <label for="privacyPolicyUrl">Privacy Policy</label>
+                        </div>
+                        <div class="row">
+                            <p>Upload Business Permit</p>
+                        </div>
+                        <label for="businessPermit">Select a PDF, JPG, or PNG file:</label>
+                        <input type="file" id="businessPermit" name="businessPermit" accept=".pdf, .jpg, .png"
+                            required>
+                        <br>
+                        <br>
+                        <button type="submit"
+                            class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill">
+                            Sign up
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
-    </section>
+    </div>
+
     <!-- Back to Top -->
     <a href="index.html" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-left"></i></a>
 
