@@ -54,7 +54,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
                 <a href="index.html" class="nav-item nav-link ">Home</a>
-                <a href="find-gym.html" class="nav-item nav-link active ">Find a Gym</a>
+                <a href="explore.html" class="nav-item nav-link active ">Find a Gym</a>
                 <a href="gym-register.html" class="nav-item nav-link">Own a Gym</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
@@ -308,67 +308,76 @@
                                           </div>
                                           <div class="card-boby">
                                             <form>
-                                              <div class="row mb-2">
-                                                <h3>Walk-In Form</h3>
-                                              </div>
-                                            
-                                              <div class="row">
-                                                <div class="col-md-6 mb-2">
-                                                  <div class="mb-3">
-                                                    <label for="walkinName" class="form-label">First Name</label>
-                                                    <input type="text" class="form-control" id="walkinName" name="walkinName" required>
-                                                </div>
-                                                </div>
-                                                <div class="col-md-6 mb-2">
-                                                  <div class="mb-3">
-                                                    <label for="walkinName" class="form-label">Last Name</label>
-                                                    <input type="text" class="form-control" id="walkinName" name="walkinName" required>
-                                                </div>
-                                                </div>
+                                              <div class="row mb-2 mt-2">
+                                                  <h2>Membership for Walk-in</h2>
                                               </div>
                                               <div class="row">
-                                                <div class="col-md-6 mb-2">
-                                                  <div class="mb-3">
-                                                    <label for="walkinAge" class="form-label">Age</label>
-                                                    <input type="number" class="form-control" id="walkinAge" name="walkinName" required>
-                                                </div>
-                                                </div>
-                                                <div class="col-md-6 mb-2">
-                                                  <div class="mb-3">
-                                                    <label for="walkinGender" class="form-label">Gender</label>
-                                                    <input type="text" class="form-control" id="walkinGender" name="walkinName" required>
-                                                </div>
-                                                </div>
+                                                  <div class="col-md-6 mb-3">
+                                                      <div class="form-floating">
+                                                          <input type="text" class="form-control rounded-pill" id="floatingFirstname" placeholder="Firstname">
+                                                          <label for="floatingFirstname">First name</label>
+                                                      </div>
+                                                  </div>
+                                                  <div class="col-md-6 mb-3">
+                                                      <div class="form-floating">
+                                                          <input type="text" class="form-control rounded-pill" id="floatingLastname" placeholder="Lastname">
+                                                          <label for="floatingLastname">Last name</label>
+                                                      </div>
+                                                  </div>
                                               </div>
-                                              <!-- Email -->
-                                              <div class="mb-3">
-                                                <label for="walkinEmail" class="form-label">Email Address</label>
-                                                <input type="email" class="form-control" id="walkinEmail" name="walkinEmail" required>
+                                              <div class="row">
+                                                  <div class="col-md-6">
+                                                      <div class="form-floating mb-3">
+                                                          <select class="form-control rounded-pill" id="floatingGender">
+                                                              <option value="male">Male</option>
+                                                              <option value="female">Female</option>
+                                                              <option value="other">Other</option>
+                                                          </select>
+                                                          <label for="floatingGender">Gender</label>
+                                                      </div>
+                                                  </div>
+                                                  <div class="col-md-6">
+                                                      <div class="form-floating mb-3">
+                                                          <input type="number" class="form-control rounded-pill" id="floatingAge" placeholder="Age">
+                                                          <label for="floatingAge">Age</label>
+                                                      </div>
+                                                  </div>
                                               </div>
-                                              <!-- Phone -->
-                                              <div class="mb-3">
-                                                <label for="walkinPhone" class="form-label">Phone</label>
-                                                <input type="tel" class="form-control" id="walkinPhone" name="walkinPhone" required>
+                                              <div class="form-floating mb-3">
+                                                  <textarea class="form-control rounded-pill" id="floatingAddress" placeholder="Your address" rows="3"></textarea>
+                                                  <label for="floatingAddress">Address</label>
                                               </div>
-                                              
-                                              <!-- Date of Visit -->
-                                              <div class="mb-3">
-                                                <label for="walkinDate" class="form-label">Date of Visit</label>
-                                                <input type="date" class="form-control" id="walkinDate" name="walkinDate" required>
+                                              <div class="form-floating mb-3">
+                                                  <input type="tel" class="form-control rounded-pill" id="floatingPhone" placeholder="Phone number">
+                                                  <label for="floatingPhone">Phone number</label>
                                               </div>
-                                              <!-- Time of Visit -->
-                                              <div class="mb-3">
-                                                <label for="walkinTime" class="form-label">Time of Visit</label>
-                                                <input type="time" class="form-control" id="walkinTime" name="walkinTime" required>
+                                              <div class="form-floating mb-3">
+                                                  <select class="form-control rounded-pill" id="floatingMembershipType">
+                                                      <option value="regular">Regular</option>
+                                                      <option value="basic">Basic</option>
+                                                      <option value="premium">Premium</option>
+                                                      <option value="gold">Gold</option>
+                                                  </select>
+                                                  <label for="floatingMembershipType">Membership Type</label>
                                               </div>
-                                
-                                              <!-- Submit button -->
-                                              <button type="submit" class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill">
-                                                Submit Walk-In
+                                              <div class="row">
+                                                  <div class="col-md-6 mb-3">
+                                                      <div class="form-floating">
+                                                          <input type="date" class="form-control rounded-pill" id="floatingDate" placeholder="Date">
+                                                          <label for="floatingDate">Date</label>
+                                                      </div>
+                                                  </div>
+                                                  <div class="col-md-6 mb-3">
+                                                      <div class="form-floating">
+                                                          <input type="time" class="form-control rounded-pill" id="floatingTime" placeholder="Time">
+                                                          <label for="floatingTime">Time</label>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <button type="submit" class="btn btn-primary mt-2 rounded-pill w-100">
+                                                  Sign up for Walk-in
                                               </button>
-
-                                              </div>
-                                            </form>
+                                          </form>
                                         </div>
                                       </div>
                                     </div>
