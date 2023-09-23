@@ -45,7 +45,7 @@
                     <!-- Step 1: Personal Details -->
                     <div id="personal-details">
                         <div class="row">
-                            <p>Personal Details</p>
+                            <p>Owner Personal Details</p>
                         </div>
                         <div class="row">
                             <div class="col-md-6 mb-3">
@@ -62,11 +62,6 @@
                                     <label for="floatingLastname">Last name</label>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control rounded-pill" id="floatingUsername"
-                                placeholder="Username">
-                            <label for="floatingUsername">Username</label>
                         </div>
                         <div class="form-floating mb-3">
                             <input type="email" class="form-control rounded-pill" id="floatingInput"
@@ -87,42 +82,47 @@
                     <!-- Step 2: Gym Details -->
                     <div id="gym-details" style="display: none;">
                         <div class="row">
-                            <p>Gym Details</p>
+                            <p>Gym Information</p>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
-                            <label for="floatingInput">Gym Name</label>
+                            <input type="text" class="form-control rounded-pill" id="floatingInput" placeholder="Name">
+                            <label for="floatingInput">Name</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
-                            <label for="floatingInput">Gym Contact Number</label>
+                            <input type="text" class="form-control rounded-pill" id="floatingInput" placeholder="Contact Number">
+                            <label for="floatingInput">Contact Number</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
-                            <label for="floatingInput">Gym Location</label>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-6">
-                                <label for="floatingInput">Longitude</label>
-                                <input type="number" class="form-control" id="floatingInput" placeholder="">
-                            </div>
-                            <div class="col-6">
-                                <label for="floatingInput">Latitude</label>
-                                <input type="number" class="form-control" id="floatingInput" placeholder="">
-                            </div>
+                            <input type="text" class="form-control rounded-pill" id="floatingInput" placeholder="Complete Location">
+                            <label for="floatingInput">Complete Location</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <textarea class="form-control" id="gymDescription" rows="4" placeholder="Gym Description"></textarea>
+                            <textarea class="form-control rounded-pill" id="gymDescription" rows="4" placeholder="Gym Description"></textarea>
                             <label for="gymDescription">Gym Description</label>
                         </div>
-                        <div class="form-floating mb-3">
-                            <select class="form-select" id="membershipOptions">
-                                <option value="">Select Membership Option</option>
-                                <option value="monthly">Monthly</option>
-                                <option value="quarterly">Quarterly</option>
-                                <option value="annual">Annual</option>
-                            </select>
-                            <label for="membershipOptions">Membership Options</label>
+                        <div class="row">
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label for="operatingDate">Operating Date</label>
+                                    <input type="date" class="form-control custom-form-control" id="operatingDate">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="mb-3">
+                                            <label for="openingTime">Opening Time</label>
+                                            <input type="time" class="form-control custom-form-control" id="openingTime">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="mb-3">
+                                            <label for="closingTime">Closing Time</label>
+                                            <input type="time" class="form-control custom-form-control" id="closingTime">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col">
@@ -139,6 +139,9 @@
                             </div>
                         </div>
                     </div>
+                    
+                    
+
 
                     <!-- Step 3: Gym Type -->
                     <div id="gym-type" style="display: none;">

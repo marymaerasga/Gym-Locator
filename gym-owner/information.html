@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Admin - GYM Locator Zamboanga</title>
+    <title>Gym Owner - GYM Locator Zamboanga</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -21,15 +21,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="../lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="../css/dashboard.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -53,16 +53,66 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item ">
-                <a class="nav-link" href="gym-owner-dashboard.html">
+                <a class="nav-link" href="dashboard.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
 
-            <li class="nav-item active">
-                <a class="nav-link" href="gym-owner-profile.html">
+            <li class="nav-item ">
+                <a class="nav-link" href="profile.html">
                     <i class="fas fa-fw fa-user"></i>
                     <span>Profile</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseGymInfo"
+                    aria-expanded="false" aria-controls="collapseGymInfo">
+                    <i class="fas fa-fw fa-building"></i>
+                    <span>Gym Information</span>
+                    <i class="fas fa-caret-down ms-auto"></i>
+                </a>
+                <div class="collapse" id="collapseGymInfo">
+                    <div>
+                    <ul class="nav ">
+                        <li class="nav-item">
+                            <a class="nav-link" href="detail.html">
+                                <i class="fas fa-fw fa-info-circle"></i>
+                                <span>Gym Details</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-fw fa-shopping-basket"></i>
+                                <span>Gym Products</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-fw fa-building"></i>
+                                <span>Facilities</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-fw fa-swimming-pool"></i>
+                                <span>Amenities</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-fw fa-dumbbell"></i>
+                                <span>Equipments</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </li>
+          
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Walk-in Customers</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">
@@ -76,8 +126,8 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-box"></i>
-                    <span>Equipments</span></a>
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Member Management</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">
@@ -307,33 +357,12 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid mb-4">
                     <div class="row">
-                        <h4>Profile</h4>
+                        <h4>GYM Information</h4>
                     </div>
                 </div>
-                <div class="container-fluid text-center">
-                    <div class="row">
-                        <div class="col-sm-8">
-                            <div class="card">
-                                <div class="card-body">
-                                  This is some text within a card body.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="card">
-                                <div class="card-body">
-                                  This is some text within a card body.
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                </div>
-                <div class="container-fluid text-center mt-3">
-                    <div class="card">
-                        <div class="card-body">
-                          This is some text within a card body.
-                        </div>
-                    </div>
+
+                <div class="container mt-3">
+                    
                 </div>
                 <!-- End Begin Page Content-->
 
@@ -351,6 +380,59 @@
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
+
+    <!-- Edit Profile Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Profile</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="form-floating">
+                        <input type="text" class="form-control rounded-pill" id="floatingFirstname"
+                            >
+                        <label for="floatingFirstname">First name</label>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="form-floating">
+                        <input type="text" class="form-control rounded-pill" id="floatingLastname"
+                            >
+                        <label for="floatingLastname">Last name</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control rounded-pill" id="floatingUsername"
+                    >
+                <label for="floatingUsername">Username</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control rounded-pill" id="floatingInput"
+                   >
+                <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control rounded-pill" id="floatingPassword"
+                   >
+                <label for="floatingPassword">Password</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control rounded-pill" id="floatingPassword"
+                   >
+                <label for="floatingPassword">Confirm Password</label>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary text-white">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -375,17 +457,17 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="../lib/wow/wow.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../lib/tempusdominus/js/moment.min.js"></script>
+    <script src="../lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="../lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-    <script src="js/dashboard.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/dashboard.js"></script>
   
 </body>
 
