@@ -348,85 +348,26 @@
                 </nav>
                 <!-- End of Topbar -->
 
-                <!-- Begin Page Content -->
-                <div class="container-fluid mb-4">
-                    <div class="row">
-                        <h4>GYM Information</h4>
-                    </div>
-                </div>
+                               <!-- Begin Page Content -->
+                               <div class="container-fluid mb-4">
+                                <div class="row">
+                                    <h4>Gym Equipments</h4>
+                                </div>
+                            </div>
+            
+                            <div class="container mt-3">
+                                <!-- Form to add a new equipment -->
+                                <form id="add-equipment-form">
+                                    <label for="equipment-name">Equipment Name:</label>
+                                    <input type="text" id="equipment-name" required>
+                                    <button type="submit" class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm">Add Equipment</button>
+                                </form>
 
-                <div class="container mt-3">
-                    
-                </div>
-                <!-- End Begin Page Content-->
-
-            </div>
-            <!-- End of Main Content -->
-
-
-        </div>
-        <!-- End of Content Wrapper -->
-
-    </div>
-    <!-- End of Page Wrapper -->
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Edit Profile Modal -->
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Profile</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <div class="row">
-                <div class="col-md-6 mb-3">
-                    <div class="form-floating">
-                        <input type="text" class="form-control rounded-pill" id="floatingFirstname"
-                            >
-                        <label for="floatingFirstname">First name</label>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <div class="form-floating">
-                        <input type="text" class="form-control rounded-pill" id="floatingLastname"
-                            >
-                        <label for="floatingLastname">Last name</label>
-                    </div>
-                </div>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control rounded-pill" id="floatingUsername"
-                    >
-                <label for="floatingUsername">Username</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="email" class="form-control rounded-pill" id="floatingInput"
-                   >
-                <label for="floatingInput">Email address</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="password" class="form-control rounded-pill" id="floatingPassword"
-                   >
-                <label for="floatingPassword">Password</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="password" class="form-control rounded-pill" id="floatingPassword"
-                   >
-                <label for="floatingPassword">Confirm Password</label>
-            </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm">Save</button>
-        </div>
-      </div>
-    </div>
-  </div>
+                                <!-- List of existing equipment -->
+                                <ul id="equipment-list">
+                                    <!-- Equipment items will be displayed here -->
+                                </ul>
+                            </div>
 
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"

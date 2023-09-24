@@ -59,12 +59,12 @@
                 </a>
             </li>
 
-            <li class="nav-item ">
+            <li class="nav-item  ">
                 <a class="nav-link" href="profile.html">
                     <i class="fas fa-fw fa-user"></i>
                     <span>Profile</span></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item ">
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseGymInfo"
                     aria-expanded="false" aria-controls="collapseGymInfo">
                     <i class="fas fa-fw fa-building"></i>
@@ -78,12 +78,6 @@
                             <a class="nav-link" href="detail.html">
                                 <i class="fas fa-fw fa-info-circle"></i>
                                 <span>Gym Details</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="fas fa-fw fa-shopping-basket"></i>
-                                <span>Gym Products</span>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -109,7 +103,7 @@
                 </div>
             </li>
           
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-users"></i>
                     <span>Walk-in Customers</span></a>
@@ -132,9 +126,8 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Reservations</span></a>
+                    <span>Settings</span></a>
             </li>
-
             <hr class="sidebar-divider d-none d-md-block">
 
             <div class="text-center d-none d-md-inline">
@@ -143,7 +136,6 @@
 
         </ul>
         <!-- End of Sidebar -->
-
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
@@ -354,46 +346,54 @@
                 </nav>
                 <!-- End of Topbar -->
 
-                               <!-- Begin Page Content -->
-                               <div class="container-fluid mb-4">
-                                <div class="row">
-                                    <h4>Gym Details</h4>
-                                </div>
-                            </div>
-                            <div class="container mt-3">
-                            <div class="row">
-                                <div class="col-sm"><label for="category-filter">Category:</label>
-                                    <select id="category-filter">
-                                        <option value="all">All Categories</option>
-                                        <option value="equipment">Equipment</option>
-                                        <option value="apparel">Apparel</option>
-                                        <option value="supplements">Supplements</option>
-                                    </select></div>
-                                <div class="col-sm"><label for="price-range-filter">Price Range:</label>
-                                    <select id="price-range-filter">
-                                        <option value="all">All Prices</option>
-                                        <option value="under-50">$0 - $50</option>
-                                        <option value="50-100">$50 - $100</option>
-                                        <option value="over-100">Over $100</option>
-                                    </select></div>
-                                <div class="col-sm">
-                                   <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                        Add Product
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container mt-3">
-                            <div class="products">
-                                <div class="product">
-                                    <img src="../img/product1.jpg" alt="Product 1" style="height: 200px; width: 200px">
-                                    <h3>Product 1</h3>
-                                    <p>Category: Equipment</p>
-                                    <p>Price: $50.00</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Begin Page Content-->
+                <!-- Begin Page Content -->
+                <div class="container-fluid mb-4">
+                    <div class="row">
+                        <h4>Walk-in</h4>
+                    </div>
+                </div>
+
+                <div class="container mt-3">
+                     <!-- Form to add a new walk-in client -->
+                     <form id="add-client-form">
+                        <label for="client-name">Client Name:</label>
+                        <input type="text" id="client-name" required>
+                        <button type="submit" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm">Add Client</button>
+                    </form>
+                </div>
+                <div class="container mt-3">
+                        <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col">First Name</th>
+                                <th scope="col">Last Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Phone Number</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Date visit</th>
+                                <th scope="col">Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>John</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <button class="edit-button btn-primary"><i class="fas fa-pen fa-sm text-white"></i></button>
+                                    <button class="delete-button btn-primary"><i class="fas fa-trash fa-sm text-white"></i></button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                </div>
+                <!-- End Begin Page Content-->
+
+            </div>
+            <!-- End of Main Content -->
 
 
         </div>
@@ -406,43 +406,54 @@
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
-      
-      </div>
-    </div>
-  </div>
 
-  <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <!-- Edit Profile Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Add a New Gym Product</h1>
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Walkin</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <form id="add-product-form">
-                <div class="form-group">
-                    <label for="product-name">Product Name:</label>
-                    <input type="text" class="form-control" id="product-name" name="product-name" required>
-                </div>
-                <div class="form-group mt-2">
-                    <label for="product-category">Category:</label>
-                    <select class="form-control" id="product-category" name="product-category">
-                        <option value="equipment">Equipment</option>
-                        <option value="apparel">Apparel</option>
-                        <option value="supplements">Supplements</option>
-                    </select>
-                </div>
-                <div class="form-group mt-2">
-                    <label for="product-price">Price:</label>
-                    <input type="number" class="form-control" id="product-price" name="product-price" min="0" step="0.01" required>
-                </div>
-                <div class="form-group mt-3">
-                    <label for="product-image">Image:</label>
-                    <input type="file" class="form-control-file" id="product-image" name="product-image">
-                </div>
-                <button type="submit" class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm mt-3">Add Product</button>
-            </form>
+           <!-- Form to add a new walk-in client -->
+<form id="add-client-form">
+    <div class="form-group mb-3">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" required>
+    </div>
+    <div class="form-group mb-3">
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" required>
+    </div>
+    <div class="form-group mb-3">
+        <label for="email">Email:</label>
+        <input type="email" id="email">
+    </div>
+    <div class="form-group mb-3">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone">
+    </div>
+    <div class="form-group mb-3">
+        <label for="address">Address:</label>
+        <input type="text" id="address">
+    </div>
+    <div class="form-group mb-3">
+        <label for="visit-date">Date of Visit:</label>
+        <input type="date" id="visit-date">
+    </div>
+    <div class="form-group mb-3">
+        <label for="purpose">Purpose of Visit:</label>
+        <textarea id="purpose" rows="4"></textarea>
+    </div>
+    <div class="form-group mb-3">
+        <label for="notes">Additional Notes:</label>
+        <textarea id="notes" rows="4"></textarea>
+    </div>
+</form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm">Save</button>
         </div>
       </div>
     </div>

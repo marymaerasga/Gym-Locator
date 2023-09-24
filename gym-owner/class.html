@@ -59,12 +59,12 @@
                 </a>
             </li>
 
-            <li class="nav-item ">
+            <li class="nav-item  ">
                 <a class="nav-link" href="profile.html">
                     <i class="fas fa-fw fa-user"></i>
                     <span>Profile</span></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item ">
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseGymInfo"
                     aria-expanded="false" aria-controls="collapseGymInfo">
                     <i class="fas fa-fw fa-building"></i>
@@ -103,17 +103,17 @@
                 </div>
             </li>
           
-            <li class="nav-item">
+            <li class="nav-item ">
                 <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-users"></i>
                     <span>Walk-in Customers</span></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item ">
                 <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-users"></i>
                     <span>Trainers and Coaches</span></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Classes</span></a>
@@ -128,7 +128,6 @@
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Settings</span></a>
             </li>
-
             <hr class="sidebar-divider d-none d-md-block">
 
             <div class="text-center d-none d-md-inline">
@@ -137,7 +136,6 @@
 
         </ul>
         <!-- End of Sidebar -->
-
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
@@ -351,12 +349,42 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid mb-4">
                     <div class="row">
-                        <h4>GYM Information</h4>
+                        <h4>Classes</h4>
                     </div>
                 </div>
 
                 <div class="container mt-3">
-                    
+                     <!-- Form to add a new walk-in client -->
+                     <form id="add-client-form">
+                        <label for="class-name">Class Name:</label>
+                        <input type="text" id="class-name" required>
+                        <button type="submit" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm">Add Class</button>
+                    </form>
+                </div>
+                <div class="container mt-3">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Email</th>
+                                <th>Phone Number</th>
+                                <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>
+                                <button class="edit-button btn-primary"><i class="fas fa-pen fa-sm text-white"></i></button>
+                                <button class="delete-button btn-primary"><i class="fas fa-trash fa-sm text-white"></i></button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                 </div>
                 <!-- End Begin Page Content-->
 
@@ -380,46 +408,65 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Profile</h1>
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Classes</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <div class="row">
-                <div class="col-md-6 mb-3">
-                    <div class="form-floating">
-                        <input type="text" class="form-control rounded-pill" id="floatingFirstname"
-                            >
-                        <label for="floatingFirstname">First name</label>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <div class="form-floating">
-                        <input type="text" class="form-control rounded-pill" id="floatingLastname"
-                            >
-                        <label for="floatingLastname">Last name</label>
-                    </div>
-                </div>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control rounded-pill" id="floatingUsername"
-                    >
-                <label for="floatingUsername">Username</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="email" class="form-control rounded-pill" id="floatingInput"
-                   >
-                <label for="floatingInput">Email address</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="password" class="form-control rounded-pill" id="floatingPassword"
-                   >
-                <label for="floatingPassword">Password</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="password" class="form-control rounded-pill" id="floatingPassword"
-                   >
-                <label for="floatingPassword">Confirm Password</label>
-            </div>
+        
+<form id="add-class-form">
+    <div class="form-group mb-3">
+        <label for="class-name">Class Name:</label>
+        <input type="text" id="class-name" required>
+    </div>
+    <div class="form-group mb-3">
+        <label for="instructor">Instructor:</label>
+        <input type="text" id="instructor">
+    </div>
+    <div class="form-group mb-3">
+        <label for="date-time">Date and Time:</label>
+        <input type="datetime-local" id="date-time" required>
+    </div>
+    <div class="form-group mb-3">
+        <label for="duration">Duration (hours):</label>
+        <input type="number" id="duration" step="0.5" min="0.5" required>
+    </div>
+    <div class="form-group mb-3">
+        <label for="capacity">Capacity:</label>
+        <input type="number" id="capacity" required>
+    </div>
+    <div class="form-group mb-3">
+        <label for="description">Description:</label>
+        <textarea id="description" rows="4"></textarea>
+    </div>
+    <div class="form-group mb-3">
+        <label for="location">Location:</label>
+        <input type="text" id="location">
+    </div>
+    <div class="form-group mb-3">
+        <label for="category">Category:</label>
+        <select id="category">
+            <option value="Cardio">Cardio</option>
+            <option value="Strength">Strength</option>
+            <option value="Yoga">Yoga</option>
+            <!-- Add more category options here -->
+        </select>
+    </div>
+    <div class="form-group mb-3">
+        <label for="equipment">Equipment Required:</label>
+        <select id="equipment" multiple>
+            <option value="Yoga Mat">Yoga Mat</option>
+            <option value="Dumbbells">Dumbbells</option>
+            <option value="Resistance Bands">Resistance Bands</option>
+            <!-- Add more equipment options here -->
+        </select>
+    </div>
+    <div class="form-group mb-3">
+        <label for="class-image">Class Image:</label>
+        <input type="file" id="class-image">
+    </div>
+</form>
+
+
         </div>
         <div class="modal-footer">
           <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm">Save</button>
