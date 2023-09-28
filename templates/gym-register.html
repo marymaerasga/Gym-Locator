@@ -39,7 +39,7 @@
                 <div id="registration-form">
                     <div class="row mb-2">
                         <h2 class="text-white">Welcome to <span style="color: #86B817;">GYM Locator</span></h2>
-                        <p class="m-0 mt-2">Please sign in to continue</p>
+                        <p class="m-0 mt-2">Please sign up to continue</p>
                     </div>
                     <hr>
                     <!-- Step 1: Personal Details -->
@@ -94,7 +94,7 @@
                         </div>
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control rounded-pill" id="location" placeholder="Complete Location">
-                            <label for="floatingInput">Complete Location</label>
+                            <label for="floatingInput">Address</label>
                         </div>
                         <div class="form-floating mb-3">
                             <textarea class="form-control rounded-pill" id="desc" rows="4" placeholder="Gym Description"></textarea>
@@ -102,9 +102,35 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <div class="mb-3">
-                                    <label for="operatingDate">Operating Date</label>
-                                    <input type="date" class="form-control custom-form-control" id="odate">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="mb-3">
+                                            <label for="daysOpen">Days Open</label>
+                                            <select class="form-select rounded-pill" aria-label="Default select example">
+                                                <option value="Monday">Monday</option>
+                                                <option value="Tuesday">Tuesday</option>
+                                                <option value="Wednesday">Wednesday</option>
+                                                <option value="Thursday">Thursday</option>
+                                                <option value="Friday">Friday</option>
+                                                <option value="Saturday">Saturday</option>
+                                                <option value="Sunday">Sunday</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="mb-3">
+                                            <label for="toOpen">To</label>
+                                            <select class="form-select rounded-pill" aria-label="Default select example">
+                                                <option value="Monday">Monday</option>
+                                                <option value="Tuesday">Tuesday</option>
+                                                <option value="Wednesday">Wednesday</option>
+                                                <option value="Thursday">Thursday</option>
+                                                <option value="Friday">Friday</option>
+                                                <option value="Saturday">Saturday</option>
+                                                <option value="Sunday">Sunday</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col">
@@ -112,13 +138,13 @@
                                     <div class="col">
                                         <div class="mb-3">
                                             <label for="openingTime">Opening Time</label>
-                                            <input type="time" class="form-control custom-form-control" id="otime">
+                                            <input type="time" class="form-control rounded-pill custom-form-control" id="otime">
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="mb-3">
                                             <label for="closingTime">Closing Time</label>
-                                            <input type="time" class="form-control custom-form-control" id="ctime">
+                                            <input type="time" class="form-control rounded-pill custom-form-control" id="ctime">
                                         </div>
                                     </div>
                                 </div>
@@ -127,7 +153,7 @@
                         <div class="row">
                             <div class="col">
                                 <button type="button" id="previous-button-1"
-                                class="btn btn-secondary btn-block w-100 mx-auto mt-2 rounded-pill">
+                                class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill">
                                 Previous
                                 </button>
                             </div>
@@ -180,7 +206,7 @@
                         <div class="row">
                             <div class="col">
                                 <button type="button" id="previous-button-2"
-                            class="btn btn-secondary btn-block w-100 mx-auto mt-2 rounded-pill">
+                            class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill">
                             Previous
                             </button>
                             </div>
@@ -195,29 +221,40 @@
 
                     <!-- Step 4: Business Permit Upload -->
                     <div id="business-permit" style="display: none;">
-                        
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control" id="terms" rows="4"
-                                placeholder="Terms and Conditions"></textarea>
-                            <label for="termsAndConditions">Terms and Conditions</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="url" class="form-control" id="policy"
-                                placeholder="Privacy Policy URL">
-                            <label for="privacyPolicyUrl">Privacy Policy</label>
-                        </div>
-                        <!-- <div class="row">
+                        <div class="row">
                             <p>Upload Business Permit</p>
                         </div>
                         <label for="businessPermit">Select a PDF, JPG, or PNG file:</label>
                         <input type="file" id="businessPermit" name="businessPermit" accept=".pdf, .jpg, .png"
-                            required> -->
+                            required>  
+                        <div class="form-floating mb-3 mt-3">
+                            <textarea class="form-control rounded-pill" id="terms" rows="4"
+                                placeholder="Terms and Conditions"></textarea>
+                            <label for="termsAndConditions">Terms and Conditions</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="url" class="form-control rounded-pill" id="policy"
+                                placeholder="Privacy Policy URL">
+                            <label for="privacyPolicyUrl">Privacy Policy</label>
+                        </div>
+                         
                         <br>
                         <br>
-                        <button type="submit"
-                            class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill" onclick="Submit()">
-                            Sign up
-                        </button>
+                        <div class="row">
+                            <div class="col">
+                                <button type="button" id="previous-button-3"
+                            class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill">
+                            Previous
+                            </button>
+                            </div>
+                            <div class="col">
+                                <button type="submit"
+                                class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill" onclick="Submit()">
+                                Sign up
+                            </button>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
