@@ -245,7 +245,7 @@
               </div>
             </div>
 
-            <!-- Step 3: Gym Type -->
+            <!-- Step 3: Gym Type 
             <div id="gym-type" style="display: none">
               <div class="row">
                 <p>Type of Gym offered</p>
@@ -315,6 +315,7 @@
                 </div>
               </div>
             </div>
+            -->
 
             <!-- Step 4: Business Permit Upload -->
             <div id="business-permit" style="display: none">
@@ -331,6 +332,7 @@
                 accept=".pdf, .jpg, .png"
                 required
               />
+              <!---
               <div class="form-floating mb-3 mt-3">
                 <textarea
                   class="form-control rounded-pill"
@@ -349,14 +351,14 @@
                 />
                 <label for="privacyPolicyUrl">Privacy Policy</label>
               </div>
-
+              -->
               <br />
               <br />
               <div class="row">
                 <div class="col">
                   <button
                     type="button"
-                    id="previous-button-3"
+                    id="previous-button-2"
                     class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill"
                   >
                     Previous
@@ -398,7 +400,6 @@
       const personalDetailsSection =
         document.querySelector("#personal-details");
       const gymDetailsSection = document.querySelector("#gym-details");
-      const gymTypeSection = document.querySelector("#gym-type");
       const businessPermitSection = document.querySelector("#business-permit");
 
       function hideSection(section) {
@@ -437,21 +438,14 @@
       nextButton2.addEventListener("click", (event) => {
         event.preventDefault();
 
-        goToNextStep(gymDetailsSection, gymTypeSection);
+        goToNextStep(gymDetailsSection,  businessPermitSection);
       });
 
       const previousButton2 = document.querySelector("#previous-button-2");
       previousButton2.addEventListener("click", (event) => {
         event.preventDefault();
 
-        goToPreviousStep(gymTypeSection, gymDetailsSection);
-      });
-
-      const nextButton3 = document.querySelector("#next-button-3");
-      nextButton3.addEventListener("click", (event) => {
-        event.preventDefault();
-
-        goToNextStep(gymTypeSection, businessPermitSection);
+        goToPreviousStep( businessPermitSection, gymDetailsSection);
       });
     </script>
 
