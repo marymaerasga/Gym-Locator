@@ -21,7 +21,8 @@ func CreateUser(w http.ResponseWriter, r *http.Request) {
 	contact := r.FormValue("contact")
 	location := r.FormValue("location")
 	desc := r.FormValue("desc")
-	odate := r.FormValue("odate")
+	odate := r.FormValue("dfrom")
+	dto := r.FormValue("dto")
 	otime := r.FormValue("otime")
 	ctime := r.FormValue("ctime")
 	terms := r.FormValue("terms")
@@ -38,6 +39,7 @@ func CreateUser(w http.ResponseWriter, r *http.Request) {
 	product.Location = location
 	product.Description = desc
 	product.O_Date = odate
+	product.D_to = dto
 	product.O_Time = otime
 	product.C_Time = ctime
 	product.Terms = terms
@@ -74,24 +76,44 @@ func EditUser(w http.ResponseWriter, r *http.Request) {
 
 	db := GormDB()
 	id, _ := strconv.Atoi(r.FormValue("id"))
-	product := models.User{}
-	name := r.FormValue("name")
-	username := r.FormValue("username")
+	product := models.Gym{}
+	name := r.FormValue("fname")
+	lname := r.FormValue("lname")
 	password := r.FormValue("password")
-	number := r.FormValue("number")
+	email := r.FormValue("email")
+	gname := r.FormValue("name")
+	contact := r.FormValue("contact")
+	location := r.FormValue("location")
+	desc := r.FormValue("description")
+	odate := r.FormValue("from")
+	dto := r.FormValue("to")
+	otime := r.FormValue("time")
+	ctime := r.FormValue("time1")
+	process := r.FormValue("process")
 	
 	db.Where("id", id).Find(&product)
 
-	product.Name = name
-	product.Username = username
-	product.Number = number
+	if process == "Profile"{
 
-	if (password == ""){
-
-	}else{
+		product.FirstName = name
+		product.LastName = lname
 		product.Password = hashPassword(password)
+		product.Email = email
+	
+		db.Save(&product)
+	}else{
+		product.Name = gname
+		product.Contact = contact
+		product.Location = location
+		product.Description = desc
+		product.O_Date = odate
+		product.D_to = dto
+		product.O_Time = otime
+		product.C_Time = ctime
+
+		db.Save(&product)
 	}
-	db.Save(&product)
+
 
 }
 

@@ -1,401 +1,535 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>GYM Register</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/favicon.ico" rel="icon" />
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <!-- Libraries Stylesheet -->
-    <link href="/assets/lib/animate/animate.min.css" rel="stylesheet">
-    <link href="/assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="/assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="/assets/lib/animate/animate.min.css" rel="stylesheet" />
+    <link
+      href="/assets/lib/owlcarousel/assets/owl.carousel.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="/assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="/assets/css/style.css" rel="stylesheet">
-</head>
+    <link href="/assets/css/style.css" rel="stylesheet" />
+  </head>
 
-<body>
-    <div class="container-fluid bg-primary hero-header" style="height: 100vh;">
-        <div class="container d-flex justify-content-center align-items-center py-5 h-100">
-            <div class="card bg-transparent border-0">
-                <div id="registration-form">
-                    <div class="row mb-2">
-                        <h2 class="text-white">Welcome to <span style="color: #86B817;">GYM Locator</span></h2>
-                        <p class="m-0 mt-2">Please sign up to continue</p>
-                    </div>
-                    <hr>
-                    <!-- Step 1: Personal Details -->
-                    <div id="personal-details">
-                        <div class="row">
-                            <p>Owner Personal Details</p>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control rounded-pill" id="pname"
-                                        placeholder="Firstname">
-                                    <label for="floatingFirstname">First name</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control rounded-pill" id="lname"
-                                        placeholder="Lastname">
-                                    <label for="floatingLastname">Last name</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control rounded-pill" id="email"
-                                placeholder="name@example.com">
-                            <label for="floatingInput">Email address</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="password" class="form-control rounded-pill" id="password"
-                                placeholder="Password">
-                            <label for="floatingPassword">Password</label>
-                        </div>
-                        <button type="button" id="next-button-1"
-                            class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill">
-                            Next
-                        </button>
-                    </div>
-
-                    <!-- Step 2: Gym Details -->
-                    <div id="gym-details" style="display: none;">
-                        <div class="row">
-                            <p>Gym Information</p>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control rounded-pill" id="gname" placeholder="Name">
-                            <label for="floatingInput">Name</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control rounded-pill" id="contact" placeholder="Contact Number">
-                            <label for="floatingInput">Contact Number</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control rounded-pill" id="location" placeholder="Complete Location">
-                            <label for="floatingInput">Address</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control rounded-pill" id="desc" rows="4" placeholder="Gym Description"></textarea>
-                            <label for="gymDescription">Gym Description</label>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="mb-3">
-                                            <label for="daysOpen">Days Open</label>
-                                            <select class="form-select rounded-pill" aria-label="Default select example">
-                                                <option value="Monday">Monday</option>
-                                                <option value="Tuesday">Tuesday</option>
-                                                <option value="Wednesday">Wednesday</option>
-                                                <option value="Thursday">Thursday</option>
-                                                <option value="Friday">Friday</option>
-                                                <option value="Saturday">Saturday</option>
-                                                <option value="Sunday">Sunday</option>
-                                              </select>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="mb-3">
-                                            <label for="toOpen">To</label>
-                                            <select class="form-select rounded-pill" aria-label="Default select example">
-                                                <option value="Monday">Monday</option>
-                                                <option value="Tuesday">Tuesday</option>
-                                                <option value="Wednesday">Wednesday</option>
-                                                <option value="Thursday">Thursday</option>
-                                                <option value="Friday">Friday</option>
-                                                <option value="Saturday">Saturday</option>
-                                                <option value="Sunday">Sunday</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="mb-3">
-                                            <label for="openingTime">Opening Time</label>
-                                            <input type="time" class="form-control rounded-pill custom-form-control" id="otime">
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="mb-3">
-                                            <label for="closingTime">Closing Time</label>
-                                            <input type="time" class="form-control rounded-pill custom-form-control" id="ctime">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <button type="button" id="previous-button-1"
-                                class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill">
-                                Previous
-                                </button>
-                            </div>
-                            <div class="col">
-                                <button type="button" id="next-button-2"
-                                class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill">
-                                Next
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-
-
-                    <!-- Step 3: Gym Type -->
-                    <div id="gym-type" style="display: none;">
-                        <div class="row">
-                            <p>Type of Gym offered</p>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="personalTraining"
-                                    name="personalTraining">
-                                <label class="form-check-label" for="personalTraining">
-                                    Personal Training
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="groupClasses"
-                                    name="groupClasses">
-                                <label class="form-check-label" for="groupClasses">
-                                    Group Classes
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="sauna" name="sauna">
-                                <label class="form-check-label" for="sauna">
-                                    Sauna
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="swimmingPool"
-                                    name="swimmingPool">
-                                <label class="form-check-label" for="swimmingPool">
-                                    Swimming Pool
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <button type="button" id="previous-button-2"
-                            class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill">
-                            Previous
-                            </button>
-                            </div>
-                            <div class="col">
-                                <button type="button" id="next-button-3"
-                                class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill">
-                                Next
-                            </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 4: Business Permit Upload -->
-                    <div id="business-permit" style="display: none;">
-                        <div class="row">
-                            <p>Upload Business Permit</p>
-                        </div>
-                        <label for="businessPermit">Select a PDF, JPG, or PNG file:</label>
-                        <input type="file" id="businessPermit" name="businessPermit" accept=".pdf, .jpg, .png"
-                            required>  
-                        <div class="form-floating mb-3 mt-3">
-                            <textarea class="form-control rounded-pill" id="terms" rows="4"
-                                placeholder="Terms and Conditions"></textarea>
-                            <label for="termsAndConditions">Terms and Conditions</label>
-                        </div>
-                        <div class="form-floating">
-                            <input type="url" class="form-control rounded-pill" id="policy"
-                                placeholder="Privacy Policy URL">
-                            <label for="privacyPolicyUrl">Privacy Policy</label>
-                        </div>
-                         
-                        <br>
-                        <br>
-                        <div class="row">
-                            <div class="col">
-                                <button type="button" id="previous-button-3"
-                            class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill">
-                            Previous
-                            </button>
-                            </div>
-                            <div class="col">
-                                <button type="submit"
-                                class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill" onclick="Submit()">
-                                Sign up
-                            </button>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
+  <body>
+    <div class="container-fluid bg-primary hero-header" style="height: 100vh">
+      <div
+        class="container d-flex justify-content-center align-items-center py-5 h-100"
+      >
+        <div class="card bg-transparent border-0">
+          <div id="registration-form">
+            <div class="row mb-2">
+              <h2 class="text-white">
+                Welcome to <span style="color: #86b817">GYM Locator</span>
+              </h2>
+              <p class="m-0 mt-2">Please sign up to continue</p>
             </div>
+            <hr />
+            <!-- Step 1: Personal Details -->
+            <div id="personal-details">
+              <div class="row">
+                <p>Owner Personal Details</p>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control rounded-pill"
+                      id="pname"
+                      placeholder="Firstname"
+                    />
+                    <label for="floatingFirstname">First name</label>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control rounded-pill"
+                      id="lname"
+                      placeholder="Lastname"
+                    />
+                    <label for="floatingLastname">Last name</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control rounded-pill"
+                  id="email"
+                  placeholder="name@example.com"
+                />
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control rounded-pill"
+                  id="password"
+                  placeholder="Password"
+                />
+                <label for="floatingPassword">Password</label>
+              </div>
+              <button
+                type="button"
+                id="next-button-1"
+                class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill"
+              >
+                Next
+              </button>
+            </div>
+
+            <!-- Step 2: Gym Details -->
+            <div id="gym-details" style="display: none">
+              <div class="row">
+                <p>Gym Information</p>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control rounded-pill"
+                  id="gname"
+                  placeholder="Name"
+                />
+                <label for="floatingInput">Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control rounded-pill"
+                  id="contact"
+                  placeholder="Contact Number"
+                />
+                <label for="floatingInput">Contact Number</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control rounded-pill"
+                  id="location"
+                  placeholder="Complete Location"
+                />
+                <label for="floatingInput">Address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <textarea
+                  class="form-control rounded-pill"
+                  id="desc"
+                  rows="4"
+                  placeholder="Gym Description"
+                ></textarea>
+                <label for="gymDescription">Gym Description</label>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="row">
+                    <div class="col">
+                      <div class="mb-3">
+                        <label for="daysOpen">Days Open</label>
+                        <select
+                          class="form-select rounded-pill"
+                          aria-label="Default select example"
+                          id="dfrom"
+                        >
+                          <option value="Monday">Monday</option>
+                          <option value="Tuesday">Tuesday</option>
+                          <option value="Wednesday">Wednesday</option>
+                          <option value="Thursday">Thursday</option>
+                          <option value="Friday">Friday</option>
+                          <option value="Saturday">Saturday</option>
+                          <option value="Sunday">Sunday</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="mb-3">
+                        <label for="toOpen">To</label>
+                        <select
+                          class="form-select rounded-pill"
+                          aria-label="Default select example"
+                          id="dto"
+                        >
+                          <option value="Monday">Monday</option>
+                          <option value="Tuesday">Tuesday</option>
+                          <option value="Wednesday">Wednesday</option>
+                          <option value="Thursday">Thursday</option>
+                          <option value="Friday">Friday</option>
+                          <option value="Saturday">Saturday</option>
+                          <option value="Sunday">Sunday</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="row">
+                    <div class="col">
+                      <div class="mb-3">
+                        <label for="openingTime">Opening Time</label>
+                        <input
+                          type="time"
+                          class="form-control rounded-pill custom-form-control"
+                          id="otime"
+                        />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="mb-3">
+                        <label for="closingTime">Closing Time</label>
+                        <input
+                          type="time"
+                          class="form-control rounded-pill custom-form-control"
+                          id="ctime"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <button
+                    type="button"
+                    id="previous-button-1"
+                    class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill"
+                  >
+                    Previous
+                  </button>
+                </div>
+                <div class="col">
+                  <button
+                    type="button"
+                    id="next-button-2"
+                    class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill"
+                  >
+                    Next
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Gym Type -->
+            <div id="gym-type" style="display: none">
+              <div class="row">
+                <p>Type of Gym offered</p>
+              </div>
+              <div class="form-floating mb-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="personalTraining"
+                    name="personalTraining"
+                  />
+                  <label class="form-check-label" for="personalTraining">
+                    Personal Training
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="groupClasses"
+                    name="groupClasses"
+                  />
+                  <label class="form-check-label" for="groupClasses">
+                    Group Classes
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="sauna"
+                    name="sauna"
+                  />
+                  <label class="form-check-label" for="sauna"> Sauna </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="swimmingPool"
+                    name="swimmingPool"
+                  />
+                  <label class="form-check-label" for="swimmingPool">
+                    Swimming Pool
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <button
+                    type="button"
+                    id="previous-button-2"
+                    class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill"
+                  >
+                    Previous
+                  </button>
+                </div>
+                <div class="col">
+                  <button
+                    type="button"
+                    id="next-button-3"
+                    class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill"
+                  >
+                    Next
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 4: Business Permit Upload -->
+            <div id="business-permit" style="display: none">
+              <div class="row">
+                <p>Upload Business Permit</p>
+              </div>
+              <label for="businessPermit"
+                >Select a PDF, JPG, or PNG file:</label
+              >
+              <input
+                type="file"
+                id="businessPermit"
+                name="businessPermit"
+                accept=".pdf, .jpg, .png"
+                required
+              />
+              <div class="form-floating mb-3 mt-3">
+                <textarea
+                  class="form-control rounded-pill"
+                  id="terms"
+                  rows="4"
+                  placeholder="Terms and Conditions"
+                ></textarea>
+                <label for="termsAndConditions">Terms and Conditions</label>
+              </div>
+              <div class="form-floating">
+                <input
+                  type="url"
+                  class="form-control rounded-pill"
+                  id="policy"
+                  placeholder="Privacy Policy URL"
+                />
+                <label for="privacyPolicyUrl">Privacy Policy</label>
+              </div>
+
+              <br />
+              <br />
+              <div class="row">
+                <div class="col">
+                  <button
+                    type="button"
+                    id="previous-button-3"
+                    class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill"
+                  >
+                    Previous
+                  </button>
+                </div>
+                <div class="col">
+                  <button
+                    type="submit"
+                    class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill"
+                    onclick="Submit()"
+                  >
+                    Sign up
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Back to Top -->
-    <a href="/" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-left"></i></a>
+    <a href="/" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+      ><i class="bi bi-arrow-left"></i
+    ></a>
     <script
       src="https://code.jquery.com/jquery-3.6.1.min.js"
       integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
       crossorigin="anonymous"
     ></script>
     <script
-    type="text/javascript"
-    src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"
-  ></script>
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      type="text/javascript"
+      src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"
+    ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-        const form = document.querySelector('#registration-form');
-        const personalDetailsSection = document.querySelector('#personal-details');
-        const gymDetailsSection = document.querySelector('#gym-details');
-        const gymTypeSection = document.querySelector('#gym-type');
-        const businessPermitSection = document.querySelector('#business-permit');
+      const form = document.querySelector("#registration-form");
+      const personalDetailsSection =
+        document.querySelector("#personal-details");
+      const gymDetailsSection = document.querySelector("#gym-details");
+      const gymTypeSection = document.querySelector("#gym-type");
+      const businessPermitSection = document.querySelector("#business-permit");
 
-        function hideSection(section) {
-            section.style.display = 'none';
-        }
+      function hideSection(section) {
+        section.style.display = "none";
+      }
 
-        function showSection(section) {
-            section.style.display = 'block';
-        }
+      function showSection(section) {
+        section.style.display = "block";
+      }
 
-        function goToNextStep(currentSection, nextSection) {
-            hideSection(currentSection);
-            showSection(nextSection);
-        }
+      function goToNextStep(currentSection, nextSection) {
+        hideSection(currentSection);
+        showSection(nextSection);
+      }
 
-        function goToPreviousStep(currentSection, previousSection) {
-            hideSection(currentSection);
-            showSection(previousSection);
-        }
+      function goToPreviousStep(currentSection, previousSection) {
+        hideSection(currentSection);
+        showSection(previousSection);
+      }
 
-        const nextButton1 = document.querySelector('#next-button-1');
-        nextButton1.addEventListener('click', (event) => {
-            event.preventDefault();
-            
-            goToNextStep(personalDetailsSection, gymDetailsSection);
-        });
+      const nextButton1 = document.querySelector("#next-button-1");
+      nextButton1.addEventListener("click", (event) => {
+        event.preventDefault();
 
-        const previousButton1 = document.querySelector('#previous-button-1');
-        previousButton1.addEventListener('click', (event) => {
-            event.preventDefault();
-          
-            goToPreviousStep(gymDetailsSection, personalDetailsSection);
-        });
+        goToNextStep(personalDetailsSection, gymDetailsSection);
+      });
 
-        const nextButton2 = document.querySelector('#next-button-2');
-        nextButton2.addEventListener('click', (event) => {
-            event.preventDefault();
-            
-            goToNextStep(gymDetailsSection, gymTypeSection);
-        });
+      const previousButton1 = document.querySelector("#previous-button-1");
+      previousButton1.addEventListener("click", (event) => {
+        event.preventDefault();
 
-        const previousButton2 = document.querySelector('#previous-button-2');
-        previousButton2.addEventListener('click', (event) => {
-            event.preventDefault();
-           
-            goToPreviousStep(gymTypeSection, gymDetailsSection);
-        });
+        goToPreviousStep(gymDetailsSection, personalDetailsSection);
+      });
 
-        const nextButton3 = document.querySelector('#next-button-3');
-        nextButton3.addEventListener('click', (event) => {
-            event.preventDefault();
-        
-            goToNextStep(gymTypeSection, businessPermitSection);
-        });
+      const nextButton2 = document.querySelector("#next-button-2");
+      nextButton2.addEventListener("click", (event) => {
+        event.preventDefault();
 
+        goToNextStep(gymDetailsSection, gymTypeSection);
+      });
+
+      const previousButton2 = document.querySelector("#previous-button-2");
+      previousButton2.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        goToPreviousStep(gymTypeSection, gymDetailsSection);
+      });
+
+      const nextButton3 = document.querySelector("#next-button-3");
+      nextButton3.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        goToNextStep(gymTypeSection, businessPermitSection);
+      });
     </script>
 
     <script>
-        function Submit(){
-           var name = $("#pname").val()
-           var lname = $("#lname").val()
-           var email = $("#email").val()
-           var password = $("#password").val()
-           var gname = $("#gname").val()
-           var contact = $("#contact").val()
-           var location = $("#location").val()
-           var desc = $("#desc").val()
-           var odate = $("#odate").val()
-           var otime = $("#otime").val()
-           var ctime = $("#ctime").val()
-           var terms = $("#terms").val()
-           var policy = $("#policy").val()
-            if (name == "" || lname == "" || email == "" || password == "" || gname == "" || contact == "" || location == "" || desc == "" || odate == "" || otime == "" || ctime == "" || terms == "" || policy  == ""){
-                Swal.fire({
-                    toast: true,
-                    position: "center",
-                    icon: "warning",
-                    title: "Please Complete Required Details",
-                    showConfirmButton: false,
-                    timer: 3000,
-                });
-            }else{
-                $.ajax({
-                    url: "/api/user",
-                    data: {
-                    name: name,
-                    lname: lname,
-                    email: email,
-                    password: password,
-                    gname: gname,
-                    contact: contact,
-                    location: location,
-                    desc: desc,
-                    odate: odate,
-                    otime: otime,
-                    ctime: ctime,
-                    type: "Test",
-                    terms: terms,
-                    policy: policy,
-                    },
-                    success: function () {
-                    Swal.fire({
-                        toast: true,
-                        position: "center",
-                        icon: "success",
-                        title: "Successful Registration",
-                        showConfirmButton: false,
-                        timer: 3000,
-                    }).then(function () {
-                        window.location.replace("/");
-                    });
-                    },
-                });
-            }
+      function Submit() {
+        var name = $("#pname").val();
+        var lname = $("#lname").val();
+        var email = $("#email").val();
+        var password = $("#password").val();
+        var gname = $("#gname").val();
+        var contact = $("#contact").val();
+        var location = $("#location").val();
+        var desc = $("#desc").val();
+        var dfrom = $("#dfrom").val();
+        var dto = $("#dto").val();
+        var otime = $("#otime").val();
+        var ctime = $("#ctime").val();
+        var terms = $("#terms").val();
+        var policy = $("#policy").val();
+        if (
+          name == "" ||
+          lname == "" ||
+          email == "" ||
+          password == "" ||
+          gname == "" ||
+          contact == "" ||
+          location == "" ||
+          desc == "" ||
+          dfrom == "" ||
+          dto == "" ||
+          otime == "" ||
+          ctime == "" ||
+          terms == "" ||
+          policy == ""
+        ) {
+          Swal.fire({
+            toast: true,
+            position: "center",
+            icon: "warning",
+            title: "Please Complete Required Details",
+            showConfirmButton: false,
+            timer: 3000,
+          });
+        } else {
+          $.ajax({
+            url: "/api/user",
+            data: {
+              name: name,
+              lname: lname,
+              email: email,
+              password: password,
+              gname: gname,
+              contact: contact,
+              location: location,
+              desc: desc,
+              dfrom: dfrom,
+              dto: dto,
+              otime: otime,
+              ctime: ctime,
+              type: "Test",
+              terms: terms,
+              policy: policy,
+            },
+            success: function () {
+              Swal.fire({
+                toast: true,
+                position: "center",
+                icon: "success",
+                title: "Successful Registration",
+                showConfirmButton: false,
+                timer: 3000,
+              }).then(function () {
+                window.location.replace("/");
+              });
+            },
+          });
         }
+      }
     </script>
-
-</body>
-
+  </body>
 </html>

@@ -42,6 +42,8 @@ func Handlers() {
 	http.HandleFunc("/GYM", views.GYMHandler)
 	http.HandleFunc("/explore", views.ExploreHandler)
 	http.HandleFunc("/GymDashboard", views.GymDashboardHandler)
+	http.HandleFunc("/GymProfile", views.GymProfileHandler)
+	http.HandleFunc("/GymDetails", views.GymDetailsHandler)
 	http.HandleFunc("/Login", views.SignHandler)
 	http.HandleFunc("/api/", api.APIHandler)
 	http.HandleFunc("/logout", views.LogOutHandler)

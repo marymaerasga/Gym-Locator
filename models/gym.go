@@ -13,6 +13,7 @@ type Gym struct {
 	Location	string
 	Description	string
 	O_Date		string
+	D_to		string
 	O_Time		string
 	C_Time		string
 	Type		string
