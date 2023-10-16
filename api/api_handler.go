@@ -56,5 +56,25 @@ func APIHandler(w http.ResponseWriter, r *http.Request) {
 		DeleteFacility(w, r)
 		return
 	}
+
+	if strings.HasPrefix(r.URL.Path, "amenities") {
+		CreateAmenities(w, r)
+		return
+	}
+
+	if strings.HasPrefix(r.URL.Path, "get_amenities") {
+		GetAmenities(w, r)
+		return
+	}
+
+	if strings.HasPrefix(r.URL.Path, "edit_amenities") {
+		EditAmenities(w, r)
+		return
+	}
+
+	if strings.HasPrefix(r.URL.Path, "delete_amenities") {
+		DeleteAmenities(w, r)
+		return
+	}
 	
 }
