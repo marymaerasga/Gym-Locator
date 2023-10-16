@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="/assets/img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,16 +21,28 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="../lib/animate/animate.min.css" rel="stylesheet">
-    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="../lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="/assets/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="../css/dashboard.css" rel="stylesheet">
+    <link href="/assets/css/dashboard.css" rel="stylesheet">
 </head>
+
+<style>
+    .datalist{
+        display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+    }
+</style>
 
 <body id="page-top">
 
@@ -52,52 +64,59 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item ">
-                <a class="nav-link" href="dashboard.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span>
+            <li class="nav-item active">
+                <a class="nav-link" href="/GymDashboard">
+                  <i class="fas fa-fw fa-tachometer-alt"></i>
+                  <span>Dashboard</span>
                 </a>
-            </li>
-
-            <li class="nav-item ">
-                <a class="nav-link" href="profile.html">
-                    <i class="fas fa-fw fa-user"></i>
-                    <span>Profile</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseGymInfo"
-                    aria-expanded="false" aria-controls="collapseGymInfo">
-                    <i class="fas fa-fw fa-building"></i>
-                    <span>Gym Information</span>
-                    <i class="fas fa-caret-down ms-auto"></i>
+              </li>
+      
+              <li class="nav-item">
+                <a class="nav-link" href="/GymProfile">
+                  <i class="fas fa-fw fa-user"></i>
+                  <span>Profile</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link collapsed"
+                  href="#"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseGymInfo"
+                  aria-expanded="false"
+                  aria-controls="collapseGymInfo"
+                >
+                  <i class="fas fa-fw fa-building"></i>
+                  <span>Gym Information</span>
+                  <i class="fas fa-caret-down ms-auto"></i>
                 </a>
                 <div class="collapse" id="collapseGymInfo">
-                    <div>
-                    <ul class="nav ">
-                        <li class="nav-item">
-                            <a class="nav-link" href="detail.html">
-                                <i class="fas fa-fw fa-info-circle"></i>
-                                <span>Gym Details</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="fas fa-fw fa-building"></i>
-                                <span>Facilities</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="fas fa-fw fa-swimming-pool"></i>
-                                <span>Amenities</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="fas fa-fw fa-dumbbell"></i>
-                                <span>Equipments</span>
-                            </a>
-                        </li>
+                  <div>
+                    <ul class="nav">
+                      <li class="nav-item">
+                        <a class="nav-link" href="/GymDetails">
+                          <i class="fas fa-fw fa-info-circle"></i>
+                          <span>Gym Details</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/GymFacility">
+                          <i class="fas fa-fw fa-building"></i>
+                          <span>Facilities</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/GymAmenities">
+                          <i class="fas fa-fw fa-swimming-pool"></i>
+                          <span>Amenities</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/GymEquipment">
+                          <i class="fas fa-fw fa-dumbbell"></i>
+                          <span>Equipments</span>
+                        </a>
+                      </li>
                     </ul>
                 </div>
                 </div>
@@ -260,7 +279,7 @@
                                 </h6>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/bg-hero.jpg"
+                                        <img class="rounded-circle" src="/assets/img/bg-hero.jpg"
                                             alt="...">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
@@ -272,7 +291,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/gym-2.jpg"
+                                        <img class="rounded-circle" src="/assets/img/gym-2.jpg"
                                             alt="...">
                                         <div class="status-indicator"></div>
                                     </div>
@@ -284,7 +303,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/gym-1.jpg"
+                                        <img class="rounded-circle" src="/assets/img/gym-1.jpg"
                                             alt="...">
                                         <div class="status-indicator bg-warning"></div>
                                     </div>
@@ -316,9 +335,9 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">cutiepatotieee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="u_name"></span>
                                 <img class="img-profile rounded-circle"
-                                    src="img/gym-2.jpg">
+                                    src="/assets/img/gym-2.jpg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -357,11 +376,11 @@
             
                             <div class="container mt-3">
                                 <!-- Form to add a new equipment -->
-                                <form id="add-equipment-form">
+                                <div id="add-equipment-form">
                                     <label for="equipment-name">Equipment Name:</label>
-                                    <input type="text" id="equipment-name" required>
-                                    <button type="submit" class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm">Add Equipment</button>
-                                </form>
+                                    <input type="text" id="Name" required>
+                                    <button type="submit" class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm" onclick="Add()">Add Equipment</button>
+                                </div>
 
                                 <!-- List of existing equipment -->
                                 <ul id="equipment-list">
@@ -389,21 +408,317 @@
         </div>
     </div>
 
+    <div
+    class="modal fade"
+    id="staticBackdrop"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Equipment</h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+            onclick="Closed()"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="form-floating mb-3">
+              <input
+                type="hidden"
+                class="form-control rounded-pill"
+                id="c_id"
+              />
+              <input
+                type="text"
+                class="form-control rounded-pill"
+                id="Name1"
+              />
+              <label for="Name">Name</label>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn-primary text-white shadow-sm"
+            onclick="Modify()"
+          >
+            Modify
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="modal fade"
+    id="deleteModal"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">
+            Delete Equipment
+          </h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+            onclick="Closed()"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="form-floating mb-3">
+              <input
+                type="hidden"
+                class="form-control rounded-pill"
+                id="c_id1"
+              />
+              <input
+                type="text"
+                class="form-control rounded-pill"
+                id="Name2"
+                readonly
+              />
+              <label for="Name2">Name</label>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn-primary text-white shadow-sm"
+            onclick="Remove()"
+          >
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../lib/wow/wow.min.js"></script>
-    <script src="../lib/easing/easing.min.js"></script>
-    <script src="../lib/waypoints/waypoints.min.js"></script>
-    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="../lib/tempusdominus/js/moment.min.js"></script>
-    <script src="../lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="../lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="/assets/lib/wow/wow.min.js"></script>
+    <script src="/assets/lib/easing/easing.min.js"></script>
+    <script src="/assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="/assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/assets/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="/assets/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="/assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="../js/main.js"></script>
-    <script src="../js/dashboard.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/dashboard.js"></script>
   
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    type="text/javascript"
+    src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"
+  ></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      var value = $.cookie("id");
+      $.get("/api/get_user", function (index) {
+        var result = JSON.parse(index).item;
+        $.each(result, function (_, v) {
+          if (v.ID == value) {
+            $("#u_name").html(v.FirstName);
+          }
+        });
+      });
+      Equipment();
+    });
+
+    function Equipment() {
+      var value = $.cookie("id");
+      $("#equipment-list").empty();
+      $.get("/api/get_equipment", function (index) {
+        var result = JSON.parse(index).item;
+        $.each(result, function (_, v) {
+          if (v.GymID == value) {
+            $("#equipment-list").append(
+              `
+              <div class="datalist">
+                <li>`+v.Name+`</li>
+                <button
+                            type="button"
+                            class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm"
+                            onclick="Edit(` +
+                v.ID +
+                `)"
+                            >
+                            Edit
+                            </button>
+                            <button
+                            type="button"
+                            class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm"
+                            onclick="Delete(` +
+                v.ID +
+                `)"
+                            >
+                            Delete
+                            </button>
+            </div>
+                `
+            );
+          }
+        });
+      });
+    }
+
+    function Closed() {
+      $("#Name").val("");
+    }
+
+    function Add() {
+      var value = $.cookie("id");
+      var name = $("#Name").val();
+
+
+      if (name == "") {
+        Swal.fire({
+          toast: true,
+          position: "center",
+          icon: "warning",
+          title: "Please Complete Required Details",
+          showConfirmButton: false,
+          timer: 3000,
+        });
+      } else {
+        $.ajax({
+          url: "/api/equipment",
+          data: {
+            id: value,
+            name: name,
+          },
+          success: function (res) {
+            Swal.fire({
+              toast: true,
+              position: "center",
+              icon: "success",
+              title: "Add Equipment Success",
+              showConfirmButton: false,
+              timer: 3000,
+            }).then(function () {
+              window.location.reload();
+            });
+          },
+        });
+      }
+    }
+
+    function Edit(id) {
+      $("#staticBackdrop").modal("show");
+      $.get("/api/get_equipment", function (index) {
+        var result = JSON.parse(index).item;
+        $.each(result, function (_, v) {
+          if (id == v.ID) {
+            $("#c_id").val(v.ID);
+            $("#Name1").val(v.Name);
+          }
+        });
+      });
+    }
+
+    function Delete(id) {
+      $("#deleteModal").modal("show");
+      $.get("/api/get_equipment", function (index) {
+        var result = JSON.parse(index).item;
+        $.each(result, function (_, v) {
+          if (id == v.ID) {
+            $("#c_id1").val(v.ID);
+            $("#Name2").val(v.Name);
+          }
+        });
+      });
+    }
+
+    function Modify() {
+      var value = $.cookie("id");
+      var c_id = $("#c_id").val();
+      var name = $("#Name1").val();
+    
+      if (name == "") {
+        Swal.fire({
+          toast: true,
+          position: "center",
+          icon: "warning",
+          title: "Please Complete Required Details",
+          showConfirmButton: false,
+          timer: 3000,
+        });
+      } else {
+        $.ajax({
+          url: "/api/edit_equipment",
+          data: {
+            c_id: c_id,
+            id: value,
+            name: name,
+          },
+          success: function (res) {
+            Swal.fire({
+              toast: true,
+              position: "center",
+              icon: "success",
+              title: "Modify Equipment Success",
+              showConfirmButton: false,
+              timer: 3000,
+            }).then(function () {
+              window.location.reload();
+            });
+          },
+        });
+      }
+    }
+
+    function Remove() {
+      var id = $("#c_id1").val();
+      $.ajax({
+        url: "/api/delete_equipment",
+        data: {
+          id: id,
+        },
+        success: function (res) {
+          Swal.fire({
+            toast: true,
+            position: "center",
+            icon: "success",
+            title: "Delete Equipment Success",
+            showConfirmButton: false,
+            timer: 3000,
+          }).then(function () {
+            window.location.reload();
+          });
+        },
+      });
+    }
+  </script>
 </body>
 
 </html>
