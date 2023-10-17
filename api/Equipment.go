@@ -13,9 +13,11 @@ func CreateEquipment(w http.ResponseWriter, r *http.Request) {
 
 	product := models.Equipment{}
 	name := r.FormValue("name")
+	desc := r.FormValue("description")
 	id := r.FormValue("id")
 	
 	product.Name = name
+	product.Description = desc
 	product.GymID = id
 	db.Save(&product)
 
@@ -47,11 +49,13 @@ func EditEquipment(w http.ResponseWriter, r *http.Request) {
 	c_id, _ := strconv.Atoi(r.FormValue("c_id"))
 	product := models.Equipment{}
 	name := r.FormValue("name")
+	desc := r.FormValue("description")
 	id := r.FormValue("id")
 	
 	db.Where("id", c_id).Find(&product)
 
 	product.Name = name
+	product.Description = desc
 	product.GymID = id
 	db.Save(&product)
 

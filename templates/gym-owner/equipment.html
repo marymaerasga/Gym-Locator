@@ -369,12 +369,12 @@
                                       <label for="Description" class="form-label">Description</label>
                                       <textarea id="Description" class="form-control" name="Description"></textarea>
                                     </div>
-                                    <div class="col-12">
+                                    <!-- <div class="col-12">
                                         <label class="form-check-label" for="gridCheck">
                                           Upload Equipement Photo:
                                         </label>
                                         <input type="file" id="Image" class="form-control" name="Image"><br>
-                                    </div>
+                                    </div> -->
                                   </div>
                                   <button type="submit" class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm" onclick="Add()">Add Equipment</button>
                                   <hr>
@@ -444,14 +444,14 @@
             </div>
             <div class="col-12">
               <label for="Description" class="form-label">Description</label>
-              <textarea id="Description" class="form-control" name="Description"></textarea>
+              <textarea id="Description1" class="form-control" name="Description"></textarea>
             </div>
-            <div class="col-12">
+            <!-- <div class="col-12">
                 <label class="form-check-label" for="gridCheck">
                   Upload Amenities Photo:
                 </label>
                 <input type="file" id="amenityImage" class="form-control" name="amenityImage"><br>
-              </div>
+              </div> -->
         </div>
         <div class="modal-footer">
           <button
@@ -606,9 +606,10 @@
     function Add() {
       var value = $.cookie("id");
       var name = $("#Name").val();
+      var desc = $("#Description").val();
 
 
-      if (name == "") {
+      if (name == "" || desc == "") {
         Swal.fire({
           toast: true,
           position: "center",
@@ -623,6 +624,7 @@
           data: {
             id: value,
             name: name,
+            description : desc,
           },
           success: function (res) {
             Swal.fire({
@@ -648,6 +650,7 @@
           if (id == v.ID) {
             $("#c_id").val(v.ID);
             $("#Name1").val(v.Name);
+            $("#Description1").val(v.Description);
           }
         });
       });
@@ -670,8 +673,9 @@
       var value = $.cookie("id");
       var c_id = $("#c_id").val();
       var name = $("#Name1").val();
+      var desc = $("#Description1").val();
     
-      if (name == "") {
+      if (name == "" || desc == "") {
         Swal.fire({
           toast: true,
           position: "center",
@@ -687,6 +691,7 @@
             c_id: c_id,
             id: value,
             name: name,
+            description : desc,
           },
           success: function (res) {
             Swal.fire({

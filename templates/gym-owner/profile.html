@@ -645,9 +645,9 @@
           $.each(result, function (_, v) {
             if (v.ID == value) {
               $("#u_name").html(v.FirstName);
-              $("#Firstname").val(v.FirstName);
-              $("#Lastname").val(v.LastName);
-              $("#Email").val(v.Email);
+              $("#Firstname").html(v.FirstName);
+              $("#Lastname").html(v.LastName);
+              $("#Email").html(v.Email);
 
               $("#Firstname1").val(v.FirstName);
               $("#Lastname1").val(v.LastName);

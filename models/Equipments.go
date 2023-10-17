@@ -7,6 +7,7 @@ type Equipment struct {
 	Gym		 	Gym
 	GymID	 	string
 	Name	  	string
+	Description string
 	Deleted  gorm.DeletedAt
 }
 
