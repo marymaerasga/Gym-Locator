@@ -47,6 +47,8 @@ func Handlers() {
 	http.HandleFunc("/GymFacility", views.GymFacilityHandler)
 	http.HandleFunc("/GymAmenities", views.GymAmenityHandler)
 	http.HandleFunc("/GymEquipment", views.GymEquipmentHandler)
+	http.HandleFunc("/GymTrainer", views.GymTrainerHandler)
+	http.HandleFunc("/GymClass", views.GymClassHandler)
 	http.HandleFunc("/Login", views.SignHandler)
 	http.HandleFunc("/api/", api.APIHandler)
 	http.HandleFunc("/logout", views.LogOutHandler)
@@ -86,11 +88,13 @@ func MigrateDB() {
 	facility := models.Facility{}
 	amenities := models.Amenities{}
 	equipment := models.Equipment{}
+	trainer := models.Trainer{}
+	class := models.Classes{}
 	
 
 
 	db := GormDB()
-	db.AutoMigrate(&user,&gym,&facility,&amenities,&equipment)
+	db.AutoMigrate(&user,&gym,&facility,&amenities,&equipment,&trainer,&class)
 }
 
 
