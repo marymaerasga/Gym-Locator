@@ -49,6 +49,13 @@
               <input type="password" class="form-control" id="password" placeholder="Password">
               <label for="floatingPassword">Password</label>
             </div>
+            <div class="form-floating mb-3">
+              <select name="Type" id="pos">
+                <option value="">Select Position</option>
+                <option value="Owner">Owner</option>
+                <option value="Trainer">Trainer</option>
+              </select>
+            </div>
 
             <!-- 2 column grid layout for inline styling -->
             <div class="row mb-4">
@@ -104,8 +111,9 @@ src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"
 function Login() {
     var email = $("#email").val();
     var password = $("#password").val();
+    var pos = $("#pos").val();
 
-    if (email == "" || password == "") {
+    if (email == "" || password == "" || pos == "") {
       $("#email").val("");
       $("#password").val("");
       Swal.fire({
@@ -122,6 +130,7 @@ function Login() {
         data: {
           email: email,
           password: password,
+          position : pos,
         },
         success: function (res) {
           var result = JSON.parse(res).results;
@@ -136,6 +145,17 @@ function Login() {
               timer: 3000,
             }).then(function () {
               window.location.replace("/GymDashboard");
+            });
+          } else if(result == 2){
+            Swal.fire({
+              toast: true,
+              position: "center",
+              icon: "success",
+              title: "Login Successful",
+              showConfirmButton: false,
+              timer: 3000,
+            }).then(function () {
+              window.location.replace("/TrainerDashboard");
             });
           } else {
             Swal.fire({

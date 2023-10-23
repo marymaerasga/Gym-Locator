@@ -17,6 +17,7 @@ type Trainer struct {
 	Specialty	string
 	Experience	string
 	Biography	string
+	Password	string
 	Deleted  gorm.DeletedAt
 }
 

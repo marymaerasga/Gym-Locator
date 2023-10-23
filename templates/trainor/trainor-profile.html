@@ -21,15 +21,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="/assets/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="/assets/css/dashboard.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -53,32 +53,32 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span>
-                </a>
-            </li>
-        
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-user"></i>
-                    <span>Profile</span>
-                </a>
-            </li>
-        
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-calendar-check"></i>
-                    <span>Bookings</span>
-                </a>
-            </li>
-        
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-edit"></i>
-                    <span>Edit Schedule</span>
-                </a>
-            </li>
+              <a class="nav-link" href="/TrainerDashboard">
+                  <i class="fas fa-fw fa-tachometer-alt"></i>
+                  <span>Dashboard</span>
+              </a>
+          </li>
+      
+          <li class="nav-item">
+              <a class="nav-link" href="/TrainerProfile">
+                  <i class="fas fa-fw fa-user"></i>
+                  <span>Profile</span>
+              </a>
+          </li>
+      
+          <li class="nav-item">
+              <a class="nav-link" href="/TrainerBook">
+                  <i class="fas fa-fw fa-calendar-check"></i>
+                  <span>Bookings</span>
+              </a>
+          </li>
+      
+          <li class="nav-item">
+              <a class="nav-link" href="/TrainerSchedule">
+                  <i class="fas fa-fw fa-edit"></i>
+                  <span>Edit Schedule</span>
+              </a>
+          </li>
         
 
             <hr class="sidebar-divider d-none d-md-block">
@@ -268,7 +268,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">patotieee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="u_name"></span>
                                 <img class="img-profile rounded-circle"
                                     src="img/gym-2.jpg">
                             </a>
@@ -288,7 +288,7 @@
                                     Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="/logout" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -467,14 +467,6 @@
            </div>
            <div class="modal-footer">
              <button
-               id="save"
-               type="button"
-               class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm"
-               onclick="Save()"
-             >
-               Save
-             </button>
-             <button
                id="modify"
                type="button"
                class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm"
@@ -510,17 +502,146 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="/assets/lib/wow/wow.min.js"></script>
+    <script src="/assets/lib/easing/easing.min.js"></script>
+    <script src="/assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="/assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/assets/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="/assets/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="/assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-    <script src="js/dashboard.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/dashboard.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"
+    ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        var value = $.cookie("trainer");
+        $.get("/api/get_trainer", function (index) {
+          var result = JSON.parse(index).item;
+          $.each(result, function (_, v) {
+            if (v.ID == value) {
+              $("#u_name").html(v.FirstName);
+
+              
+              $("#Firstname").html(v.FirstName);
+              $("#Lastname").html(v.LastName);
+              $("#Email").html(v.Email);
+              $("#Number").html(v.Number);
+              $("#Address").html(v.Address);
+              $("#Specialties").html(v.Specialty);
+              $("#Expr").html(v.Experience);
+
+
+              $("#c_id").val(v.ID);
+              $("#fname").val(v.FirstName);
+              $("#lname").val(v.LastName);
+              $("#email").val(v.Email);
+              $("#phone").val(v.Number);
+              $("#address").val(v.Address);
+              $("#certifications").val(v.Certifications);
+              $("#specialties").val(v.Specialty);
+              $("#experience").val(v.Experience);
+              $("#bio").val(v.Biography);
+              $("#dob").val(v.DOB);
+              if (v.Gender == "Male") {
+                $("input[name=gender][value=" + v.Gender + "]").prop(
+                  "checked",
+                  true
+                );
+              } else if (v.Gender == "Female") {
+                $("input[name=gender][value=" + v.Gender + "]").prop(
+                  "checked",
+                  true
+                );
+              }
+            }
+          });
+        });
+      });
+
+      function Modify() {
+        var c_id = $("#c_id").val();
+        var gender = $('input[name="gender"]:checked').val();
+        var value = $.cookie("id");
+        var fname = $("#fname").val();
+        var lname = $("#lname").val();
+        var email = $("#email").val();
+        var phone = $("#phone").val();
+        var dob = $("#dob").val();
+        var address = $("#address").val();
+        var certifications = $("#certifications").val();
+        var specialties = $("#specialties").val();
+        var experience = $("#experience").val();
+        var bio = $("#bio").val();
+
+        if (
+          fname == "" ||
+          lname == "" ||
+          email == "" ||
+          phone == "" ||
+          address == "" ||
+          dob == "" ||
+          experience == "" ||
+          specialties == "" ||
+          certifications == "" ||
+          bio == "" ||
+          gender == ""
+        ) {
+          Swal.fire({
+            toast: true,
+            position: "center",
+            icon: "warning",
+            title: "Please Complete Required Details",
+            showConfirmButton: false,
+            timer: 3000,
+          });
+        } else {
+          $.ajax({
+            url: "/api/edit_trainer",
+            data: {
+              c_id: c_id,
+              id: value,
+              fname: fname,
+              lname: lname,
+              email: email,
+              phone: phone,
+              address: address,
+              dob: dob,
+              certifications: certifications,
+              specialties: specialties,
+              experience: experience,
+              bio: bio,
+              gender: gender,
+            },
+            success: function (res) {
+              Swal.fire({
+                toast: true,
+                position: "center",
+                icon: "success",
+                title: "Modify Trainer Success",
+                showConfirmButton: false,
+                timer: 3000,
+              }).then(function () {
+                window.location.reload();
+              });
+            },
+          });
+        }
+      }
+    </script>
   
 </body>
 

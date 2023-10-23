@@ -37,6 +37,7 @@ func CreateTrainer(w http.ResponseWriter, r *http.Request) {
 	product.Experience = experience
 	product.Biography = bio
 	product.GymID = id
+	product.Password = hashPassword("Gym2023")
 	db.Save(&product)
 
 	sqlDB, _ := db.DB()

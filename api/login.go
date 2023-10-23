@@ -16,44 +16,95 @@ func Login(w http.ResponseWriter, r *http.Request) {
 	db := GormDB()
 	email := r.FormValue("email")
 	password := r.FormValue("password")
-	user := models.Gym{}
-	report := []models.Gym{}
+	position := r.FormValue("position")
+
+	if position == "Owner"{
+		user := models.Gym{}
+		report := []models.Gym{}
+		
+		db.Where("email = ?", email).Find(&user)
+		db.Where("email = ?", email).Find(&report)
 	
-	db.Where("email = ?", email).Find(&user)
-	db.Where("email = ?", email).Find(&report)
-
-	db.Where("id", user.ID).Find(&user)
-
-	if CheckPasswordHash(password, user.Password) {
-		result := "1"
-
-		newSession := uuid.NewString()
-
-		http.SetCookie(w, &http.Cookie{
-			Path:  "/",
-			Name:  "session",
-			Value: newSession,
-		})
-
-		http.SetCookie(w, &http.Cookie{
-			Path:  "/",
-			Name:  "id",
-			Value: fmt.Sprint(user.ID),
-		})
-		data := map[string]interface{}{
-			"status":  "ok",
-			"results": result,
-			"reports": report,
+		db.Where("id", user.ID).Find(&user)
+	
+		if CheckPasswordHash(password, user.Password) {
+			result := "1"
+	
+			newSession := uuid.NewString()
+	
+			http.SetCookie(w, &http.Cookie{
+				Path:  "/",
+				Name:  "session",
+				Value: newSession,
+			})
+	
+			http.SetCookie(w, &http.Cookie{
+				Path:  "/",
+				Name:  "id",
+				Value: fmt.Sprint(user.ID),
+			})
+			data := map[string]interface{}{
+				"status":  "ok",
+				"results": result,
+				"reports": report,
+			}
+			ReturnJSON(w, r, data)
+		} else {
+			result := "0"
+			data := map[string]interface{}{
+				"status":  "error",
+				"results": result,
+			}
+			ReturnJSON(w, r, data)
 		}
-		ReturnJSON(w, r, data)
-	} else {
-		result := "0"
-		data := map[string]interface{}{
-			"status":  "error",
-			"results": result,
+	}else{
+		user := models.Trainer{}
+		report := []models.Trainer{}
+		
+		db.Where("email = ?", email).Find(&user)
+		db.Where("email = ?", email).Find(&report)
+	
+		db.Where("id", user.ID).Find(&user)
+	
+		if CheckPasswordHash(password, user.Password) {
+			result := "2"
+	
+			newSession := uuid.NewString()
+	
+			http.SetCookie(w, &http.Cookie{
+				Path:  "/",
+				Name:  "session",
+				Value: newSession,
+			})
+	
+			http.SetCookie(w, &http.Cookie{
+				Path:  "/",
+				Name:  "id",
+				Value: fmt.Sprint(user.GymID),
+			})
+
+			http.SetCookie(w, &http.Cookie{
+				Path:  "/",
+				Name:  "trainer",
+				Value: fmt.Sprint(user.ID),
+			})
+			data := map[string]interface{}{
+				"status":  "ok",
+				"results": result,
+				"reports": report,
+			}
+			ReturnJSON(w, r, data)
+		} else {
+			result := "0"
+			data := map[string]interface{}{
+				"status":  "error",
+				"results": result,
+			}
+			ReturnJSON(w, r, data)
 		}
-		ReturnJSON(w, r, data)
 	}
+
+
 
 	sqlDB, _ := db.DB()
 	sqlDB.Close()

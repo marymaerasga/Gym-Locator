@@ -49,14 +49,14 @@ func Handlers() {
 	http.HandleFunc("/GymEquipment", views.GymEquipmentHandler)
 	http.HandleFunc("/GymTrainer", views.GymTrainerHandler)
 	http.HandleFunc("/GymClass", views.GymClassHandler)
+
+	http.HandleFunc("/TrainerDashboard", views.TrainerDashboardHandler)
+	http.HandleFunc("/TrainerProfile", views.TrainerProfileHandler)
+	http.HandleFunc("/TrainerBook", views.TrainerBookHandler)
+	http.HandleFunc("/TrainerSchedule", views.TrainerScheduleHandler)
 	http.HandleFunc("/Login", views.SignHandler)
 	http.HandleFunc("/api/", api.APIHandler)
 	http.HandleFunc("/logout", views.LogOutHandler)
-
-
-
-
-
 }
 
 func CreateDB(name string) *sql.DB {
@@ -90,11 +90,12 @@ func MigrateDB() {
 	equipment := models.Equipment{}
 	trainer := models.Trainer{}
 	class := models.Classes{}
+	schedule := models.Schedule{}
 	
 
 
 	db := GormDB()
-	db.AutoMigrate(&user,&gym,&facility,&amenities,&equipment,&trainer,&class)
+	db.AutoMigrate(&user,&gym,&facility,&amenities,&equipment,&trainer,&class,&schedule)
 }
 
 

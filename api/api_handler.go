@@ -138,6 +138,27 @@ func APIHandler(w http.ResponseWriter, r *http.Request) {
 		DeleteClass(w, r)
 		return
 	}
+
+
+	if strings.HasPrefix(r.URL.Path, "schedule") {
+		CreateSchedule(w, r)
+		return
+	}
+
+	if strings.HasPrefix(r.URL.Path, "get_schedule") {
+		GetSchedule(w, r)
+		return
+	}
+
+	if strings.HasPrefix(r.URL.Path, "edit_schedule") {
+		EditSchedule(w, r)
+		return
+	}
+
+	if strings.HasPrefix(r.URL.Path, "delete_schedule") {
+		DeleteSchedule(w, r)
+		return
+	}
 	
 	
 }
