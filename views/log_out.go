@@ -19,5 +19,19 @@ func LogOutHandler(w http.ResponseWriter, r *http.Request) {
 		MaxAge: -1,
 	})
 
+	http.SetCookie(w, &http.Cookie{
+		Path:   "/",
+		Name:   "trainer",
+		Value:  "",
+		MaxAge: -1,
+	})
+
+	http.SetCookie(w, &http.Cookie{
+		Path:   "/",
+		Name:   "client",
+		Value:  "",
+		MaxAge: -1,
+	})
+
 	http.Redirect(w, r, "/", http.StatusSeeOther)
 }

@@ -21,15 +21,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="/assets/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="/assets/css/dashboard.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -52,14 +52,14 @@
             <hr class="sidebar-divider my-0">
 
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/ClientDashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
             
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/ClientProfile">
                     <i class="fas fa-fw fa-user"></i>
                     <span>Profile</span>
                 </a>
@@ -71,7 +71,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/ClientBooking">
                     <i class="fas fa-fw fa-calendar-alt"></i>
                     <span>Bookings</span>
                 </a>
@@ -294,9 +294,9 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">cutie</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="u_name"></span>
                                 <img class="img-profile rounded-circle"
-                                    src="img/gym-2.jpg">
+                                    src="/assets/img/gym-2.jpg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -314,7 +314,7 @@
                                     Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="/logout" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -346,8 +346,8 @@
                 <h6 id="Lastname"></h6>
               </div>
               <div class="col-12">
-                <label for="Email" class="form-label">Email Address</label>
-                <h6  id="Email"></h6>
+                <label for="Age" class="form-label">Age</label>
+                <h6  id="Age"></h6>
               </div>
               <div class="col-6">
                 <label for="Number" class="form-label">Phone Number</label>
@@ -418,6 +418,7 @@
               <div class="col-md-6">
                 <label for="Firstname1" class="form-label">Firstname</label>
                 <input type="text" class="form-control" id="Firstname1">
+                <input type="hidden" class="form-control" id="c_id">
               </div>
               <div class="col-md-6">
                 <label for="Lastname1" class="form-label">Lastname</label>
@@ -425,24 +426,24 @@
               </div>
               <div class="col-md-6">
                 <label for="Address" class="form-label">Address</label>
-                <input type="text" class="form-control" id="Address">
+                <input type="text" class="form-control" id="Address1">
               </div>
               <div class="col-md-6">
                 <label for="Number" class="form-label">Phone Number</label>
-                <input type="text" class="form-control" id="Number">
+                <input type="text" class="form-control" id="Number1">
               </div>
               <div class="col-12">
-                <label for="Email1" class="form-label">Email Address</label>
-                <input type="text" class="form-control" id="Email1">
+                <label for="Age1" class="form-label">Age</label>
+                <input type="number" class="form-control" id="Age1">
               </div>
-              <div class="col-12">
+              <!-- <div class="col-12">
                 <label for="Password" class="form-label">Password</label>
                 <input type="password" class="form-control" id="Password">
               </div>
               <div class="col-12">
                 <label for="Password1" class="form-label">Confirm Password</label>
                 <input type="password" class="form-control"id="Password1">
-              </div>
+              </div> -->
           <div class="modal-footer">
             <button
               type="button"
@@ -480,17 +481,112 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="/assets/lib/wow/wow.min.js"></script>
+    <script src="/assets/lib/easing/easing.min.js"></script>
+    <script src="/assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="/assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/assets/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="/assets/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="/assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-    <script src="js/dashboard.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/dashboard.js"></script>
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    type="text/javascript"
+    src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"
+  ></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      var value = $.cookie("client");
+      $.get("/api/get_client", function (index) {
+        var result = JSON.parse(index).item;
+        $.each(result, function (_, v) {
+          if (v.ID == value) {
+            $("#u_name").html(v.FirstName);
+            $("#Firstname").html(v.FirstName);
+            $("#Lastname").html(v.LastName);
+            $("#Age").html(v.Age);
+            $("#Number").html(v.Number);
+            $("#Address").html(v.Address);
+
+            $("#c_id").val(v.GymID);
+            $("#Firstname1").val(v.FirstName);
+            $("#Lastname1").val(v.LastName);
+            $("#Age1").val(v.Age);
+            $("#Number1").val(v.Number);
+            $("#Address1").val(v.Address);
+          }
+        });
+      });
+    });
+
+    function Closed() {
+        $("#Password").val("");
+        $("#Password1").val("");
+      }
+
+      function Save() {
+        var value = $.cookie("client");
+        var fname = $("#Firstname1").val();
+        var lname = $("#Lastname1").val();
+        var age = $("#Age1").val();
+        var number = $("#Number1").val();
+        var address = $("#Address1").val();
+        var id = $("#c_id").val();
+        if (
+          fname == "" ||
+          lname == "" ||
+          age == "" ||
+          number == "" ||
+          address == ""
+        ) {
+          Swal.fire({
+            toast: true,
+            position: "center",
+            icon: "warning",
+            title: "Please Complete Required Details",
+            showConfirmButton: false,
+            timer: 3000,
+          });
+        } else {
+          $.ajax({
+            url: "/api/edit_client",
+            data: {
+              id: value,
+              gid : id,
+              fname: fname,
+              lname: lname,
+              age:  age,
+              number: number,
+              address: address,
+            },
+            success: function (res) {
+              Swal.fire({
+                toast: true,
+                position: "center",
+                icon: "success",
+                title: "Modify User Success",
+                showConfirmButton: false,
+                timer: 3000,
+              }).then(function () {
+                window.location.reload();
+              });
+            },
+          });
+        }
+      }
+    </script>
+  </script>
   
 </body>
 

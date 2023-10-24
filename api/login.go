@@ -15,6 +15,8 @@ import (
 func Login(w http.ResponseWriter, r *http.Request) {
 	db := GormDB()
 	email := r.FormValue("email")
+	username := r.FormValue("username")
+	id := r.FormValue("id")
 	password := r.FormValue("password")
 	position := r.FormValue("position")
 
@@ -57,7 +59,46 @@ func Login(w http.ResponseWriter, r *http.Request) {
 			}
 			ReturnJSON(w, r, data)
 		}
-	}else{
+		}else if position == "Client"{
+			user := models.Client{}
+			report := []models.Client{}
+			
+			db.Where("username = ? && gym_id = ?", username,id).Find(&user)
+			db.Where("username = ? && gym_id = ?", username,id).Find(&report)
+		
+			db.Where("id", user.ID).Find(&user)
+		
+			if CheckPasswordHash(password, user.Password) {
+				result := "3"
+		
+				newSession := uuid.NewString()
+		
+				http.SetCookie(w, &http.Cookie{
+					Path:  "/",
+					Name:  "session",
+					Value: newSession,
+				})
+		
+				http.SetCookie(w, &http.Cookie{
+					Path:  "/",
+					Name:  "client",
+					Value: fmt.Sprint(user.ID),
+				})
+				data := map[string]interface{}{
+					"status":  "ok",
+					"results": result,
+					"reports": report,
+				}
+				ReturnJSON(w, r, data)
+			} else {
+				result := "0"
+				data := map[string]interface{}{
+					"status":  "error",
+					"results": result,
+				}
+				ReturnJSON(w, r, data)
+			}
+			}else{
 		user := models.Trainer{}
 		report := []models.Trainer{}
 		
@@ -125,7 +166,7 @@ func CheckPasswordHash(pass, hash string) bool {
 }
 
 func GormDB() *gorm.DB {
-	dsn := "root:a@tcp(127.0.0.1:3306)/gym?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "root:GroupNB2023@tcp(127.0.0.1:3306)/gym?charset=utf8mb4&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 
 	if err != nil {

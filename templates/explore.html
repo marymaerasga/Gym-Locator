@@ -107,11 +107,11 @@
             </div>
             <a href="/Login" class="nav-item nav-link">Login</a>
           </div>
-          <a
+          <!-- <a
             href="user-register.html"
             class="btn btn-primary rounded-pill py-2 px-4"
             >Register</a
-          >
+          > -->
         </div>
       </nav>
 
@@ -307,9 +307,12 @@
                               <button
                                 type="button"
                                 class="btn btn-primary btn-sm btn-outline-primary me-2"
+                                data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop1"
                                 id="messageButton"
+                                onclick="Show()"
                               >
-                                Message
+                               Login
                               </button>
                               <button
                                 type="button"
@@ -588,7 +591,7 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form>
+            <div>
               <div class="row mb-2 mt-2">
                 <p>Please sign up to continue</p>
               </div>
@@ -598,10 +601,10 @@
                     <input
                       type="text"
                       class="form-control"
-                      id="floatingFirstname"
+                      id="fname"
                       placeholder="Firstname"
                     />
-                    <label for="floatingFirstname">First name</label>
+                    <label for="fname">First name</label>
                   </div>
                 </div>
                 <div class="col-md-6 mb-3">
@@ -609,22 +612,22 @@
                     <input
                       type="text"
                       class="form-control"
-                      id="floatingLastname"
+                      id="lname"
                       placeholder="Lastname"
                     />
-                    <label for="floatingLastname">Last name</label>
+                    <label for="lname">Last name</label>
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-floating mb-3">
-                    <select class="form-control" id="floatingGender">
+                    <select class="form-control" id="gender">
                       <option value="male">Male</option>
                       <option value="female">Female</option>
                       <option value="other">Other</option>
                     </select>
-                    <label for="floatingGender">Gender</label>
+                    <label for="gender">Gender</label>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -632,72 +635,126 @@
                     <input
                       type="number"
                       class="form-control"
-                      id="floatingAge"
+                      id="age"
                       placeholder="Age"
                     />
-                    <label for="floatingAge">Age</label>
+                    <label for="age">Age</label>
                   </div>
                 </div>
               </div>
               <div class="form-floating mb-3">
                 <textarea
                   class="form-control"
-                  id="floatingAddress"
+                  id="address"
                   placeholder="Your address"
                   rows="3"
                 ></textarea>
-                <label for="floatingAddress">Address</label>
+                <label for="address">Address</label>
               </div>
               <div class="form-floating mb-3">
                 <input
                   type="tel"
                   class="form-control"
-                  id="floatingPhone"
+                  id="phone"
                   placeholder="Phone number"
                 />
-                <label for="floatingPhone">Phone number</label>
+                <label for="phone">Phone number</label>
               </div>
               <div class="form-floating mb-3">
-                <select class="form-control" id="floatingMembershipType">
+                <select class="form-control" id="member">
                   <option value="regular">Regular</option>
                   <option value="basic">Basic</option>
                   <option value="premium">Premium</option>
                   <option value="gold">Gold</option>
                 </select>
-                <label for="floatingMembershipType">Membership Type</label>
+                <label for="member">Membership Type</label>
               </div>
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <div class="form-floating">
-                    <input
-                      type="date"
-                      class="form-control"
-                      id="floatingDate"
-                      placeholder="Date"
-                    />
-                    <label for="floatingDate">Joining Date</label>
-                  </div>
+             
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="username"
+                    placeholder="Username"
+                  />
+                  <label for="username">Username</label>
                 </div>
-                <div class="col-md-6 mb-3">
-                  <div class="form-floating">
+           
+              
+                  <div class="form-floating mb-3">
                     <input
-                      type="time"
+                      type="password"
                       class="form-control"
-                      id="floatingTime"
-                      placeholder="Time"
+                      id="password"
+                      placeholder="Password"
                     />
-                    <label for="floatingTime">Time</label>
+                    <label for="password">Password</label>
                   </div>
-                </div>
-              </div>
-              <button type="submit" class="btn btn-primary mt-2 w-100">
+                
+              
+              <button type="submit" class="btn btn-primary mt-2 w-100" onclick="Join()">
                 Join Now
               </button>
-            </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div
+    class="modal fade"
+    id="staticBackdrop1"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <div class="row mb-2 mt-2">
+              <p>Login  <span id="gymname1"></span></p>
+            </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username1"
+                  placeholder="Username"
+                />
+                <label for="username1">Username</label>
+              </div>
+         
+            
+                <div class="form-floating mb-3">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password1"
+                    placeholder="Password"
+                  />
+                  <label for="password1">Password</label>
+                </div>
+              
+            
+            <button type="submit" class="btn btn-primary mt-2 w-100" onclick="Login()">
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
@@ -1007,6 +1064,125 @@
         });
       }
 
+      function Join(){
+        var id  = localStorage.getItem("Gym")
+        var fname = $("#fname").val()
+        var lname = $("#lname").val()
+        var gender = $("#gender").val()
+        var age = $("#age").val()
+        var address = $("#address").val()
+        var phone = $("#phone").val()
+        var member = $("#member").val()
+        var username = $("#username").val()
+        var password = $("#password").val()
+
+        if (fname == "" || lname == "" || gender == "" || age == "" || address == "" || phone == "" || member == "" || username == "" || password == ""){
+          Swal.fire({
+            toast: true,
+            position: "center",
+            icon: "warning",
+            title: "Please Complete Required Details",
+            showConfirmButton: false,
+            timer: 3000,
+          });
+        }else{
+          $.ajax({
+            url: "/api/client",
+            data: {
+              id: id,
+              fname: fname,
+              lname: lname,
+              gender: gender,
+              age: age,
+              address: address,
+              phone: phone,
+              member: member,
+              username: username,
+              password: password,
+            
+            },
+            success: function () {
+              Swal.fire({
+                toast: true,
+                position: "center",
+                icon: "success",
+                title: "Successful Registration",
+                showConfirmButton: false,
+                timer: 3000,
+              }).then(function () {
+                window.location.replace("/explore");
+              });
+            },
+          });
+        }
+      }
+
+      function Login(){
+        var id  = localStorage.getItem("Gym")
+        var username = $("#username1").val()
+        var password = $("#password1").val()
+
+        if ( username == "" || password == ""){
+          Swal.fire({
+            toast: true,
+            position: "center",
+            icon: "warning",
+            title: "Please Complete Required Details",
+            showConfirmButton: false,
+            timer: 3000,
+          });
+        }else{
+          $.ajax({
+        url: "/api/login",
+        data: {
+          id : id,
+          username: username,
+          password: password,
+          position : "Client",
+        },
+        success: function (res) {
+          var result = JSON.parse(res).results;
+          var user = JSON.parse(res).reports;
+           if(result == 3){
+            Swal.fire({
+              toast: true,
+              position: "center",
+              icon: "success",
+              title: "Login Successful",
+              showConfirmButton: false,
+              timer: 3000,
+            }).then(function () {
+              window.location.replace("/ClientDashboard");
+            });
+          } else {
+            Swal.fire({
+              toast: true,
+              position: "center",
+              icon: "warning",
+              title: "Please Check your Email and Password!",
+              showConfirmButton: false,
+              timer: 3000,
+            });
+            $("#username1").val("");
+            $("#password1").val("");
+          }
+        },
+      });
+        }
+      }
+
+      function Show(){
+        var id  = localStorage.getItem("Gym")
+        $.get("/api/get_user", function (index) {
+          var result = JSON.parse(index).item;
+          $.each(result, function (_, v) {
+            if (v.ID == id) {
+              $("#gymname1").html("(" +  " " +  v.Name + " " + ")");
+            }
+          });
+        });
+      }
+
     </script>
 <script>
 let map;
@@ -1056,21 +1232,6 @@ function initMap() {
             
           });
         });
-
-
-  // const legend = document.getElementById("legend");
-
-  // for (const key in icons) {
-  // const type = icons[key];
-  // const name = type.name;
-  // const icon = type.icon;
-  // const div = document.createElement("div");
-
-  // div.innerHTML = '<img src="' + icon + '"> ' + name;
-  // legend.appendChild(div);
-  // }
-
-  // map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
 }
 
 window.initMap = initMap;

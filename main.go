@@ -54,6 +54,10 @@ func Handlers() {
 	http.HandleFunc("/TrainerProfile", views.TrainerProfileHandler)
 	http.HandleFunc("/TrainerBook", views.TrainerBookHandler)
 	http.HandleFunc("/TrainerSchedule", views.TrainerScheduleHandler)
+
+	http.HandleFunc("/ClientDashboard", views.UserDashboardHandler)
+	http.HandleFunc("/ClientProfile", views.UserProfileHandler)
+	http.HandleFunc("/ClientBooking", views.UserBookingHandler)
 	http.HandleFunc("/Login", views.SignHandler)
 	http.HandleFunc("/api/", api.APIHandler)
 	http.HandleFunc("/logout", views.LogOutHandler)
@@ -61,7 +65,7 @@ func Handlers() {
 
 func CreateDB(name string) *sql.DB {
 	fmt.Println("Database Created")
-	db, err := sql.Open("mysql", "root:a@tcp(127.0.0.1:3306)/")
+	db, err := sql.Open("mysql", "root:GroupNB2023@tcp(127.0.0.1:3306)/")
 	if err != nil {
 		panic(err)
 	}
@@ -73,7 +77,7 @@ func CreateDB(name string) *sql.DB {
 	}
 	db.Close()
 
-	db, err = sql.Open("mysql", "root:a@tcp(127.0.0.1:3306)/"+name)
+	db, err = sql.Open("mysql", "root:GroupNB2023@tcp(127.0.0.1:3306)/"+name)
 	if err != nil {
 		panic(err)
 	}
@@ -91,11 +95,13 @@ func MigrateDB() {
 	trainer := models.Trainer{}
 	class := models.Classes{}
 	schedule := models.Schedule{}
+	client := models.Client{}
+	book := models.Booking{}
 	
 
 
 	db := GormDB()
-	db.AutoMigrate(&user,&gym,&facility,&amenities,&equipment,&trainer,&class,&schedule)
+	db.AutoMigrate(&user,&gym,&facility,&amenities,&equipment,&trainer,&class,&schedule,&client,&book)
 }
 
 
@@ -153,7 +159,7 @@ func hashPassword(pass string) string {
 }
 
 func GormDB() *gorm.DB {
-	dsn := "root:a@tcp(127.0.0.1:3306)/gym?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "root:GroupNB2023@tcp(127.0.0.1:3306)/gym?charset=utf8mb4&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 
 	if err != nil {
