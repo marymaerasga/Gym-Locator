@@ -27,6 +27,8 @@ func CreateUser(w http.ResponseWriter, r *http.Request) {
 	ctime := r.FormValue("ctime")
 	terms := r.FormValue("terms")
 	policy := r.FormValue("policy")
+	lat := r.FormValue("lat")
+	long := r.FormValue("long")
 	
 
 
@@ -44,6 +46,8 @@ func CreateUser(w http.ResponseWriter, r *http.Request) {
 	product.C_Time = ctime
 	product.Terms = terms
 	product.Policy = policy
+	product.Long = long
+		product.Lat = lat
 	product.Type = "Test"
 	
 	
@@ -84,6 +88,8 @@ func EditUser(w http.ResponseWriter, r *http.Request) {
 	gname := r.FormValue("name")
 	contact := r.FormValue("contact")
 	location := r.FormValue("location")
+	lat := r.FormValue("lat")
+	long := r.FormValue("long")
 	desc := r.FormValue("description")
 	odate := r.FormValue("from")
 	dto := r.FormValue("to")
@@ -110,6 +116,8 @@ func EditUser(w http.ResponseWriter, r *http.Request) {
 		product.D_to = dto
 		product.O_Time = otime
 		product.C_Time = ctime
+		product.Long = long
+		product.Lat = lat
 
 		db.Save(&product)
 	}

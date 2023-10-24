@@ -46,6 +46,12 @@
     <link href="/assets/css/style.css" rel="stylesheet" />
   </head>
 
+  <style>
+     #map {
+      height: 100%;
+    }
+  </style>
+
   <body>
     <!-- Spinner Start -->
     <div
@@ -543,10 +549,15 @@
                                       </div>
                                     </div>
                                     --------------------->
+
+                                     <!-- Map display ---->
+              
+                  </div>
+                  <div id="map">
+
                   </div>
                 </div>
-                <!-- Map display ---->
-                <div id="map"></div>
+               
               </div>
             </div>
           </div>
@@ -693,6 +704,11 @@
     ></a>
 
     <!-- JavaScript Libraries -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBw1K86ZgpsleRBJcd_uA6F9O8dhf7gMl8&callback=initMap&v=weekly"
+	defer
+  ></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
@@ -706,6 +722,7 @@
     <!-- Template Javascript -->
     <script src="/assets/js/explore-gym.js"></script>
     <script src="/assets/js/main.js"></script>
+    
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -818,9 +835,11 @@
                   <div class="card-footer bg-transparent">
                     <div class="row justify-content-center">
                       <div class="col mb-2">
-                        <a href="#" class="btn btn-primary  btn-sm w-100">
-                         Directions
-                        </a>
+                        <button type="button" class="btn btn-primary  btn-sm w-100" onclick="Direction(` +
+                v.ID +
+                `)">
+                         Direction
+                        </button>
                       </div>
                       <div class="col mb-2">
                         <button type="button" class="btn btn-primary  btn-sm w-100" onclick="Explore(` +
@@ -844,6 +863,9 @@
         localStorage.setItem("Gym",id)
         const cardGymDisplay = document.getElementById("cardGymDisplay");
         cardGymDisplay.style.display = "block";
+
+        const cardGymDisplay1 = document.getElementById("map");
+        cardGymDisplay1.style.display = "none";
         $.get("/api/get_user", function (index) {
           var result = JSON.parse(index).item;
           $.each(result, function (_, v) {
@@ -906,7 +928,95 @@
       function Close() {
         const cardGymDisplay = document.getElementById("cardGymDisplay");
         cardGymDisplay.style.display = "none";
+
+        const cardGymDisplay1 = document.getElementById("map");
+        cardGymDisplay1.style.display = "block";
       }
+
+      // function Direction(id){
+        
+      //   const cardGymDisplay = document.getElementById("map");
+      //   cardGymDisplay.style.display = "block";
+      //   const cardGymDisplay1 = document.getElementById("cardGymDisplay");
+      //   cardGymDisplay1.style.display = "none";
+      //   $.get("/api/get_user", function (index) {
+      //     var result = JSON.parse(index).item;
+      //     $.each(result, function (_, v) {
+      //       if (v.ID == id) {
+      //        localStorage.setItem("lat",v.Lat)
+      //        localStorage.setItem("long",v.Long)
+      //       }
+      //     });
+      //   });
+      // }
     </script>
+<script>
+let map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+  zoom: 16,
+  center: new google.maps.LatLng(6.9214, 122.0790),
+  mapTypeId: "roadmap",
+  });
+
+  const iconBase = "https://maps.google.com/mapfiles/kml/shapes/";
+  const icons = {
+  parking: {
+    name: "Parking",
+    icon: iconBase + "parking_lot_maps.png",
+  },
+  library: {
+    name: "Library",
+    icon: iconBase + "library_maps.png",
+  },
+  info: {
+    name: "Info",
+    icon: iconBase + "info-i_maps.png",
+  },
+  };
+
+ 
+  $.get("/api/get_user", function (index) {
+          var result = JSON.parse(index).item;
+          $.each(result, function (_, v) {
+           
+              const features = [
+                  {
+                    position: new google.maps.LatLng(v.Lat,v.Long),
+                    type: "info",
+                  },
+                  ];
+
+                  features.forEach((feature) => {
+                    console.log(feature.position)
+                  new google.maps.Marker({
+                    position: feature.position,
+                    icon: icons[feature.type].icon,
+                    map: map,
+                  });
+                  });
+            
+          });
+        });
+
+
+  // const legend = document.getElementById("legend");
+
+  // for (const key in icons) {
+  // const type = icons[key];
+  // const name = type.name;
+  // const icon = type.icon;
+  // const div = document.createElement("div");
+
+  // div.innerHTML = '<img src="' + icon + '"> ' + name;
+  // legend.appendChild(div);
+  // }
+
+  // map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+}
+
+window.initMap = initMap;
+</script>
+
   </body>
 </html>

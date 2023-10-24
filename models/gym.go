@@ -11,6 +11,8 @@ type Gym struct {
 	Name		string
 	Contact		string
 	Location	string
+	Lat			string
+	Long		string
 	Description	string
 	O_Date		string
 	D_to		string
