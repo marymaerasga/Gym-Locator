@@ -351,6 +351,12 @@
                                     <label for="Description" class="form-label">Description</label>
                                     <textarea id="Description" class="form-control" name="Description"></textarea>
                                   </div>
+                                  <div class="col-12">
+                                    <label class="form-check-label" for="gridCheck">
+                                      Upload Facility Photo:
+                                    </label>
+                                    <input type="file" id="facilityImage" class="form-control" name="facilityImage"><br>
+                                </div>
                                   <!-- <div class="col-12">
                                       <label class="form-check-label" for="gridCheck">
                                         Upload Amenity Photo:
@@ -427,12 +433,12 @@
             <label for="Description" class="form-label">Description</label>
             <textarea id="Description1" class="form-control" name="Description"></textarea>
           </div>
-          <!-- <div class="col-12">
+          <div class="col-12">
               <label class="form-check-label" for="gridCheck">
                 Upload Amenities Photo:
               </label>
               <input type="file" id="amenityImage" class="form-control" name="amenityImage"><br>
-            </div> -->
+            </div> 
         <div class="modal-footer">
           <button
             type="button"
@@ -552,37 +558,44 @@
             $("#amenity-list").append(
               `
                   <div class="col">
-                  <div class="card" style="width: 300px; height: 300px;">
-                  <img src="facility1.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">` +
-                      v.Name +`</h5>
-                    <p class="card-text">` +
-                      v.Description +
-                      `</p>
-                      <div class="modal-footer" style="margin-top: auto;">
-                        <button
-                        type="button"
-                        class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm"
-                        onclick="Edit(` +
-            v.ID +
-            `)"
-                        >
-                        Edit
-                        </button>
-                        <button
-                        type="button"
-                        class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm"
-                        onclick="Delete(` +
-            v.ID +
-            `)"
-                        >
-                        Delete
-                        </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">Image</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Description</th>
+                          <th scope="col">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> <img src="facility1.jpg" class="card-img-top" alt="..."></td>
+                          <td>` +
+                            v.Name +`</td>
+                          <td>` +
+                            v.Description +
+                            `</td>
+                          <td><button
+                            type="button"
+                            class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm"
+                            onclick="Edit(` +
+                v.ID +
+                `)"
+                            >
+                            Edit
+                            </button>
+                            <button
+                            type="button"
+                            class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm"
+                            onclick="Delete(` +
+                v.ID +
+                `)"
+                            >
+                            Delete
+                            </button></td>
+                        </tr>
+                      </tbody>
+                    </table>
             `
             );
           }

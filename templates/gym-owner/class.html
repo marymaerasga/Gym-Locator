@@ -426,7 +426,7 @@
                 <tr>
                   <th>Name</th>
                   <th>Instructor</th>
-                  <th>Durtation</th>
+                  <th>Duration</th>
                   <th>Capacity</th>
                   <th>Action</th>
                 </tr>
@@ -450,102 +450,62 @@
     </a>
 
     <!-- Edit Profile Modal -->
-    <div
-      class="modal fade"
-      id="staticBackdrop"
-      data-bs-backdrop="static"
-      data-bs-keyboard="false"
-      tabindex="-1"
-      aria-labelledby="staticBackdropLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="staticBackdropLabel">Classes</h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-              onclick="Closed()"
-            ></button>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="Closed()"></button>
           </div>
           <div class="modal-body">
-            <div id="add-class-form">
-              <div class="form-group mb-3">
-                <label for="class-name">Class Name:</label>
-                <input type="hidden" id="c_id"  />
-                <input type="text" id="name" required />
+            <form class="row g-3">
+              <div class="col-12">
+                <label class="form-label" for="class-name">Class Name:</label>
+                <input class="form-control" type="hidden" id="c_id" />
+                <input class="form-control" type="text" id="name" required />
               </div>
-              <div class="form-group mb-3">
-                <label for="category">Instructor:</label>
-                <select id="instructor">
-                
-                </select>
+              <div class="col-12">
+                <label class="form-label" for="instructor">Instructor:</label>
+                <select class="form-select" id="instructor"></select>
               </div>
+              <div class="col-12">
+                <label class="form-label" for="date-time">Date and Time:</label>
+                <input class="form-control" type="datetime-local" id="date" required />
               </div>
-              <div class="form-group mb-3">
-                <label for="date-time">Date and Time:</label>
-                <input type="datetime-local" id="date" required />
+              <div class="col-12">
+                <label class="form-label" for="duration">Duration (hours):</label>
+                <input class="form-control" type="number" id="duration" step="0.5" min="0.5" required />
               </div>
-              <div class="form-group mb-3">
-                <label for="duration">Duration (hours):</label>
-                <input
-                  type="number"
-                  id="duration"
-                  step="0.5"
-                  min="0.5"
-                  required
-                />
+              <div class="col-12">
+                <label class="form-label" for="capacity">Capacity:</label>
+                <input class="form-control" type="number" id="capacity" required />
               </div>
-              <div class="form-group mb-3">
-                <label for="capacity">Capacity:</label>
-                <input type="number" id="capacity" required />
+              <div class="col-12">
+                <label class="form-label" for="description">Description:</label>
+                <textarea class="form-control" id="description" rows="4"></textarea>
               </div>
-              <div class="form-group mb-3">
-                <label for="description">Description:</label>
-                <textarea id="description" rows="4"></textarea>
-              </div>
-              <div class="form-group mb-3">
-                <label for="category">Category:</label>
-                <select id="category">
+              <div class="col-12">
+                <label class="form-label" for="category">Category:</label>
+                <select class="form-select" id="category">
                   <option value="Cardio">Cardio</option>
                   <option value="Strength">Strength</option>
                   <option value="Yoga">Yoga</option>
                   <!-- Add more category options here -->
                 </select>
               </div>
-              <div class="form-group mb-3">
-                <label for="equipment">Equipment Required:</label>
-                <select id="equipment">
-             
-                </select>
+              <div class="col-12">
+                <label class="form-label" for="equipment">Equipment Required:</label>
+                <select class="form-select" id="equipment"></select>
               </div>
-              </div>
-              <!-- <div class="form-group mb-3">
-                <label for="class-image">Class Image:</label>
-                <input type="file" id="class-image" />
-              </div> -->
-            </div>
+            </form>
           </div>
+          <!-- <div class="form-group mb-3">
+            <label for="class-image">Class Image:</label>
+            <input type="file" id="class-image" />
+          </div> -->
           <div class="modal-footer">
-            <button
-            id="save"
-            type="button"
-            class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm"
-            onclick="Save()"
-          >
-            Save
-          </button>
-          <button
-            id="modify"
-            type="button"
-            class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm"
-            onclick="Modify()"
-          >
-            Modify
-          </button>
+            <button id="save" type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm" onclick="Save()">Save</button>
+            <button id="modify" type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm" onclick="Modify()">Modify</button>
           </div>
         </div>
       </div>
