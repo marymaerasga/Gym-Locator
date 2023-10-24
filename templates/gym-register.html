@@ -47,7 +47,7 @@
   </head>
 
   <body>
-    <div class="container-fluid bg-primary hero-header" style="height: 100vh">
+    <div class="container-fluid bg-primary hero-header" >
       <div
         class="container d-flex justify-content-center align-items-center py-5 h-100"
       >
@@ -61,7 +61,7 @@
             </div>
             <hr />
             <!-- Step 1: Personal Details -->
-            <div id="personal-details">
+            <div id="personal-details" style="height: 100vh">
               <div class="row">
                 <p>Owner Personal Details</p>
               </div>
@@ -148,24 +148,30 @@
                 />
                 <label for="floatingInput">Address</label>
               </div>
-              <div class="form-floating mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="lat"
-                  placeholder="Latitude"
-                />
-                <label for="floatingInput">Latitude</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="long"
-                  placeholder="Longitude"
-                />
-                <label for="floatingInput">Longitude</label>
-              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lat"
+                      placeholder="Latitude"
+                    />
+                    <label for="floatingInput">Latitude</label>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="long"
+                      placeholder="Longitude"
+                    />
+                    <label for="floatingInput">Longitude</label>
+                  </div>
+                </div>
+                </div>
               <div class="form-floating mb-3">
                 <textarea
                   class="form-control"
@@ -336,7 +342,7 @@
             -->
 
             <!-- Step 4: Business Permit Upload -->
-            <div id="business-permit" style="display: none">
+            <div id="business-permit" style="display: none; height: 100vh">
               <div class="row">
                 <p>Upload Business Permit</p>
               </div>
