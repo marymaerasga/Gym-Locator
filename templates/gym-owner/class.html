@@ -1,564 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Gym Owner - Classes</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta content="" name="description" />
 
-    <!-- Favicon -->
-    <link href="/assets/img/favicon.ico" rel="icon" />
+<head>
+  <meta charset="utf-8" />
+  <title>Gym Owner - Classes</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="" name="keywords" />
+  <meta content="" name="description" />
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Favicon -->
+  <link href="/assets/img/favicon.ico" rel="icon" />
 
-    <!-- Icon Font Stylesheet -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+    rel="stylesheet" />
 
-    <!-- Libraries Stylesheet -->
-    <link href="/assets/lib/animate/animate.min.css" rel="stylesheet" />
-    <link
-      href="/assets/lib/owlcarousel/assets/owl.carousel.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="/assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
-      rel="stylesheet"
-    />
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Libraries Stylesheet -->
+  <link href="/assets/lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="/assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <link href="/assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
-    <!-- Template Stylesheet -->
-    <link href="/assets/css/dashboard.css" rel="stylesheet" />
-  </head>
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
 
-  <body id="page-top">
-    <!-- Page Wrapper -->
-    <div id="wrapper">
-      <!-- Sidebar -->
-      <ul
-        class="navbar-nav sidebar sidebar-dark accordion"
-        id="accordionSidebar"
-        style="background-color: #86b817"
-      >
-        <!-- Sidebar - Brand -->
-        <a
-          class="sidebar-brand d-flex align-items-center justify-content-center"
-          href="index.html"
-        >
-          <div class="sidebar-brand-icon">
-            <i class="fa fa-map-marker-alt me-3"></i>
-          </div>
-          <div class="sidebar-brand-text">Gym Locator</div>
-        </a>
+  <!-- Template Stylesheet -->
+  <link href="/assets/css/dashboard.css" rel="stylesheet" />
+</head>
 
-        <!-- Divider -->
-        <hr class="sidebar-divider my-0" />
-
-        <!-- Nav Item - Dashboard -->
-        <li class="nav-item">
-          <a class="nav-link" href="/GymDashboard">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span>
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/GymProfile">
-            <i class="fas fa-fw fa-user"></i>
-            <span>Profile</span></a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link collapsed"
-            href="#"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseGymInfo"
-            aria-expanded="false"
-            aria-controls="collapseGymInfo"
-          >
-            <i class="fas fa-fw fa-building"></i>
-            <span>Gym Information</span>
-            <i class="fas fa-caret-down ms-auto"></i>
-          </a>
-          <div class="collapse" id="collapseGymInfo">
-            <div>
-              <ul class="nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="/GymDetails">
-                    <i class="fas fa-fw fa-info-circle"></i>
-                    <span>Gym Details</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/GymFacility">
-                    <i class="fas fa-fw fa-building"></i>
-                    <span>Facilities</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/GymAmenities">
-                    <i class="fas fa-fw fa-swimming-pool"></i>
-                    <span>Amenities</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/GymEquipment">
-                    <i class="fas fa-fw fa-dumbbell"></i>
-                    <span>Equipments</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/GymTrainer">
-            <i class="fas fa-fw fa-users"></i>
-            <span>Trainers and Coaches</span></a
-          >
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="/GymClass">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Classes</span></a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-users"></i>
-            <span>Members</span></a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-money-bill-wave"></i>
-            <span>Payments</span>
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-bullhorn"></i>
-            <span>Announcements</span>
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-list-alt"></i>
-            <span>Plans</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-chart-area"></i>
-            <span>Settings</span></a
-          >
-        </li>
-        <hr class="sidebar-divider d-none d-md-block" />
-
-        <div class="text-center d-none d-md-inline">
-          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+<body id="page-top">
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+    <!-- Sidebar -->
+    <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #86b817">
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon">
+          <i class="fa fa-map-marker-alt me-3"></i>
         </div>
-      </ul>
-      <!-- End of Sidebar -->
-      <!-- Content Wrapper -->
-      <div id="content-wrapper" class="d-flex flex-column">
-        <!-- Main Content -->
-        <div id="content">
-          <!-- Topbar -->
-          <nav
-            class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
-          >
-            <!-- Sidebar Toggle (Topbar) -->
-            <button
-              id="sidebarToggleTop"
-              class="btn d-md-none rounded-circle mr-3"
-            >
-              <i class="fa fa-bars"></i>
-            </button>
+        <div class="sidebar-brand-text">Gym Locator</div>
+      </a>
 
-            <!-- Topbar Search -->
-            <form
-              class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search"
-            >
-              <div class="input-group">
-                <input
-                  type="text"
-                  class="form-control bg-light border-0 small"
-                  placeholder="Search for..."
-                  aria-label="Search"
-                  aria-describedby="basic-addon2"
-                />
-                <div class="input-group-append">
-                  <button
-                    class="btn"
-                    type="button"
-                    style="background-color: #86b817"
-                  >
-                    <i class="fas fa-search fa-sm text-white"></i>
-                  </button>
-                </div>
-              </div>
-            </form>
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0" />
 
-            <!-- Topbar Navbar -->
-            <ul class="navbar-nav ml-auto">
-              <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-              <li class="nav-item dropdown no-arrow d-sm-none">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="searchDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <i class="fas fa-search fa-fw"></i>
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item">
+        <a class="nav-link" href="/GymDashboard">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/GymProfile">
+          <i class="fas fa-fw fa-user"></i>
+          <span>Profile</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseGymInfo"
+          aria-expanded="false" aria-controls="collapseGymInfo">
+          <i class="fas fa-fw fa-building"></i>
+          <span>Gym Information</span>
+          <i class="fas fa-caret-down ms-auto"></i>
+        </a>
+        <div class="collapse" id="collapseGymInfo">
+          <div>
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link" href="/GymDetails">
+                  <i class="fas fa-fw fa-info-circle"></i>
+                  <span>Gym Details</span>
                 </a>
-                <!-- Dropdown - Messages -->
-                <div
-                  class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                  aria-labelledby="searchDropdown"
-                >
-                  <form class="form-inline mr-auto w-100 navbar-search">
-                    <div class="input-group">
-                      <input
-                        type="text"
-                        class="form-control bg-light border-0 small"
-                        placeholder="Search for..."
-                        aria-label="Search"
-                        aria-describedby="basic-addon2"
-                      />
-                      <div class="input-group-append">
-                        <button class="btn btn-primary" type="button">
-                          <i class="fas fa-search fa-sm"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
               </li>
-
-              <!-- Nav Item - Alerts -->
-              <li class="nav-item dropdown no-arrow mx-1">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="alertsDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <i class="fas fa-bell fa-fw" style="color: #86b817"></i>
-                  <!-- Counter - Alerts -->
-                  <span class="badge badge-danger badge-counter">3+</span>
+              <li class="nav-item">
+                <a class="nav-link" href="/GymFacility">
+                  <i class="fas fa-fw fa-building"></i>
+                  <span>Facilities</span>
                 </a>
-                <!-- Dropdown - Alerts -->
-                <div
-                  class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                  aria-labelledby="alertsDropdown"
-                >
-                  <h6 class="dropdown-header">Alerts Center</h6>
-                  <a class="dropdown-item d-flex align-items-center" href="#">
-                    <div class="mr-3">
-                      <div class="icon-circle bg-primary">
-                        <i class="fas fa-file-alt text-white"></i>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="small text-gray-500">December 12, 2020</div>
-                      <span class="font-weight-bold"
-                        >Mae Erasga wants to join!</span
-                      >
-                    </div>
-                  </a>
-                  <a
-                    class="dropdown-item text-center small text-gray-500"
-                    href="#"
-                    >Show All Alerts</a
-                  >
-                </div>
               </li>
-
-              <!-- Nav Item - Messages -->
-              <li class="nav-item dropdown no-arrow mx-1">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="messagesDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <i class="fas fa-envelope fa-fw" style="color: #86b817"></i>
-                  <!-- Counter - Messages -->
-                  <span class="badge badge-danger badge-counter">7</span>
+              <li class="nav-item">
+                <a class="nav-link" href="/GymAmenities">
+                  <i class="fas fa-fw fa-swimming-pool"></i>
+                  <span>Amenities</span>
                 </a>
-                <!-- Dropdown - Messages -->
-                <div
-                  class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                  aria-labelledby="messagesDropdown"
-                >
-                  <h6 class="dropdown-header">Message Center</h6>
-                  <a class="dropdown-item d-flex align-items-center" href="#">
-                    <div class="dropdown-list-image mr-3">
-                      <img
-                        class="rounded-circle"
-                        src="/assets//assets/img/bg-hero.jpg"
-                        alt="..."
-                      />
-                      <div class="status-indicator bg-success"></div>
-                    </div>
-                    <div class="font-weight-bold">
-                      <div class="text-truncate">
-                        Hi there! Can I ask something about the promo of your
-                        gym.
-                      </div>
-                      <div class="small text-gray-500">Zeena Marquez · 58m</div>
-                    </div>
-                  </a>
-                  <a
-                    class="dropdown-item text-center small text-gray-500"
-                    href="#"
-                    >Read More Messages</a
-                  >
-                </div>
               </li>
-
-              <div class="topbar-divider d-none d-sm-block"></div>
-
-              <!-- Nav Item - User Information -->
-              <li class="nav-item dropdown no-arrow">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="userDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <span
-                    class="mr-2 d-none d-lg-inline text-gray-600 small"
-                    id="u_name"
-                  ></span>
-                  <img
-                    class="img-profile rounded-circle"
-                    src="/assets/img/gym-2.jpg"
-                  />
+              <li class="nav-item">
+                <a class="nav-link" href="/GymEquipment">
+                  <i class="fas fa-fw fa-dumbbell"></i>
+                  <span>Equipments</span>
                 </a>
-                <!-- Dropdown - User Information -->
-                <div
-                  class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                  aria-labelledby="userDropdown"
-                >
-                  <a class="dropdown-item" href="#">
-                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Profile
-                  </a>
-                  <a class="dropdown-item" href="#">
-                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Settings
-                  </a>
-                  <a class="dropdown-item" href="#">
-                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Activity Log
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <a
-                    class="dropdown-item"
-                    href="/logout"
-                    data-toggle="modal"
-                    data-target="#logoutModal"
-                  >
-                    <i
-                      class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"
-                    ></i>
-                    Logout
-                  </a>
-                </div>
               </li>
             </ul>
-          </nav>
-          <!-- End of Topbar -->
-
-          <!-- Begin Page Content -->
-          <div class="container-fluid mb-4">
-            <div class="row">
-              <h4>Classes</h4>
-            </div>
           </div>
-
-          <div class="container mt-3">
-            <!-- Form to add a new walk-in client -->
-            <div id="add-client-form">
-              <button
-                type="button"
-                class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm"
-             onclick="Add()" >
-                Add Class
-            </div>
-            </form>
-          </div>
-          <div class="container mt-3">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Instructor</th>
-                  <th>Duration</th>
-                  <th>Capacity</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody id="fac">
-               
-              </tbody>
-            </table>
-          </div>
-          <!-- End Begin Page Content-->
         </div>
-        <!-- End of Main Content -->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/GymTrainer">
+          <i class="fas fa-fw fa-users"></i>
+          <span>Trainers and Coaches</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/GymClass">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Classes</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="fas fa-fw fa-users"></i>
+          <span>Members</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="fas fa-fw fa-money-bill-wave"></i>
+          <span>Payments</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="fas fa-fw fa-bullhorn"></i>
+          <span>Announcements</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="fas fa-fw fa-list-alt"></i>
+          <span>Plans</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="fas fa-fw fa-chart-area"></i>
+          <span>Settings</span></a>
+      </li>
+      <hr class="sidebar-divider d-none d-md-block" />
+
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
       </div>
-      <!-- End of Content Wrapper -->
+    </ul>
+    <!-- End of Sidebar -->
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+      <!-- Main Content -->
+      <div id="content">
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <!-- Topbar Search -->
+          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                aria-label="Search" aria-describedby="basic-addon2" />
+              <div class="input-group-append">
+                <button class="btn" type="button" style="background-color: #86b817">
+                  <i class="fas fa-search fa-sm text-white"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+            <li class="nav-item dropdown no-arrow d-sm-none">
+              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-search fa-fw"></i>
+              </a>
+              <!-- Dropdown - Messages -->
+              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                aria-labelledby="searchDropdown">
+                <form class="form-inline mr-auto w-100 navbar-search">
+                  <div class="input-group">
+                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                      aria-label="Search" aria-describedby="basic-addon2" />
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </li>
+
+            <!-- Nav Item - Alerts -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bell fa-fw" style="color: #86b817"></i>
+                <!-- Counter - Alerts -->
+                <span class="badge badge-danger badge-counter">3+</span>
+              </a>
+              <!-- Dropdown - Alerts -->
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                aria-labelledby="alertsDropdown">
+                <h6 class="dropdown-header">Alerts Center</h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-primary">
+                      <i class="fas fa-file-alt text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">December 12, 2020</div>
+                    <span class="font-weight-bold">Mae Erasga wants to join!</span>
+                  </div>
+                </a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+              </div>
+            </li>
+
+            <!-- Nav Item - Messages -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-envelope fa-fw" style="color: #86b817"></i>
+                <!-- Counter - Messages -->
+                <span class="badge badge-danger badge-counter">7</span>
+              </a>
+              <!-- Dropdown - Messages -->
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                aria-labelledby="messagesDropdown">
+                <h6 class="dropdown-header">Message Center</h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image mr-3">
+                    <img class="rounded-circle" src="/assets//assets/img/bg-hero.jpg" alt="..." />
+                    <div class="status-indicator bg-success"></div>
+                  </div>
+                  <div class="font-weight-bold">
+                    <div class="text-truncate">
+                      Hi there! Can I ask something about the promo of your
+                      gym.
+                    </div>
+                    <div class="small text-gray-500">Zeena Marquez · 58m</div>
+                  </div>
+                </a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+              </div>
+            </li>
+
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="u_name"></span>
+                <img class="img-profile rounded-circle" src="/assets/img/gym-2.jpg" />
+              </a>
+              <!-- Dropdown - User Information -->
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Profile
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Settings
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Activity Log
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/logout" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid mb-4">
+          <div class="row">
+            <h4>Classes</h4>
+          </div>
+        </div>
+
+        <div class="container mt-3">
+          <!-- Form to add a new walk-in client -->
+          <div id="add-client-form">
+            <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm"
+              onclick="Add()">
+              Add Class
+          </div>
+          </form>
+        </div>
+        <div class="container mt-3">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Instructor</th>
+                <th>Duration</th>
+                <th>Capacity</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="fac">
+
+            </tbody>
+          </table>
+        </div>
+        <!-- End Begin Page Content-->
+      </div>
+      <!-- End of Main Content -->
     </div>
-    <!-- End of Page Wrapper -->
+    <!-- End of Content Wrapper -->
+  </div>
+  <!-- End of Page Wrapper -->
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-      <i class="fas fa-angle-up"></i>
-    </a>
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
 
-    <!-- Edit Profile Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">Classes</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="Closed()"></button>
-          </div>
-          <div class="modal-body">
-            <form class="row g-3">
-              <div class="col-12">
-                <label class="form-label" for="class-name">Class Name:</label>
-                <input class="form-control" type="hidden" id="c_id" />
-                <input class="form-control" type="text" id="name" required />
-              </div>
-              <div class="col-12">
-                <label class="form-label" for="instructor">Instructor:</label>
-                <select class="form-select" id="instructor"></select>
-              </div>
-              <div class="col-12">
-                <label class="form-label" for="date-time">Date and Time:</label>
-                <input class="form-control" type="datetime-local" id="date" required />
-              </div>
-              <div class="col-12">
-                <label class="form-label" for="duration">Duration (hours):</label>
-                <input class="form-control" type="number" id="duration" step="0.5" min="0.5" required />
-              </div>
-              <div class="col-12">
-                <label class="form-label" for="capacity">Capacity:</label>
-                <input class="form-control" type="number" id="capacity" required />
-              </div>
-              <div class="col-12">
-                <label class="form-label" for="description">Description:</label>
-                <textarea class="form-control" id="description" rows="4"></textarea>
-              </div>
-              <div class="col-12">
-                <label class="form-label" for="category">Category:</label>
-                <select class="form-select" id="category">
-                  <option value="Cardio">Cardio</option>
-                  <option value="Strength">Strength</option>
-                  <option value="Yoga">Yoga</option>
-                  <!-- Add more category options here -->
-                </select>
-              </div>
-              <div class="col-12">
-                <label class="form-label" for="equipment">Equipment Required:</label>
-                <select class="form-select" id="equipment"></select>
-              </div>
-            </form>
-          </div>
-          <!-- <div class="form-group mb-3">
+  <!-- Edit Profile Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Classes</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+            onclick="Closed()"></button>
+        </div>
+        <div class="modal-body">
+          <form class="row g-3">
+            <div class="col-12">
+              <label class="form-label" for="class-name">Class Name:</label>
+              <input class="form-control" type="hidden" id="c_id" />
+              <input class="form-control" type="text" id="name" required />
+            </div>
+            <div class="col-12" id="inslist">
+              <!-- <label class="form-label" for="instructor">Instructor:</label>
+                <select class="form-select" id="instructor"></select> -->
+            </div>
+            <div class="col-12">
+              <label class="form-label" for="date-time">Date and Time:</label>
+              <input class="form-control" type="datetime-local" id="date" required />
+            </div>
+            <div class="col-12">
+              <label class="form-label" for="duration">Duration (hours):</label>
+              <input class="form-control" type="number" id="duration" step="0.5" min="0.5" required />
+            </div>
+            <div class="col-12">
+              <label class="form-label" for="capacity">Capacity:</label>
+              <input class="form-control" type="number" id="capacity" required />
+            </div>
+            <div class="col-12">
+              <label class="form-label" for="description">Description:</label>
+              <textarea class="form-control" id="description" rows="4"></textarea>
+            </div>
+            <div class="col-12">
+              <label class="form-label" for="category">Category:</label>
+              <select class="form-select" id="category">
+                <option value="Cardio">Cardio</option>
+                <option value="Strength">Strength</option>
+                <option value="Yoga">Yoga</option>
+                <!-- Add more category options here -->
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label" for="equipment">Equipment Required:</label>
+              <select class="form-select" id="equipment"></select>
+            </div>
+          </form>
+        </div>
+        <!-- <div class="form-group mb-3">
             <label for="class-image">Class Image:</label>
             <input type="file" id="class-image" />
           </div> -->
-          <div class="modal-footer">
-            <button id="save" type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm" onclick="Save()">Save</button>
-            <button id="modify" type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm" onclick="Modify()">Modify</button>
-          </div>
+        <div class="modal-footer">
+          <button id="save" type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm"
+            onclick="Save()">Save</button>
+          <button id="modify" type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm"
+            onclick="Modify()">Modify</button>
         </div>
       </div>
     </div>
+  </div>
 
 
-    <div
-    class="modal fade"
-    id="deleteModal"
-    data-bs-backdrop="static"
-    data-bs-keyboard="false"
-    tabindex="-1"
-    aria-labelledby="staticBackdropLabel"
-    aria-hidden="true"
-  >
+  <div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="staticBackdropLabel">
             Delete Class
           </h1>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-            onclick="Closed()"
-          ></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+            onclick="Closed()"></button>
         </div>
         <div class="modal-body">
           <div class="row">
             <div class="form-floating mb-3">
-              <input
-                type="hidden"
-                class="form-control rounded-pill"
-                id="c_id1"
-              />
-              <input
-                type="text"
-                class="form-control rounded-pill"
-                id="Name1"
-                readonly
-              />
+              <input type="hidden" class="form-control rounded-pill" id="c_id1" />
+              <input type="text" class="form-control rounded-pill" id="Name1" readonly />
               <label for="Name1">Name</label>
             </div>
           </div>
         </div>
         <div class="modal-footer">
-          <button
-            type="button"
-            class="btn-primary text-white shadow-sm"
-            onclick="Remove()"
-          >
+          <button type="button" class="btn-primary text-white shadow-sm" onclick="Remove()">
             Delete
           </button>
         </div>
@@ -566,69 +428,49 @@
     </div>
   </div>
 
-    <!-- Logout Modal-->
-    <div
-      class="modal fade"
-      id="logoutModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-            <button
-              class="close"
-              type="button"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            Select "Logout" below if you are ready to end your current session.
-          </div>
-          <div class="modal-footer">
-            <button
-              class="btn btn-secondary"
-              type="button"
-              data-dismiss="modal"
-            >
-              Cancel
-            </button>
-            <a class="btn btn-primary" href="login.html">Logout</a>
-          </div>
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Select "Logout" below if you are ready to end your current session.
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">
+            Cancel
+          </button>
+          <a class="btn btn-primary" href="login.html">Logout</a>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/lib/wow/wow.min.js"></script>
-    <script src="/assets/lib/easing/easing.min.js"></script>
-    <script src="/assets/lib/waypoints/waypoints.min.js"></script>
-    <script src="/assets/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="/assets/lib/tempusdominus/js/moment.min.js"></script>
-    <script src="/assets/lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="/assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/lib/wow/wow.min.js"></script>
+  <script src="/assets/lib/easing/easing.min.js"></script>
+  <script src="/assets/lib/waypoints/waypoints.min.js"></script>
+  <script src="/assets/lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="/assets/lib/tempusdominus/js/moment.min.js"></script>
+  <script src="/assets/lib/tempusdominus/js/moment-timezone.min.js"></script>
+  <script src="/assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="/assets/js/main.js"></script>
-    <script src="/assets/js/dashboard.js"></script>
+  <!-- Template Javascript -->
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/dashboard.js"></script>
 
-    <script
-    src="https://code.jquery.com/jquery-3.6.1.min.js"
-    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-    crossorigin="anonymous"
-  ></script>
-  <script
-    type="text/javascript"
-    src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"
-  ></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script type="text/javascript"
+    src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
 
@@ -651,21 +493,64 @@
 
     function Trainer() {
       var value = $.cookie("id");
-      $("#instructor").empty();
-      $("#instructor").append(`
-      <option value="">Select Instructor</option>
+      $("#inslist").empty();
+      $("#inslist").append(`
+      <label class="form-label" for="instructor">Instructor:</label>
       `);
       $.get("/api/get_trainer", function (index) {
         var result = JSON.parse(index).item;
         $.each(result, function (_, v) {
           if (v.GymID == value) {
-          $("#instructor").append(`
-          <option value="`+v.ID+`">`+v.LastName+`  `+v.FirstName+`</option>
+            $("#inslist").append(`
+            <input type="checkbox" id="male" name="checkbox1"
+                  onclick="Ins('`+ v.ID + `')" />
+                  <label for="male">`+ v.LastName + ` ` + v.FirstName + `</label>
       `);
           }
         });
       });
     }
+
+    function Ins(test) {
+      var cart = localStorage.getItem("cart");
+      //  * Initial adding of item in the cart
+      if (cart === null || cart === "" || cart === " ") {
+        cart = [];
+
+        cart.push({
+          trainer: test,
+        });
+        localStorage.setItem("cart", JSON.stringify(cart));
+      }
+      else {
+        cart = JSON.parse(cart);
+        var added = false;
+        //* Adding the quantity of the same item in the cart
+        $.each(cart, function (k, v) {
+          if (v.trainer == test) {
+
+            added = true;
+          }
+        });
+        var cart = JSON.parse(localStorage.getItem("cart"));
+        cart = cart.filter((data) => data.trainer != test);
+        localStorage.removeItem("cart");
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        if (cart == null || cart == "" || cart == " ") {
+          localStorage.removeItem("cart")
+        }
+
+        //* Adding of another item to cart
+        if (!added) {
+          cart.push({
+            trainer: test
+          });
+          localStorage.setItem("cart", JSON.stringify(cart));
+        }
+      }
+    }
+
 
 
     function Equipment() {
@@ -678,44 +563,40 @@
         var result = JSON.parse(index).item;
         $.each(result, function (_, v) {
           if (v.GymID == value) {
-          $("#equipment").append(`
-          <option value="`+v.ID+`">`+v.Name+`</option>
+            $("#equipment").append(`
+          <option value="`+ v.ID + `">` + v.Name + `</option>
       `);
           }
         });
       });
     }
 
-    function Class(){
+    function Class() {
       var value = $.cookie("id");
-        $("#fac").empty();
-        $.get("/api/get_class", function (index) {
-          var result = JSON.parse(index).item;
-          $.each(result, function (_, v) {
-            if (v.GymID == value) {
-              console.log(v)
-              $("#fac").append(
-                `<tr>
+      $("#fac").empty();
+      $.get("/api/get_class", function (index) {
+        var result = JSON.parse(index).item;
+        var classa = JSON.parse(index).class;
+        $.each(result, function (_, v) {
+          if (v.GymID == value) {
+            $("#fac").append(
+              `<tr>
                 <td>` +
-                  v.Name +
-                  `</td>
+              v.Name +
+              `</td>
+                <td id="train-`+ v.ID + `"></td>
                 <td>` +
-                  v.Trainer.LastName +
-                  `  ` +
-                  v.Trainer.FirstName +
-                  `</td>
-                <td>` +
-                  v.Duration +
-                  `</td>
+              v.Duration +
+              `</td>
                   <td>` +
-                  v.Capacity +
-                  `</td>
+              v.Capacity +
+              `</td>
                   <td>  <button
                       type="button"
                       class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm"
                       onclick="Edit(` +
-                  v.ID +
-                  `)"
+              v.ID +
+              `)"
                       >
                       Edit
                       </button>
@@ -725,18 +606,27 @@
                       type="button"
                       class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm"
                       onclick="Delete(` +
-                  v.ID +
-                  `)"
+              v.ID +
+              `)"
                       >
                       Delete
                       </button>
                       </td> 
                   </tr>
                 `
-              );
+            );
+          }
+          $.each(classa, function (_, k) {
+            console.log(k)
+            if (k.ClassesID == v.ID) {
+              $("#train-" + v.ID).append(`
+            <li>`+ k.Trainer.FirstName + ` ` + k.Trainer.LastName + `</li>
+            `)
             }
-          });
+          })
         });
+
+      });
     }
 
 
@@ -756,7 +646,7 @@
     function Save() {
       var value = $.cookie("id");
       var name = $("#name").val();
-      var instructor = $("#instructor").val();
+      var instructor = localStorage.getItem("cart")
       var date = $("#date").val();
       var duration = $("#duration").val();
       var capacity = $("#capacity").val();
@@ -771,7 +661,7 @@
         capacity == "" ||
         description == "" ||
         category == "" ||
-        equipment == "" 
+        equipment == ""
       ) {
         Swal.fire({
           toast: true,
@@ -804,6 +694,7 @@
               showConfirmButton: false,
               timer: 3000,
             }).then(function () {
+              localStorage.removeItem("cart")
               window.location.reload();
             });
           },
@@ -813,13 +704,17 @@
 
     function Add() {
       $("#staticBackdrop").modal("show");
+
       document.getElementById("modify").style.visibility = "hidden";
+
       document.getElementById("save").style.visibility = "block";
+
     }
 
     function Edit(id) {
       document.getElementById("save").style.visibility = "hidden";
       document.getElementById("modify").style.visibility = "block";
+
       $("#staticBackdrop").modal("show");
       $.get("/api/get_class", function (index) {
         var result = JSON.parse(index).item;
@@ -827,7 +722,6 @@
           if (id == v.ID) {
             $("#c_id").val(v.ID);
             $("#name").val(v.Name);
-            $("#instructor").val(v.TrainerID);
             $("#date").val(v.Date);
             $("#duration").val(v.Duration);
             $("#capacity").val(v.Capacity);
@@ -856,7 +750,6 @@
       var c_id = $("#c_id").val();
       var value = $.cookie("id");
       var name = $("#name").val();
-      var instructor = $("#instructor").val();
       var date = $("#date").val();
       var duration = $("#duration").val();
       var capacity = $("#capacity").val();
@@ -866,13 +759,12 @@
 
       if (
         name == "" ||
-        instructor == "" ||
         date == "" ||
         duration == "" ||
         capacity == "" ||
         description == "" ||
         category == "" ||
-        equipment == "" 
+        equipment == ""
       ) {
         Swal.fire({
           toast: true,
@@ -889,7 +781,6 @@
             c_id: c_id,
             id: value,
             name: name,
-            instructor: instructor,
             date: date,
             duration: duration,
             capacity: capacity,
@@ -935,5 +826,6 @@
       });
     }
   </script>
-  </body>
+</body>
+
 </html>

@@ -16,7 +16,7 @@ func Login(w http.ResponseWriter, r *http.Request) {
 	db := GormDB()
 	email := r.FormValue("email")
 	username := r.FormValue("username")
-	id := r.FormValue("id")
+	// id := r.FormValue("id")
 	password := r.FormValue("password")
 	position := r.FormValue("position")
 
@@ -63,8 +63,8 @@ func Login(w http.ResponseWriter, r *http.Request) {
 			user := models.Client{}
 			report := []models.Client{}
 			
-			db.Where("username = ? && gym_id = ?", username,id).Find(&user)
-			db.Where("username = ? && gym_id = ?", username,id).Find(&report)
+			db.Where("username = ? ", username).Find(&user)
+			db.Where("username = ? ", username).Find(&report)
 		
 			db.Where("id", user.ID).Find(&user)
 		
@@ -166,7 +166,7 @@ func CheckPasswordHash(pass, hash string) bool {
 }
 
 func GormDB() *gorm.DB {
-	dsn := "root:GroupNB2023@tcp(127.0.0.1:3306)/gym?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "root:a@tcp(127.0.0.1:3306)/gym?charset=utf8mb4&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 
 	if err != nil {

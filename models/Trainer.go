@@ -13,8 +13,6 @@ type Trainer struct {
 	Address		string
 	DOB			string
 	Gender		string
-	Certifications		string
-	Specialty	string
 	Experience	string
 	Biography	string
 	Password	string

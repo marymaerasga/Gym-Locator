@@ -6,8 +6,6 @@ type Classes struct {
 	ID       uint `gorm:"primaryKey"`
 	Gym		 	Gym
 	GymID	 	string
-	Trainer		Trainer
-	TrainerID	string
 	Name	 	string
 	Date	  	string
 	Duration	string
