@@ -245,6 +245,11 @@ func APIHandler(w http.ResponseWriter, r *http.Request) {
 		DeleteAnnouncement(w, r)
 		return
 	}
+
+	if strings.HasPrefix(r.URL.Path, "update") {
+		UpdateBooking(w, r)
+		return
+	}
 	
 	
 	

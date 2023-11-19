@@ -22,6 +22,7 @@ func CreateBooking(w http.ResponseWriter, r *http.Request) {
 	product.GymID = gid
 	product.ClientID = id
 	product.TrainerID = trainer
+	product.Status = "Pending"
 
 	db.Save(&product)
 
@@ -64,6 +65,27 @@ func EditBooking(w http.ResponseWriter, r *http.Request) {
 	product.GymID = gid
 	product.ClientID = id
 	product.TrainerID = trainer
+	db.Save(&product)
+
+
+}
+
+
+func UpdateBooking(w http.ResponseWriter, r *http.Request) {
+
+	db := GormDB()
+	id, _ := strconv.Atoi(r.FormValue("id"))
+	product := models.Booking{}
+	
+	pos := r.FormValue("pos")
+	
+	db.Where("id", id).Find(&product)
+
+	if pos == "Accept"{
+		product.Status = "Accepted"
+	}else{
+		product.Status = "Rejected"
+	}
 	db.Save(&product)
 
 

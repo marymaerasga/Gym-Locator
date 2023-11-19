@@ -61,6 +61,8 @@ func Handlers() {
 	http.HandleFunc("/ClientDashboard", views.UserDashboardHandler)
 	http.HandleFunc("/ClientProfile", views.UserProfileHandler)
 	http.HandleFunc("/ClientBooking", views.UserBookingHandler)
+	http.HandleFunc("/ClientReminder", views.UserReminderHandler)
+	http.HandleFunc("/ClientAnnouncements", views.UserAnnouncementHandler)
 	http.HandleFunc("/Login", views.SignHandler)
 	http.HandleFunc("/api/", api.APIHandler)
 	http.HandleFunc("/logout", views.LogOutHandler)

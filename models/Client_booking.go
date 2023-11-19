@@ -10,6 +10,7 @@ type Booking struct {
 	ClientID	 string
 	Trainer		 Trainer
 	TrainerID	 string
+	Status		 string
 	Date		 string
 	Deleted  gorm.DeletedAt
 }
