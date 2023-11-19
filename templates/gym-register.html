@@ -1,559 +1,634 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>GYM Register</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta content="" name="description" />
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon" />
+<head>
+  <meta charset="utf-8" />
+  <title>GYM Register</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="" name="keywords" />
+  <meta content="" name="description" />
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon" />
 
-    <!-- Icon Font Stylesheet -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+    rel="stylesheet" />
 
-    <!-- Libraries Stylesheet -->
-    <link href="/assets/lib/animate/animate.min.css" rel="stylesheet" />
-    <link
-      href="/assets/lib/owlcarousel/assets/owl.carousel.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="/assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
-      rel="stylesheet"
-    />
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Libraries Stylesheet -->
+  <link href="/assets/lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="/assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <link href="/assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
-    <!-- Template Stylesheet -->
-    <link href="/assets/css/style.css" rel="stylesheet" />
-  </head>
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
 
-  <body>
-    <div class="container-fluid bg-primary hero-header" >
-      <div
-        class="container d-flex justify-content-center align-items-center py-5 h-100"
-      >
-        <div class="card bg-transparent border-0">
-          <div id="registration-form">
-            <div class="row mb-2">
-              <h2 class="text-white">
-                Welcome to <span style="color: #86b817">GYM Locator</span>
-              </h2>
-              <p class="m-0 mt-2">Please sign up to continue</p>
+  <!-- Template Stylesheet -->
+  <link href="/assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container-fluid bg-primary hero-header">
+    <div class="container d-flex justify-content-center align-items-center py-5 h-100">
+      <div class="card bg-transparent border-0">
+        <div id="registration-form">
+          <div class="row mb-2">
+            <h2 class="text-white">
+              Welcome to <span style="color: #86b817">GYM Locator</span>
+            </h2>
+            <p class="m-0 mt-2">Please sign up to continue</p>
+          </div>
+          <hr />
+          <!-- Step 1: Personal Details -->
+          <div id="personal-details" style="height: 100vh">
+            <div class="row">
+              <p>Owner Personal Details</p>
             </div>
-            <hr />
-            <!-- Step 1: Personal Details -->
-            <div id="personal-details" style="height: 100vh">
-              <div class="row">
-                <p>Owner Personal Details</p>
-              </div>
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <div class="form-floating">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="pname"
-                      placeholder="Firstname"
-                    />
-                    <label for="floatingFirstname">First name</label>
-                  </div>
-                </div>
-                <div class="col-md-6 mb-3">
-                  <div class="form-floating">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="lname"
-                      placeholder="Lastname"
-                    />
-                    <label for="floatingLastname">Last name</label>
-                  </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="pname" placeholder="Firstname" />
+                  <label for="floatingFirstname">First name</label>
                 </div>
               </div>
-              <div class="form-floating mb-3">
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  placeholder="name@example.com"
-                />
-                <label for="floatingInput">Email address</label>
+              <div class="col-md-6 mb-3">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="lname" placeholder="Lastname" />
+                  <label for="floatingLastname">Last name</label>
+                </div>
               </div>
-              <div class="form-floating mb-3">
-                <input
-                  type="password"
-                  class="form-control"
-                  id="password"
-                  placeholder="Password"
-                />
-                <label for="floatingPassword">Password</label>
-              </div>
-              <button
-                type="button"
-                id="next-button-1"
-                class="btn btn-primary btn-block w-100 mx-auto mt-2"
-              >
-                Next
-              </button>
             </div>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="email" placeholder="name@example.com" />
+              <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="password" placeholder="Password" />
+              <label for="floatingPassword">Password</label>
+            </div>
+            <button type="button" id="next-button-1" class="btn btn-primary btn-block w-100 mx-auto mt-2">
+              Next
+            </button>
+          </div>
 
-            <!-- Step 2: Gym Details -->
-            <div id="gym-details" style="display: none">
-              <div class="row">
-                <p>Gym Information</p>
-              </div>
-              <div class="form-floating mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="gname"
-                  placeholder="Name"
-                />
-                <label for="floatingInput">Name</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="contact"
-                  placeholder="Contact Number"
-                />
-                <label for="floatingInput">Contact Number</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="location"
-                  placeholder="Complete Location"
-                />
-                <label for="floatingInput">Address</label>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <div class="form-floating mb-3">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="lat"
-                      placeholder="Latitude"
-                    />
-                    <label for="floatingInput">Latitude</label>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="form-floating mb-3">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="long"
-                      placeholder="Longitude"
-                    />
-                    <label for="floatingInput">Longitude</label>
-                  </div>
-                </div>
-                </div>
-              <div class="form-floating mb-3">
-                <textarea
-                  class="form-control"
-                  id="desc"
-                  rows="4"
-                  placeholder="Gym Description"
-                ></textarea>
-                <label for="gymDescription">Gym Description</label>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <div class="row">
-                    <div class="col">
-                      <div class="mb-3">
-                        <label for="daysOpen">Days Open</label>
-                        <select
-                          class="form-select"
-                          aria-label="Default select example"
-                          id="dfrom"
-                        >
-                          <option value="Monday">Monday</option>
-                          <option value="Tuesday">Tuesday</option>
-                          <option value="Wednesday">Wednesday</option>
-                          <option value="Thursday">Thursday</option>
-                          <option value="Friday">Friday</option>
-                          <option value="Saturday">Saturday</option>
-                          <option value="Sunday">Sunday</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="mb-3">
-                        <label for="toOpen">To</label>
-                        <select
-                          class="form-select"
-                          aria-label="Default select example"
-                          id="dto"
-                        >
-                          <option value="Monday">Monday</option>
-                          <option value="Tuesday">Tuesday</option>
-                          <option value="Wednesday">Wednesday</option>
-                          <option value="Thursday">Thursday</option>
-                          <option value="Friday">Friday</option>
-                          <option value="Saturday">Saturday</option>
-                          <option value="Sunday">Sunday</option>
-                        </select>
-                      </div>
+          <!-- Step 2: Gym Details -->
+          <div id="gym-details" style="display: none">
+            <div class="row">
+              <p>Gym Information</p>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="gname" placeholder="Name" />
+              <label for="floatingInput">Name</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="contact" placeholder="Contact Number" />
+              <label for="floatingInput">Contact Number</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="location" placeholder="Complete Location" />
+              <label for="floatingInput">Address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <textarea class="form-control" id="desc" rows="4" placeholder="Gym Description"></textarea>
+              <label for="gymDescription">Gym Description</label>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="row">
+                  <div class="col">
+                    <div class="mb-3">
+                      <label for="daysOpen">Days Open</label>
+                      <select class="form-select" aria-label="Default select example" id="dfrom">
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                        <option value="Sunday">Sunday</option>
+                      </select>
                     </div>
                   </div>
-                </div>
-                <div class="col">
-                  <div class="row">
-                    <div class="col">
-                      <div class="mb-3">
-                        <label for="openingTime">Opening Time</label>
-                        <input
-                          type="time"
-                          class="form-control custom-form-control"
-                          id="otime"
-                        />
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="mb-3">
-                        <label for="closingTime">Closing Time</label>
-                        <input
-                          type="time"
-                          class="form-control custom-form-control"
-                          id="ctime"
-                        />
-                      </div>
+                  <div class="col">
+                    <div class="mb-3">
+                      <label for="toOpen">To</label>
+                      <select class="form-select" aria-label="Default select example" id="dto">
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                        <option value="Sunday">Sunday</option>
+                      </select>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col">
-                  <button
-                    type="button"
-                    id="previous-button-1"
-                    class="btn btn-primary btn-block w-100 mx-auto mt-2"
-                  >
-                    Previous
-                  </button>
-                </div>
-                <div class="col">
-                  <button
-                    type="button"
-                    id="next-button-2"
-                    class="btn btn-primary btn-block w-100 mx-auto mt-2"
-                  >
-                    Next
-                  </button>
+              <div class="col">
+                <div class="row">
+                  <div class="col">
+                    <div class="mb-3">
+                      <label for="openingTime">Opening Time</label>
+                      <input type="time" class="form-control custom-form-control" id="otime" />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="mb-3">
+                      <label for="closingTime">Closing Time</label>
+                      <input type="time" class="form-control custom-form-control" id="ctime" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-
-            <!-- Step 3: Gym Type 
-            <div id="gym-type" style="display: none">
-              <div class="row">
-                <p>Type of Gym offered</p>
+            <div class="row">
+              <div class="col">
+                <button type="button" id="previous-button-1" class="btn btn-primary btn-block w-100 mx-auto mt-2">
+                  Previous
+                </button>
               </div>
-              <div class="form-floating mb-3">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="personalTraining"
-                    name="personalTraining"
-                  />
-                  <label class="form-check-label" for="personalTraining">
-                    Personal Training
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="groupClasses"
-                    name="groupClasses"
-                  />
-                  <label class="form-check-label" for="groupClasses">
-                    Group Classes
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="sauna"
-                    name="sauna"
-                  />
-                  <label class="form-check-label" for="sauna"> Sauna </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="swimmingPool"
-                    name="swimmingPool"
-                  />
-                  <label class="form-check-label" for="swimmingPool">
-                    Swimming Pool
-                  </label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <button
-                    type="button"
-                    id="previous-button-2"
-                    class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill"
-                  >
-                    Previous
-                  </button>
-                </div>
-                <div class="col">
-                  <button
-                    type="button"
-                    id="next-button-3"
-                    class="btn btn-primary btn-block w-100 mx-auto mt-2 rounded-pill"
-                  >
-                    Next
-                  </button>
-                </div>
+              <div class="col">
+                <button type="button" id="next-button-2" class="btn btn-primary btn-block w-100 mx-auto mt-2">
+                  Next
+                </button>
               </div>
             </div>
-            -->
+          </div>
 
-            <!-- Step 4: Business Permit Upload -->
-            <div id="business-permit" style="display: none; height: 100vh">
-              <div class="row">
-                <p>Upload Business Permit</p>
+
+          <!-- Step 4: Business Permit Upload -->
+          <div id="business-permit" style="display: none; height: 100vh">
+            <div class="row">
+              <p>Upload Business Permit</p>
+            </div>
+            <label for="businessPermit">Select a PDF, JPG, or PNG file:</label>
+            <input type="file" id="businessPermit" name="businessPermit" accept=".pdf, .jpg, .png" required />
+
+            <br />
+            <br />
+            <div class="row">
+              <div class="col">
+                <button type="button" id="previous-button-2" class="btn btn-primary btn-block w-100 mx-auto mt-2">
+                  Previous
+                </button>
               </div>
-              <label for="businessPermit"
-                >Select a PDF, JPG, or PNG file:</label
-              >
-              <input
-                type="file"
-                id="businessPermit"
-                name="businessPermit"
-                accept=".pdf, .jpg, .png"
-                required
-              />
-              <!---
-              <div class="form-floating mb-3 mt-3">
-                <textarea
-                  class="form-control rounded-pill"
-                  id="terms"
-                  rows="4"
-                  placeholder="Terms and Conditions"
-                ></textarea>
-                <label for="termsAndConditions">Terms and Conditions</label>
-              </div>
-              <div class="form-floating">
-                <input
-                  type="url"
-                  class="form-control rounded-pill"
-                  id="policy"
-                  placeholder="Privacy Policy URL"
-                />
-                <label for="privacyPolicyUrl">Privacy Policy</label>
-              </div>
-              -->
-              <br />
-              <br />
-              <div class="row">
-                <div class="col">
-                  <button
-                    type="button"
-                    id="previous-button-2"
-                    class="btn btn-primary btn-block w-100 mx-auto mt-2"
-                  >
-                    Previous
-                  </button>
-                </div>
-                <div class="col">
-                  <button
-                    type="submit"
-                    class="btn btn-primary btn-block w-100 mx-auto mt-2"
-                    onclick="Submit()"
-                  >
-                    Sign up
-                  </button>
-                </div>
+              <div class="col">
+                <button type="submit" class="btn btn-primary btn-block w-100 mx-auto mt-2" onclick="Submit()">
+                  Sign up
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Back to Top -->
-    <a href="/" class="btn btn-lg btn-primary btn-lg-square back-to-top"
-      ><i class="bi bi-arrow-left"></i
-    ></a>
-    <script
-      src="https://code.jquery.com/jquery-3.6.1.min.js"
-      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      type="text/javascript"
-      src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"
-    ></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <div class="card">
+    <div class="container">
+      <div id="map"></div>
+    </div>
+  </div>
 
-    <script>
-      const form = document.querySelector("#registration-form");
-      const personalDetailsSection =
-        document.querySelector("#personal-details");
-      const gymDetailsSection = document.querySelector("#gym-details");
-      const businessPermitSection = document.querySelector("#business-permit");
+  <!-- Back to Top -->
+  <a href="/" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-left"></i></a>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script type="text/javascript"
+    src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-      function hideSection(section) {
-        section.style.display = "none";
+  <script>
+    const form = document.querySelector("#registration-form");
+    const personalDetailsSection =
+      document.querySelector("#personal-details");
+    const gymDetailsSection = document.querySelector("#gym-details");
+    const businessPermitSection = document.querySelector("#business-permit");
+
+    function hideSection(section) {
+      section.style.display = "none";
+    }
+
+    function showSection(section) {
+      section.style.display = "block";
+    }
+
+    function goToNextStep(currentSection, nextSection) {
+      hideSection(currentSection);
+      showSection(nextSection);
+    }
+
+    function goToPreviousStep(currentSection, previousSection) {
+      hideSection(currentSection);
+      showSection(previousSection);
+    }
+
+    const nextButton1 = document.querySelector("#next-button-1");
+    nextButton1.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      goToNextStep(personalDetailsSection, gymDetailsSection);
+    });
+
+    const previousButton1 = document.querySelector("#previous-button-1");
+    previousButton1.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      goToPreviousStep(gymDetailsSection, personalDetailsSection);
+    });
+
+    const nextButton2 = document.querySelector("#next-button-2");
+    nextButton2.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      goToNextStep(gymDetailsSection, businessPermitSection);
+    });
+
+    const previousButton2 = document.querySelector("#previous-button-2");
+    previousButton2.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      goToPreviousStep(businessPermitSection, gymDetailsSection);
+    });
+  </script>
+
+  <script>
+    function Submit() {
+      var name = $("#pname").val();
+      var lname = $("#lname").val();
+      var email = $("#email").val();
+      var password = $("#password").val();
+      var gname = $("#gname").val();
+      var contact = $("#contact").val();
+      var location = $("#location").val();
+      var lat = localStorage.getItem("lat")
+      var long = localStorage.getItem("lang")
+      var desc = $("#desc").val();
+      var dfrom = $("#dfrom").val();
+      var dto = $("#dto").val();
+      var otime = $("#otime").val();
+      var ctime = $("#ctime").val();
+      var terms = $("#terms").val();
+      var policy = $("#policy").val();
+      if (
+        name == "" ||
+        lname == "" ||
+        email == "" ||
+        password == "" ||
+        gname == "" ||
+        contact == "" ||
+        location == "" ||
+        desc == "" ||
+        dfrom == "" ||
+        dto == "" ||
+        otime == "" ||
+        ctime == "" ||
+        terms == "" ||
+        lat == "" ||
+        long == "" ||
+        policy == ""
+      ) {
+        Swal.fire({
+          toast: true,
+          position: "center",
+          icon: "warning",
+          title: "Please Complete Required Details",
+          showConfirmButton: false,
+          timer: 3000,
+        });
+      } else {
+        $.ajax({
+          url: "/api/user",
+          data: {
+            name: name,
+            lname: lname,
+            email: email,
+            password: password,
+            gname: gname,
+            contact: contact,
+            location: location,
+            desc: desc,
+            dfrom: dfrom,
+            dto: dto,
+            otime: otime,
+            ctime: ctime,
+            type: "Test",
+            terms: terms,
+            policy: policy,
+            lat: lat,
+            long: long,
+          },
+          success: function () {
+            Swal.fire({
+              toast: true,
+              position: "center",
+              icon: "success",
+              title: "Successful Registration",
+              showConfirmButton: false,
+              timer: 3000,
+            }).then(function () {
+              window.location.replace("/");
+            });
+          },
+        });
       }
+    }
+  </script>
 
-      function showSection(section) {
-        section.style.display = "block";
-      }
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBw1K86ZgpsleRBJcd_uA6F9O8dhf7gMl8&callback=initMap&libraries=places&v=weekly"
+    defer></script>
 
-      function goToNextStep(currentSection, nextSection) {
-        hideSection(currentSection);
-        showSection(nextSection);
-      }
-
-      function goToPreviousStep(currentSection, previousSection) {
-        hideSection(currentSection);
-        showSection(previousSection);
-      }
-
-      const nextButton1 = document.querySelector("#next-button-1");
-      nextButton1.addEventListener("click", (event) => {
-        event.preventDefault();
-
-        goToNextStep(personalDetailsSection, gymDetailsSection);
+  <script>
+    function initMap() {
+      const map = new google.maps.Map(document.getElementById("map"), {
+        mapTypeControl: false,
+        zoom: 15,
+        center: new google.maps.LatLng(14.5454, 121.0687),
+        mapTypeId: "roadmap",
       });
 
-      const previousButton1 = document.querySelector("#previous-button-1");
-      previousButton1.addEventListener("click", (event) => {
-        event.preventDefault();
+      new AutocompleteDirectionsHandler(map);
 
-        goToPreviousStep(gymDetailsSection, personalDetailsSection);
-      });
+      const iconBase =
+        "https://fonts.googleapis.com/css2?family=Material+Icons";
+      const icons = {
+        Restaurant: {
+          name: "Restaurant",
+          icon: "assets/img/RESTAURANT.png",
+        },
+        School: {
+          name: "School",
+          icon: "assets/img/SCHOOL.png",
+        },
+        Hotel: {
+          name: "Hotel",
+          icon: "assets/img/HOTEL.png",
+        },
+        Store: {
+          name: "Store",
+          icon: "assets/img/STORE.png",
+        },
+        Landmark: {
+          name: "Landmark",
+          icon: "assets/img/LANDMARK.png",
+        },
+      };
 
-      const nextButton2 = document.querySelector("#next-button-2");
-      nextButton2.addEventListener("click", (event) => {
-        event.preventDefault();
 
-        goToNextStep(gymDetailsSection, businessPermitSection);
-      });
+      const showLocationBtn = document.getElementById("showLocationBtn");
 
-      const previousButton2 = document.querySelector("#previous-button-2");
-      previousButton2.addEventListener("click", (event) => {
-        event.preventDefault();
+      // Check if geolocation is supported by the browser
+      document.addEventListener("DOMContentLoaded", function () {
+        if ("geolocation" in navigator) {
+          const isMobile = /iPhone|iPad|iPod|Android/i.test(
+            navigator.userAgent
+          );
 
-        goToPreviousStep(businessPermitSection, gymDetailsSection);
-      });
-    </script>
-
-    <script>
-      function Submit() {
-        var name = $("#pname").val();
-        var lname = $("#lname").val();
-        var email = $("#email").val();
-        var password = $("#password").val();
-        var gname = $("#gname").val();
-        var contact = $("#contact").val();
-        var location = $("#location").val();
-        var lat = $("#lat").val();
-        var long = $("#long").val();
-        var desc = $("#desc").val();
-        var dfrom = $("#dfrom").val();
-        var dto = $("#dto").val();
-        var otime = $("#otime").val();
-        var ctime = $("#ctime").val();
-        var terms = $("#terms").val();
-        var policy = $("#policy").val();
-        if (
-          name == "" ||
-          lname == "" ||
-          email == "" ||
-          password == "" ||
-          gname == "" ||
-          contact == "" ||
-          location == "" ||
-          desc == "" ||
-          dfrom == "" ||
-          dto == "" ||
-          otime == "" ||
-          ctime == "" ||
-          terms == "" ||
-          lat == "" ||
-          long == "" ||
-          policy == ""
-        ) {
-          Swal.fire({
-            toast: true,
-            position: "center",
-            icon: "warning",
-            title: "Please Complete Required Details",
-            showConfirmButton: false,
-            timer: 3000,
-          });
+          // const eventType = isMobile ? "touchstart" : "click";
+          // showLocationBtn.addListener(eventType, showUserLocation);
         } else {
-          $.ajax({
-            url: "/api/user",
-            data: {
-              name: name,
-              lname: lname,
-              email: email,
-              password: password,
-              gname: gname,
-              contact: contact,
-              location: location,
-              desc: desc,
-              dfrom: dfrom,
-              dto: dto,
-              otime: otime,
-              ctime: ctime,
-              type: "Test",
-              terms: terms,
-              policy: policy,
-              lat: lat,
-              long: long,
-            },
-            success: function () {
+          console.error("Geolocation is not supported by this browser.");
+          alert("Geolocation is not supported by this browser.");
+        }
+      });
+
+      function getdata(id) {
+
+        $("#pic").empty()
+        var a = 0;
+        $.get("/api/picture", function (index) {
+          var result = JSON.parse(index).item;
+          $.each(result, function (_, v) {
+            if (v.ReportID == id) {
+              a += parseInt(1)
+              if (parseInt(a) <= 3) {
+                $("#pic").append(`
+              <div >
+                <img src="`+ v.Picture + `" style="width: 100px; height: 100px;" alt="">
+              </div>
+              `)
+              }
+
+              $("#links").append(`
+              <div class="datainfo">
+                <span>`+ v.Name + `</span>
+                <span>`+ v.Comment + `</span>
+                <span>`+ v.Rating + `</span>
+              </div>
+              `)
+
+            }
+          })
+
+        })
+      }
+
+      function showUserLocation() {
+        navigator.geolocation.getCurrentPosition(
+          function (position) {
+            const userLocation = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude,
+            };
+
+            const marker = new google.maps.Marker({
+              position: userLocation,
+              icon: {
+                url: "assets/img/HOTEL.png",
+                scaledSize: new google.maps.Size(25, 25),
+              },
+              map: map,
+            });
+
+
+            $.cookie("lat", position.coords.latitude)
+            $.cookie("long", position.coords.longitude)
+            smoothZoom(map, 15, map.getZoom(), userLocation);
+            map.setCenter(userLocation);
+          },
+          function (error) {
+            console.error("Error getting user location:", error.message);
+            alert("Error getting user location: " + error.message);
+          }
+        );
+      }
+
+      function smoothZoom(map, targetZoom, currentZoom, center) {
+        if (currentZoom >= targetZoom) {
+          return;
+        }
+
+        const nextZoom = currentZoom + 1;
+        map.setZoom(nextZoom);
+
+        setTimeout(function () {
+          smoothZoom(map, targetZoom, nextZoom, center);
+        }, 100);
+      }
+
+      fetch("/api/get_report")
+        .then((response) => response.json())
+        .then((data) => {
+          const loc = $.cookie("location")
+          const result = data.item;
+          result.forEach((v) => {
+            if (loc == null) {
+              const x = v.Coordinate;
+              const arr = x.split(",");
+              const image = {
+                url: icons[v.Category].icon,
+                scaledSize: new google.maps.Size(20, 20),
+              };
+
+              const marker = new google.maps.Marker({
+                position: new google.maps.LatLng(arr[0], arr[1]),
+                icon: image,
+                map: map,
+
+              });
+
+              marker.addListener("click", () => {
+                $("nav").hide()
+                $("#links").empty()
+                getdata(v.ID)
+                $.cookie("coor", v.Coordinate)
+                var modaldelete = document.getElementById("myModaldelete");
+                modaldelete.style.display = "block";
+                $(".h2h2h2").html(v.Category)
+                $("#name").html(v.Name)
+                $("#address").html(v.Address)
+                $("#description").html(v.Description)
+              })
+            } else if (loc == v.Category) {
+              const x = v.Coordinate;
+              const arr = x.split(",");
+              const image = {
+                url: icons[v.Category].icon,
+                scaledSize: new google.maps.Size(20, 20),
+              };
+
+              const marker = new google.maps.Marker({
+                position: new google.maps.LatLng(arr[0], arr[1]),
+                icon: image,
+                map: map,
+
+              });
+
+              marker.addListener("click", () => {
+                $("nav").hide()
+                $("#links").empty()
+                getdata(v.ID)
+                $.cookie("coor", v.Coordinate)
+                console.log("data", v.Coordinate)
+                var modaldelete = document.getElementById("myModaldelete");
+                modaldelete.style.display = "block";
+                $(".h2h2h2").html(v.Category)
+                $("#name").html(v.Name)
+                $("#address").html(v.Address)
+                $("#description").html(v.Description)
+
+              })
+            }
+          });
+        })
+        .catch((error) => {
+          console.error("Error fetching coordinates:", error);
+        });
+    }
+
+    class AutocompleteDirectionsHandler {
+      map;
+      originPlaceId;
+      travelMode;
+      directionsService;
+      directionsRenderer;
+      constructor(map) {
+        this.map = map;
+        this.originPlaceId = "";
+        this.destinationPlaceId = "";
+        this.travelMode = google.maps.TravelMode.WALKING;
+        this.directionsService = new google.maps.DirectionsService();
+        this.directionsRenderer = new google.maps.DirectionsRenderer();
+        this.directionsRenderer.setMap(map);
+
+        const originInput = document.getElementById("location");
+        const modeSelector = document.getElementById("mode-selector");
+        // Specify just the place data fields that you need.
+        const originAutocomplete = new google.maps.places.Autocomplete(
+          originInput,
+        );
+
+
+        this.setupPlaceChangedListener(originAutocomplete, "ORIG");
+
+      }
+
+      setupPlaceChangedListener(autocomplete, mode) {
+        autocomplete.bindTo("bounds", this.map);
+        autocomplete.addListener("place_changed", () => {
+          const place = autocomplete.getPlace();
+
+
+
+          if (!place.place_id) {
+            window.alert("Please select an option from the dropdown list.");
+            return;
+          }
+
+          if (mode === "ORIG") {
+
+            let text = place.address_components[1].short_name;
+            let text1 = place.address_components[2].short_name;
+
+            console.log(place)
+            $.ajax({
+              type: "GET",
+              url: "https://maps.googleapis.com/maps/api/geocode/json?place_id=" + place.place_id + "&key=AIzaSyBw1K86ZgpsleRBJcd_uA6F9O8dhf7gMl8",
+              dataType: "text",
+              success: function (yourJSONstring) {
+                var respJson = $.parseJSON(yourJSONstring);
+                localStorage.setItem("lat", respJson.results[0].geometry.location.lat)
+                localStorage.setItem("lang", respJson.results[0].geometry.location.lng)
+              },
+              error: function (xhr) {
+              }
+            });
+
+
+            if (text == "Zamboanga") {
+              this.originPlaceId = place.place_id;
+            } else if (text1 == "Zamboanga") {
+              this.originPlaceId = place.place_id;
+            } else {
               Swal.fire({
                 toast: true,
                 position: "center",
-                icon: "success",
-                title: "Successful Registration",
+                icon: "warning",
+                title: "Only Zamboanga Area Accepted",
                 showConfirmButton: false,
                 timer: 3000,
               }).then(function () {
-                window.location.replace("/");
+                $("#location").val("")
               });
-            },
-          });
-        }
+
+            }
+          }
+        })
       }
-    </script>
-  </body>
+
+
+    }
+    window.initMap = initMap;
+  </script>
+</body>
+
 </html>

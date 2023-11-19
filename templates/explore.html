@@ -532,6 +532,31 @@
       </div>
     </div>
 
+    <div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              GYM Details
+            </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+              onclick="Closed()"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="form-floating mb-3">
+                <p>GYM Name: <span id="gym"></span></p>
+                <p>GYM Address: <span id="address1"></span></p>
+                <p>GYM Number: <span id="number"></span></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
@@ -562,13 +587,13 @@
           document.getElementById("exploreCloseButton");
         const cardGymDisplay = document.getElementById("cardGymDisplay");
 
-        exploreButton.addEventListener("click", function () {
-          cardGymDisplay.style.display = "block";
-        });
+        // exploreButton.addEventListener("click", function () {
+        //   cardGymDisplay.style.display = "block";
+        // });
 
-        exploreCloseButton.addEventListener("click", function () {
-          cardGymDisplay.style.display = "none";
-        });
+        // exploreCloseButton.addEventListener("click", function () {
+        //   cardGymDisplay.style.display = "none";
+        // });
 
         const walkinButton = document.getElementById("walkinButton");
         const walkinCloseButton = document.getElementById("walkinCloseButton");
@@ -1044,12 +1069,18 @@
             ];
 
             features.forEach((feature) => {
-              console.log(feature.position)
-              new google.maps.Marker({
+              const marker = new google.maps.Marker({
                 position: feature.position,
                 icon: icons[feature.type].icon,
                 map: map,
               });
+              marker.addListener("click", () => {
+                $("#deleteModal").modal("show");
+                $("#gym").html(v.Name)
+                $("#address1").html(v.Location)
+                $("#number").html(v.Contact)
+
+              })
             });
 
           });
