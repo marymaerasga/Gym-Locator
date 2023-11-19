@@ -49,6 +49,9 @@ func Handlers() {
 	http.HandleFunc("/GymEquipment", views.GymEquipmentHandler)
 	http.HandleFunc("/GymTrainer", views.GymTrainerHandler)
 	http.HandleFunc("/GymClass", views.GymClassHandler)
+	http.HandleFunc("/GymPlan", views.GymPlanHandler)
+	http.HandleFunc("/GymMember", views.GymMemberHandler)
+	http.HandleFunc("/GymAnnouncements", views.GymMentHandler)
 
 	http.HandleFunc("/TrainerDashboard", views.TrainerDashboardHandler)
 	http.HandleFunc("/TrainerProfile", views.TrainerProfileHandler)
@@ -100,11 +103,13 @@ func MigrateDB() {
 	certificate := models.Certificate{}
 	special := models.Specialties{}
 	ctrainer := models.ClassTrainer{}
+	plan := models.Plan{}
+	annouce := models.Annoucement{}
 	
 
 
 	db := GormDB()
-	db.AutoMigrate(&user,&gym,&facility,&amenities,&equipment,&trainer,&class,&schedule,&client,&book,&special,&certificate,&ctrainer)
+	db.AutoMigrate(&user,&gym,&facility,&amenities,&equipment,&trainer,&class,&schedule,&client,&book,&special,&certificate,&ctrainer,&plan,&annouce)
 }
 
 
@@ -155,6 +160,7 @@ func CreateDefaultUser() {
 	}
 
 }
+
 
 func hashPassword(pass string) string {
 	bytes, _ := bcrypt.GenerateFromPassword([]byte(pass), 14)

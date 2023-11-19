@@ -13,9 +13,12 @@ type Client struct {
 	Gender		string
 	Age			string
 	Member		string
+	Price		string
 	Username	string
 	Password	string
+	Payment		string
 	Date 		string
+	Status		string
 	Deleted  gorm.DeletedAt
 }
 

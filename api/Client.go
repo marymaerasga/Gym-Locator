@@ -6,8 +6,6 @@ import (
 	"time"
 
 	"github.com/dafalo/Gym-Locator/models"
-	
-	
 )
 
 func CreateClient(w http.ResponseWriter, r *http.Request) {
@@ -24,6 +22,8 @@ func CreateClient(w http.ResponseWriter, r *http.Request) {
 	member := r.FormValue("member")
 	username := r.FormValue("username")
 	password := r.FormValue("password")
+	payment := r.FormValue("payment")
+	amount := r.FormValue("amount")
 	id := r.FormValue("id")
 	now := time.Now()
 	date := now.Format("2006-01-02")
@@ -39,6 +39,9 @@ func CreateClient(w http.ResponseWriter, r *http.Request) {
 	product.Password = hashPassword(password)
 	product.Date = date
 	product.GymID = id
+	product.Payment = payment
+	product.Price = amount
+	product.Status = "Pending"
 	db.Save(&product)
 
 	sqlDB, _ := db.DB()
@@ -88,11 +91,26 @@ func EditClient(w http.ResponseWriter, r *http.Request) {
 
 }
 
+func EditPayment(w http.ResponseWriter, r *http.Request) {
+
+	db := GormDB()
+	c_id, _ := strconv.Atoi(r.FormValue("c_id"))
+	product := models.Client{}
+	amount := r.FormValue("amount")
+
+
+	db.Where("id", c_id).Find(&product)
+
+	product.Payment = amount
+	db.Save(&product)
+
+}
+
 func DeleteClient(w http.ResponseWriter, r *http.Request) {
 
 	db := GormDB()
 	id, _ := strconv.Atoi(r.FormValue("id"))
-	item := models.Trainer{}
+	item := models.Client{}
 	db.Where("id", id).Statement.Delete(&item)
 
 	sqlDB, _ := db.DB()

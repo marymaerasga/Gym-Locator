@@ -1,469 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>GYM Locator Zamboanga</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta content="" name="description" />
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon" />
+<head>
+  <meta charset="utf-8" />
+  <title>GYM Locator Zamboanga</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="" name="keywords" />
+  <meta content="" name="description" />
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon" />
 
-    <!-- Icon Font Stylesheet -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+    rel="stylesheet" />
 
-    <!-- Libraries Stylesheet -->
-    <link href="/assets/lib/animate/animate.min.css" rel="stylesheet" />
-    <link
-      href="/assets/lib/owlcarousel/assets/owl.carousel.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="/assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
-      rel="stylesheet"
-    />
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Libraries Stylesheet -->
+  <link href="/assets/lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="/assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <link href="/assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
-    <!-- Template Stylesheet -->
-    <link href="/assets/css/style.css" rel="stylesheet" />
-  </head>
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
 
-  <style>
-     #map {
-      height: 100%;
-    }
-  </style>
+  <!-- Template Stylesheet -->
+  <link href="/assets/css/style.css" rel="stylesheet" />
+</head>
 
-  <body>
-    <!-- Spinner Start -->
-    <div
-      id="spinner"
-      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
-    >
-      <div
-        class="spinner-border text-primary"
-        style="width: 3rem; height: 3rem"
-        role="status"
-      >
-        <span class="sr-only">Loading...</span>
-      </div>
+<style>
+  #map {
+    height: 100%;
+  }
+</style>
+
+<body>
+  <!-- Spinner Start -->
+  <div id="spinner"
+    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
+      <span class="sr-only">Loading...</span>
     </div>
-    <!-- Spinner End -->
+  </div>
+  <!-- Spinner End -->
 
-    <!-- Navbar & Hero Start -->
-    <div class="container-fluid position-relative p-0">
-      <nav
-        class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0"
-      >
-        <a href="#" class="navbar-brand p-0">
-          <h1 class="text-primary m-0">
-            <i class="fa fa-map-marker-alt me-3"></i>Gym Locator
-          </h1>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarCollapse"
-          title="Toggle Navigation"
-        >
-          <span class="fa fa-bars"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <div class="navbar-nav ms-auto py-0">
-            <a href="/" class="nav-item nav-link">Home</a>
-            <a href="/explore" class="nav-item nav-link">Find a Gym</a>
-            <a href="/GYM" class="nav-item nav-link">Own a Gym</a>
-            <div class="nav-item dropdown">
-              <a
-                href="#"
-                class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                >Pages</a
-              >
-              <div class="dropdown-menu m-0">
-                <a href="#" class="dropdown-item">About Us</a>
-                <a href="#" class="dropdown-item">Contact Us</a>
-                <a href="#" class="dropdown-item">Testimonial</a>
-              </div>
+  <!-- Navbar & Hero Start -->
+  <div class="container-fluid position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+      <a href="#" class="navbar-brand p-0">
+        <h1 class="text-primary m-0">
+          <i class="fa fa-map-marker-alt me-3"></i>Gym Locator
+        </h1>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        title="Toggle Navigation">
+        <span class="fa fa-bars"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto py-0">
+          <a href="/" class="nav-item nav-link">Home</a>
+          <a href="/explore" class="nav-item nav-link">Find a Gym</a>
+          <a href="/GYM" class="nav-item nav-link">Own a Gym</a>
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+            <div class="dropdown-menu m-0">
+              <a href="#" class="dropdown-item">About Us</a>
+              <a href="#" class="dropdown-item">Contact Us</a>
+              <a href="#" class="dropdown-item">Testimonial</a>
             </div>
-            <a href="/Login" class="nav-item nav-link">Login</a>
           </div>
-          <!-- <a
+          <a href="/Login" class="nav-item nav-link">Login</a>
+        </div>
+        <!-- <a
             href="user-register.html"
             class="btn btn-primary rounded-pill py-2 px-4"
             >Register</a
           > -->
-        </div>
-      </nav>
+      </div>
+    </nav>
 
-      <div class="container-fluid bg-primary py-5 hero-header">
-        <!------Container for the Search and map integration------->
-        <div class="container-fluid">
-          <div class="row py-2">
-            <div class="col-sm-5 pt-lg-4 mt-lg-4">
-              <div class="container-fluid bg-white" style="border-radius: 10px">
-                <div class="row justify-content-center py-2 mb-2">
-                  <div class="col">
-                    <div class="position-relative w-100 mt-3">
-                      <input
-                        class="form-control border border-1 w-100 rounded-pill py-3 ps-4 pe-5"
-                        type="text"
-                        id="search"
-                        placeholder="Search for..."
-                      />
-                      <button
-                        type="button"
-                        class="btn btn-primary py-2 position-absolute rounded-pill top-0 end-0 me-2"
-                        style="margin-top: 7px"
-                      >
-                        <i class="bi bi-search"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="row py-2 mb-2">
-                  <div class="col">
-                    <select
-                      id="rating-filter"
-                      class="form-select form-select-sm"
-                      aria-label=".form-select-sm example"
-                      style="border-radius: 20px"
-                    >
-                      <option value="">Ratings</option>
-                      <option value="5">5 Stars</option>
-                      <option value="4">4 Stars</option>
-                      <option value="3">3 Stars</option>
-                      <option value="2">2 Stars</option>
-                      <option value="1">1 Star</option>
-                    </select>
-                  </div>
-                  <div class="col">
-                    <select
-                      id="classes-filter"
-                      class="form-select form-select-sm"
-                      aria-label=".form-select-sm example"
-                      style="border-radius: 20px"
-                    >
-                      <option value="">Classes</option>
-                      <option value="yoga">Yoga</option>
-                      <option value="pilates">Pilates</option>
-                      <option value="zumba">Zumba</option>
-                      <option value="spinning">Spinning</option>
-                      <option value="aerobics">Aerobics</option>
-                    </select>
-                  </div>
-                  <div class="col">
-                    <select
-                      id="amenities-filter"
-                      class="form-select form-select-sm"
-                      aria-label=".form-select-sm example"
-                      style="border-radius: 20px"
-                    >
-                      <option value="">Amenities</option>
-                      <option value="pool">Pool</option>
-                      <option value="sauna">Sauna</option>
-                      <option value="steam-room">Steam Room</option>
-                      <option value="group-classes">Group Classes</option>
-                      <option value="personal-training">
-                        Personal Training
-                      </option>
-                    </select>
-                  </div>
-                </div>
-                <div class="row py-2 mb-2">
-                  <hr class="thick-line" />
-                  <div
-                    class="container"
-                    style="height: 520px; overflow-y: scroll"
-                    id="gymlist"
-                  >
-                    <!-- Append list of Gym -->
+    <div class="container-fluid bg-primary py-5 hero-header">
+      <!------Container for the Search and map integration------->
+      <div class="container-fluid">
+        <div class="row py-2">
+          <div class="col-sm-5 pt-lg-4 mt-lg-4">
+            <div class="container-fluid bg-white" style="border-radius: 10px">
+              <div class="row justify-content-center py-2 mb-2">
+                <div class="col">
+                  <div class="position-relative w-100 mt-3">
+                    <input class="form-control border border-1 w-100 rounded-pill py-3 ps-4 pe-5" type="text"
+                      id="search" placeholder="Search for..." />
+                    <button type="button" class="btn btn-primary py-2 position-absolute rounded-pill top-0 end-0 me-2"
+                      style="margin-top: 7px">
+                      <i class="bi bi-search"></i>
+                    </button>
                   </div>
                 </div>
               </div>
+              <div class="row py-2 mb-2">
+                <div class="col">
+                  <select id="rating-filter" class="form-select form-select-sm" aria-label=".form-select-sm example"
+                    style="border-radius: 20px">
+                    <option value="">Ratings</option>
+                    <option value="5">5 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="2">2 Stars</option>
+                    <option value="1">1 Star</option>
+                  </select>
+                </div>
+                <div class="col">
+                  <select id="classes-filter" class="form-select form-select-sm" aria-label=".form-select-sm example"
+                    style="border-radius: 20px">
+                    <option value="">Classes</option>
+                    <option value="yoga">Yoga</option>
+                    <option value="pilates">Pilates</option>
+                    <option value="zumba">Zumba</option>
+                    <option value="spinning">Spinning</option>
+                    <option value="aerobics">Aerobics</option>
+                  </select>
+                </div>
+                <div class="col">
+                  <select id="amenities-filter" class="form-select form-select-sm" aria-label=".form-select-sm example"
+                    style="border-radius: 20px">
+                    <option value="">Amenities</option>
+                    <option value="pool">Pool</option>
+                    <option value="sauna">Sauna</option>
+                    <option value="steam-room">Steam Room</option>
+                    <option value="group-classes">Group Classes</option>
+                    <option value="personal-training">
+                      Personal Training
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="row py-2 mb-2">
+                <hr class="thick-line" />
+                <div class="container" style="height: 520px; overflow-y: scroll" id="gymlist">
+                  <!-- Append list of Gym -->
+                </div>
+              </div>
             </div>
-            <div class="col-sm-7 pt-lg-4 mt-lg-4">
-              <div class="container-fliud">
-                <div class="card" style="height: 700px; border-radius: 10px">
-                  <div class="card-body">
-                    <!-- Gym details container -->
-                    <div id="gymDetailsContainer">
-                      <div
-                        id="cardGymDisplay"
-                        class="card-gym-display position-relative"
-                        style="display: none"
-                      >
-                        <div class="row mb-4">
-                          <button
-                            class="btn-close position-absolute btn-sm top-0 end-0"
-                            onclick="Close()"
-                            aria-label="Close"
-                          ></button>
-                        </div>
-                        <div
-                          id="carouselExampleControlsNoTouching"
-                          class="carousel slide"
-                          data-bs-touch="false"
-                          data-bs-interval="false"
-                        >
-                          <div class="carousel-inner">
-                            <div class="carousel-item active">
-                              <div class="row">
-                                <div class="col-md-6">
-                                  <img
-                                    src="/assets/img/gym-1.jpg"
-                                    class="carousel-img-gym-display"
-                                    alt="..."
-                                  />
-                                </div>
-                                <div class="col-md-6">
-                                  <img
-                                    src="/assets/img/gym-2.jpg"
-                                    class="carousel-img-gym-display"
-                                    alt="..."
-                                  />
-                                </div>
+          </div>
+          <div class="col-sm-7 pt-lg-4 mt-lg-4">
+            <div class="container-fliud">
+              <div class="card" style="height: 700px; border-radius: 10px">
+                <div class="card-body">
+                  <!-- Gym details container -->
+                  <div id="gymDetailsContainer">
+                    <div id="cardGymDisplay" class="card-gym-display position-relative" style="display: none">
+                      <div class="row mb-4">
+                        <button class="btn-close position-absolute btn-sm top-0 end-0" onclick="Close()"
+                          aria-label="Close"></button>
+                      </div>
+                      <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false"
+                        data-bs-interval="false">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <div class="row">
+                              <div class="col-md-6">
+                                <img src="/assets/img/gym-1.jpg" class="carousel-img-gym-display" alt="..." />
                               </div>
-                            </div>
-                            <div class="carousel-item">
-                              <div class="row">
-                                <div class="col-md-6">
-                                  <img
-                                    src="/assets/img/gym-3.jpg"
-                                    class="carousel-img-gym-display"
-                                    alt="..."
-                                  />
-                                </div>
-                                <!-- Add another column with the fourth image -->
-                                <div class="col-md-6">
-                                  <img
-                                    src="/assets/img/gym-4.jpg"
-                                    class="carousel-img-gym-display"
-                                    alt="..."
-                                  />
-                                </div>
+                              <div class="col-md-6">
+                                <img src="/assets/img/gym-2.jpg" class="carousel-img-gym-display" alt="..." />
                               </div>
                             </div>
                           </div>
-                          <button
-                            class="carousel-control-prev"
-                            type="button"
-                            data-bs-target="#carouselExampleControlsNoTouching"
-                            data-bs-slide="prev"
-                          >
-                            <span
-                              class="carousel-control-prev-icon"
-                              aria-hidden="true"
-                            ></span>
-                            <span class="visually-hidden">Previous</span>
-                          </button>
-                          <button
-                            class="carousel-control-next"
-                            type="button"
-                            data-bs-target="#carouselExampleControlsNoTouching"
-                            data-bs-slide="next"
-                          >
-                            <span
-                              class="carousel-control-next-icon"
-                              aria-hidden="true"
-                            ></span>
-                            <span class="visually-hidden">Next</span>
-                          </button>
-                        </div>
-                        <div class="card-body-gym-display">
-                          <!-- Gym Name -->
-                          <h5 class="card-title mt-3 m-0" id="gymname"></h5>
-                          <p class="text-muted m-0">
-                            (5.0)
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                          </p>
-                          <p class="m-0 mb-2"> Open 6 AM Mon-Sun</p>
-                          <!-- Action Buttons -->
-                          <div class="row g-0 mt-3">
-                            <div class="col me-3 mb-2">
-                              <button
-                                type="button"
-                                class="btn btn-primary btn-sm btn-outline-primary me-2"
-                                data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop1"
-                                id="messageButton"
-                                onclick="Show()"
-                              >
-                               Login
-                              </button>
-                              <button
-                                type="button"
-                                class="btn btn-primary btn-sm btn-outline-primary me-2"
-                                data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop"
-                              >
-                                Join Now
-                              </button>
+                          <div class="carousel-item">
+                            <div class="row">
+                              <div class="col-md-6">
+                                <img src="/assets/img/gym-3.jpg" class="carousel-img-gym-display" alt="..." />
+                              </div>
+                              <!-- Add another column with the fourth image -->
+                              <div class="col-md-6">
+                                <img src="/assets/img/gym-4.jpg" class="carousel-img-gym-display" alt="..." />
+                              </div>
                             </div>
                           </div>
-                          <hr />
-                          <!-- Nav Links -->
-                          <ul class="nav" id="pills-tab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                              <a
-                                class="nav-link active"
-                                id="pills-home-tab"
-                                data-bs-toggle="pill"
-                                href="#pills-home"
-                                role="tab"
-                                aria-controls="pills-home"
-                                aria-selected="true"
-                                >Gym Detail</a
-                              >
-                            </li>
-                            <li class="nav-item" role="presentation">
-                              <a
-                                class="nav-link active"
-                                id="pills-classes-tab"
-                                data-bs-toggle="pill"
-                                href="#pills-classes"
-                                role="tab"
-                                aria-controls="pills-classes"
-                                aria-selected="false"
-                                onclick="Classes()">Classes</a
-                              >
-                            </li>
-                            <li class="nav-item" role="presentation">
-                              <a
-                                class="nav-link"
-                                id="pills-trainers-tab"
-                                data-bs-toggle="pill"
-                                href="#pills-trainer"
-                                role="tab"
-                                aria-controls="pills-trainers"
-                                aria-selected="false"
-                                onclick="Trainer()"
-                                >Trainers</a
-                              >
-                            </li>
-                            <li class="nav-item" role="presentation">
-                              <a
-                                class="nav-link"
-                                id="pills-memberships-tab"
-                                data-bs-toggle="pill"
-                                href="#pills-memberships"
-                                role="tab"
-                                aria-controls="pills-memberships"
-                                aria-selected="false"
-                                >Memberships</a
-                              >
-                            </li>
-                            <li class="nav-item" role="presentation">
-                              <a
-                                class="nav-link"
-                                id="pills-amenities-tab"
-                                data-bs-toggle="pill"
-                                href="#pills-amenities"
-                                role="tab"
-                                aria-controls="pills-amenities"
-                                aria-selected="false"
-                                onclick="Ammenities()"
-                                >Amenities</a
-                              >
-                            </li>
-                            <li class="nav-item" role="presentation">
-                              <a
-                                class="nav-link"
-                                id="pills-ratings-tab"
-                                data-bs-toggle="pill"
-                                href="#pills-ratings"
-                                role="tab"
-                                aria-controls="pills-ratings"
-                                aria-selected="false"
-                                >Ratings</a
-                              >
-                            </li>
-                          </ul>
-                          <hr />
-                          <!-- Tab Content -->
-                          <div class="tab-content" id="pills-tabContent">
-                            <!-- Gym Details Tab Pane -->
-                            <div
-                              class="tab-pane fade show active"
-                              id="pills-home"
-                              role="tabpanel"
-                              aria-labelledby="pills-home-tab"
-                            >
-                              <!-- Gym Description -->
-                              <p class="card-text" id="gymdesc"></p>
-                              <!-- Contact Information -->
-                              <h6 class="mt-4">Contact:</h6>
-                              <ul>
-                                <li id="gymcontact"></li>
-                                <li id="gymemail"></li>
-                                <li>Website: www.cardiofitgym.com</li>
-                              </ul>
-                              <!-- Address -->
-                              <h6 class="mt-4">Address:</h6>
-                              <p id="gymaddress"></p>
-                            </div>
-                            <!-- Amenities Tab Pane -->
-                            <div
-                              class="tab-pane fade"
-                              id="pills-classes"
-                              role="tabpanel"
-                              aria-labelledby="pills-profile-tab"
-                            >
-                              <h6 class="mt-4">Classes</h6>
-                              <ul id="classlist">
-                               
-                              </ul>
-                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button"
+                          data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button"
+                          data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                      <div class="card-body-gym-display">
+                        <!-- Gym Name -->
+                        <h5 class="card-title mt-3 m-0" id="gymname"></h5>
+                        <p class="text-muted m-0">
+                          (5.0)
+                          <small class="fa fa-star text-primary"></small>
+                          <small class="fa fa-star text-primary"></small>
+                          <small class="fa fa-star text-primary"></small>
+                          <small class="fa fa-star text-primary"></small>
+                          <small class="fa fa-star text-primary"></small>
+                        </p>
+                        <p class="m-0 mb-2"> Open 6 AM Mon-Sun</p>
+                        <!-- Action Buttons -->
+                        <div class="row g-0 mt-3">
+                          <div class="col me-3 mb-2">
+                            <button type="button" class="btn btn-primary btn-sm btn-outline-primary me-2"
+                              data-bs-toggle="modal" data-bs-target="#staticBackdrop1" id="messageButton"
+                              onclick="Show()">
+                              Login
+                            </button>
+                            <button type="button" class="btn btn-primary btn-sm btn-outline-primary me-2"
+                              data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                              Join Now
+                            </button>
+                          </div>
+                        </div>
+                        <hr />
+                        <!-- Nav Links -->
+                        <ul class="nav" id="pills-tab" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" href="#pills-home"
+                              role="tab" aria-controls="pills-home" aria-selected="true">Gym Detail</a>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="pills-classes-tab" data-bs-toggle="pill"
+                              href="#pills-classes" role="tab" aria-controls="pills-classes" aria-selected="false"
+                              onclick="Classes()">Classes</a>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="pills-trainers-tab" data-bs-toggle="pill" href="#pills-trainer"
+                              role="tab" aria-controls="pills-trainers" aria-selected="false"
+                              onclick="Trainer()">Trainers</a>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="pills-memberships-tab" data-bs-toggle="pill"
+                              href="#pills-memberships" role="tab" aria-controls="pills-memberships"
+                              aria-selected="false">Memberships</a>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="pills-amenities-tab" data-bs-toggle="pill" href="#pills-amenities"
+                              role="tab" aria-controls="pills-amenities" aria-selected="false"
+                              onclick="Ammenities()">Amenities</a>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="pills-ratings-tab" data-bs-toggle="pill" href="#pills-ratings"
+                              role="tab" aria-controls="pills-ratings" aria-selected="false">Ratings</a>
+                          </li>
+                        </ul>
+                        <hr />
+                        <!-- Tab Content -->
+                        <div class="tab-content" id="pills-tabContent">
+                          <!-- Gym Details Tab Pane -->
+                          <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+                            <!-- Gym Description -->
+                            <p class="card-text" id="gymdesc"></p>
+                            <!-- Contact Information -->
+                            <h6 class="mt-4">Contact:</h6>
+                            <ul>
+                              <li id="gymcontact"></li>
+                              <li id="gymemail"></li>
+                              <li>Website: www.cardiofitgym.com</li>
+                            </ul>
+                            <!-- Address -->
+                            <h6 class="mt-4">Address:</h6>
+                            <p id="gymaddress"></p>
+                          </div>
+                          <!-- Amenities Tab Pane -->
+                          <div class="tab-pane fade" id="pills-classes" role="tabpanel"
+                            aria-labelledby="pills-profile-tab">
+                            <h6 class="mt-4">Classes</h6>
+                            <ul id="classlist">
 
-                            <!-- Ratings Tab Pane -->
-                            <div
-                              class="tab-pane fade"
-                              id="pills-trainer"
-                              role="tabpanel"
-                              aria-labelledby="pills-contact-tab"
-                            >
+                            </ul>
+                          </div>
+
+                          <!-- Ratings Tab Pane -->
+                          <div class="tab-pane fade" id="pills-trainer" role="tabpanel"
+                            aria-labelledby="pills-contact-tab">
                             <h6 class="mt-4">Trainers</h6>
                             <ul id="trainerlist">
-                             
+
                             </ul>
-                            </div>
-                            <!-- Photos Tab Pane -->
-                            <div
-                              class="tab-pane fade"
-                              id="pills-amenities"
-                              role="tabpanel"
-                              aria-labelledby="pills-photos-tab"
-                            >
+                          </div>
+                          <!-- Photos Tab Pane -->
+                          <div class="tab-pane fade" id="pills-amenities" role="tabpanel"
+                            aria-labelledby="pills-photos-tab">
                             <h6 class="mt-4">Amenities</h6>
                             <ul id="amenitieslist">
-                             
+
                               <!-- ... (photos content here) ... -->
-                            </div>
                           </div>
-                          <!-- <h6 class="mt-4">Classes Offered:</h6>
+                        </div>
+                        <!-- <h6 class="mt-4">Classes Offered:</h6>
                           <ul>
                             <li>Yoga</li>
                             <li>Zumba</li>
@@ -554,14 +389,14 @@
                                     </div>
                                     --------------------->
 
-                                     <!-- Map display ---->
-              
+                    <!-- Map display ---->
+
                   </div>
                   <div id="map">
 
                   </div>
                 </div>
-               
+
               </div>
             </div>
           </div>
@@ -571,24 +406,12 @@
     <!-- Navbar & Hero End -->
 
     <!-- Modal -->
-    <div
-      class="modal fade"
-      id="staticBackdrop"
-      data-bs-backdrop="static"
-      data-bs-keyboard="false"
-      tabindex="-1"
-      aria-labelledby="staticBackdropLabel"
-      aria-hidden="true"
-    >
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <div>
@@ -598,23 +421,13 @@
               <div class="row">
                 <div class="col-md-6 mb-3">
                   <div class="form-floating">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="fname"
-                      placeholder="Firstname"
-                    />
+                    <input type="text" class="form-control" id="fname" placeholder="Firstname" />
                     <label for="fname">First name</label>
                   </div>
                 </div>
                 <div class="col-md-6 mb-3">
                   <div class="form-floating">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="lname"
-                      placeholder="Lastname"
-                    />
+                    <input type="text" class="form-control" id="lname" placeholder="Lastname" />
                     <label for="lname">Last name</label>
                   </div>
                 </div>
@@ -632,36 +445,22 @@
                 </div>
                 <div class="col-md-6">
                   <div class="form-floating mb-3">
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="age"
-                      placeholder="Age"
-                    />
-                    <label for="age">Age</label>
+                    <input type="date" class="form-control" id="age" placeholder="Age" />
+                    <label for="age">Birthday</label>
                   </div>
                 </div>
               </div>
               <div class="form-floating mb-3">
-                <textarea
-                  class="form-control"
-                  id="address"
-                  placeholder="Your address"
-                  rows="3"
-                ></textarea>
+                <textarea class="form-control" id="address" placeholder="Your address" rows="3"></textarea>
                 <label for="address">Address</label>
               </div>
               <div class="form-floating mb-3">
-                <input
-                  type="tel"
-                  class="form-control"
-                  id="phone"
-                  placeholder="Phone number"
-                />
+                <input type="tel" class="form-control" id="phone" placeholder="Phone number" />
                 <label for="phone">Phone number</label>
               </div>
               <div class="form-floating mb-3">
                 <select class="form-control" id="member">
+                  <option value="">Select Plan</option>
                   <option value="regular">Regular</option>
                   <option value="basic">Basic</option>
                   <option value="premium">Premium</option>
@@ -669,29 +468,28 @@
                 </select>
                 <label for="member">Membership Type</label>
               </div>
-             
-                <div class="form-floating mb-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="username"
-                    placeholder="Username"
-                  />
-                  <label for="username">Username</label>
-                </div>
-           
-              
-                  <div class="form-floating mb-3">
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="password"
-                      placeholder="Password"
-                    />
-                    <label for="password">Password</label>
-                  </div>
-                
-              
+              <div class="form-floating mb-3">
+                <input type="tel" class="form-control" id="duration" readonly />
+                <label for="phone">Membership Fee / Duration</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="hidden" class="form-control" id="xpayment" placeholder="Payment" />
+                <input type="number" class="form-control" id="payment" placeholder="Payment" />
+                <label for="phone">Payment</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="username" placeholder="Username" />
+                <label for="username">Username</label>
+              </div>
+
+
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="password" placeholder="Password" />
+                <label for="password">Password</label>
+              </div>
+
+
               <button type="submit" class="btn btn-primary mt-2 w-100" onclick="Join()">
                 Join Now
               </button>
@@ -701,72 +499,47 @@
       </div>
     </div>
 
-    <div
-    class="modal fade"
-    id="staticBackdrop1"
-    data-bs-backdrop="static"
-    data-bs-keyboard="false"
-    tabindex="-1"
-    aria-labelledby="staticBackdropLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="modal-body">
-          <div>
-            <div class="row mb-2 mt-2">
-              <p>Login  <span id="gymname1"></span></p>
-            </div>
+    <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div>
+              <div class="row mb-2 mt-2">
+                <p>Login <span id="gymname1"></span></p>
+              </div>
               <div class="form-floating mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="username1"
-                  placeholder="Username"
-                />
+                <input type="text" class="form-control" id="username1" placeholder="Username" />
                 <label for="username1">Username</label>
               </div>
-         
-            
-                <div class="form-floating mb-3">
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="password1"
-                    placeholder="Password"
-                  />
-                  <label for="password1">Password</label>
-                </div>
-              
-            
-            <button type="submit" class="btn btn-primary mt-2 w-100" onclick="Login()">
-              Login
-            </button>
+
+
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="password1" placeholder="Password" />
+                <label for="password1">Password</label>
+              </div>
+
+
+              <button type="submit" class="btn btn-primary mt-2 w-100" onclick="Login()">
+                Login
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
-      ><i class="bi bi-arrow-up"></i
-    ></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBw1K86ZgpsleRBJcd_uA6F9O8dhf7gMl8&callback=initMap&v=weekly"
-	defer
-  ></script>
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBw1K86ZgpsleRBJcd_uA6F9O8dhf7gMl8&callback=initMap&v=weekly"
+      defer></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
@@ -780,7 +553,7 @@
     <!-- Template Javascript -->
     <script src="/assets/js/explore-gym.js"></script>
     <script src="/assets/js/main.js"></script>
-    
+
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -835,15 +608,10 @@
       });
     </script>
 
-    <script
-      src="https://code.jquery.com/jquery-3.6.1.min.js"
-      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      type="text/javascript"
-      src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+      src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
@@ -870,8 +638,8 @@
                     <div class="card-body">
                         <a href="#" class="card-link" >
                             <h5 class="card-title">` +
-                v.Name +
-                `</h5>
+              v.Name +
+              `</h5>
                         </a>
                         <p class="card-subtitle text-muted">
                             <div>
@@ -885,8 +653,8 @@
                         </p>
                         <p class="m-0 mb-2"> Open . 6 AM Mon-Sun</p>
                         <p class="card-text">` +
-                v.Description +
-                `</p>
+              v.Description +
+              `</p>
                     </div>
                   </div>
                 </div>
@@ -895,15 +663,15 @@
                     <div class="row justify-content-center">
                       <div class="col mb-2">
                         <button type="button" class="btn btn-primary  btn-sm w-100" onclick="Direction(` +
-                v.ID +
-                `)">
+              v.ID +
+              `)">
                          Direction
                         </button>
                       </div>
                       <div class="col mb-2">
                         <button type="button" class="btn btn-primary  btn-sm w-100" onclick="Explore(` +
-                v.ID +
-                `)">
+              v.ID +
+              `)">
                          Explore
                         </button>
                       </div>
@@ -919,7 +687,7 @@
       }
       // Display Data in onclick of Explore Button
       function Explore(id) {
-        localStorage.setItem("Gym",id)
+        localStorage.setItem("Gym", id)
         const cardGymDisplay = document.getElementById("cardGymDisplay");
         cardGymDisplay.style.display = "block";
 
@@ -939,6 +707,50 @@
         });
       }
 
+      $("#member").change(function () {
+        var end = $("#member").val()
+        var id = localStorage.getItem("Gym")
+
+        $.get("/api/get_plan", function (index) {
+          var result = JSON.parse(index).item;
+          $.each(result, function (_, v) {
+            if (v.GymID == id && v.Name == end) {
+              $("#duration").val(v.Amount + ".00" + " " + "-" + " " + v.Duration)
+              $("#xpayment").val(v.Amount)
+            } else {
+              $("#duration").val("")
+              $("#xpayment").val("")
+            }
+          })
+
+          if (end == "") {
+            $("#duration").val("")
+            $("#xpayment").val("")
+          }
+        })
+
+      });
+
+
+      $("#payment").on("change keyup", function (e) {
+        var pay = $("#xpayment").val()
+        var pay1 = $("#payment").val()
+
+        if (parseFloat(pay1) > parseFloat(pay)) {
+          Swal.fire({
+            toast: true,
+            position: "center",
+            icon: "warning",
+            title: "Amount is Higher than Price",
+            showConfirmButton: false,
+            timer: 3000,
+          });
+          $("#payment").val("")
+        } else {
+
+        }
+      });
+
       function Classes() {
         var id = localStorage.getItem("Gym")
         $("#classlist").empty()
@@ -947,14 +759,14 @@
           $.each(result, function (_, v) {
             if (v.GymID == id) {
               $("#classlist").append(`
-              <li>`+v.Name+`</li>
+              <li>`+ v.Name + `</li>
               `)
             }
           });
         });
       }
 
-      function Trainer(){
+      function Trainer() {
         var id = localStorage.getItem("Gym")
         $("#trainerlist").empty()
         $.get("/api/get_trainer", function (index) {
@@ -962,14 +774,14 @@
           $.each(result, function (_, v) {
             if (v.GymID == id) {
               $("#trainerlist").append(`
-              <li>`+v.LastName+` `+v.FirstName+`</li>
+              <li>`+ v.LastName + ` ` + v.FirstName + `</li>
               `)
             }
           });
         });
       }
 
-      function Ammenities(){
+      function Ammenities() {
         var id = localStorage.getItem("Gym")
         $("#amenitieslist").empty()
         $.get("/api/get_amenities", function (index) {
@@ -977,7 +789,7 @@
           $.each(result, function (_, v) {
             if (v.GymID == id) {
               $("#amenitieslist").append(`
-              <li>`+v.Name+`</li>
+              <li>`+ v.Name + `</li>
               `)
             }
           });
@@ -992,20 +804,20 @@
         cardGymDisplay1.style.display = "block";
       }
 
-      $("#search").on("change keyup", function(e) {
+      $("#search").on("change keyup", function (e) {
         Search(this.value.toLowerCase());
       });
-    
+
       function Search(search) {
         $("#gymlist").empty();
         $.get("/api/get_user", function (index) {
           var result = JSON.parse(index).item;
           $.each(result, function (_, v) {
             if (
-            v.Name.toLowerCase().includes(search) 
-          ){
-            $("#gymlist").append(
-              `
+              v.Name.toLowerCase().includes(search)
+            ) {
+              $("#gymlist").append(
+                `
               <div class="card mb-3" style="max-width: 540px;">
                 <div class="row g-0">
                   <div class="col-md-4">
@@ -1059,25 +871,31 @@
               </div>
                                   
 			      	`
-            );
-          }
+              );
+            }
           });
         });
       }
 
-      function Join(){
-        var id  = localStorage.getItem("Gym")
+      function Join() {
+        dob = new Date($("#age").val());
+        var today = new Date();
+        var age1 = Math.floor((today - dob) / (365.25 * 24 * 60 * 60 * 1000));
+        $('#age').html(age + ' years old');
+        var id = localStorage.getItem("Gym")
         var fname = $("#fname").val()
         var lname = $("#lname").val()
         var gender = $("#gender").val()
-        var age = $("#age").val()
+        var age = age1
         var address = $("#address").val()
+        var amount = $("#xpayment").val()
+        var payment = $("#payment").val()
         var phone = $("#phone").val()
         var member = $("#member").val()
         var username = $("#username").val()
         var password = $("#password").val()
 
-        if (fname == "" || lname == "" || gender == "" || age == "" || address == "" || phone == "" || member == "" || username == "" || password == ""){
+        if (fname == "" || lname == "" || payment == "" || gender == "" || age == "" || address == "" || phone == "" || member == "" || username == "" || password == "") {
           Swal.fire({
             toast: true,
             position: "center",
@@ -1086,7 +904,8 @@
             showConfirmButton: false,
             timer: 3000,
           });
-        }else{
+
+        } else {
           $.ajax({
             url: "/api/client",
             data: {
@@ -1100,7 +919,9 @@
               member: member,
               username: username,
               password: password,
-            
+              payment: payment,
+              amount: amount,
+
             },
             success: function () {
               Swal.fire({
@@ -1118,12 +939,12 @@
         }
       }
 
-      function Login(){
-        var id  = localStorage.getItem("Gym")
+      function Login() {
+        var id = localStorage.getItem("Gym")
         var username = $("#username1").val()
         var password = $("#password1").val()
 
-        if ( username == "" || password == ""){
+        if (username == "" || password == "") {
           Swal.fire({
             toast: true,
             position: "center",
@@ -1132,111 +953,112 @@
             showConfirmButton: false,
             timer: 3000,
           });
-        }else{
+        } else {
           $.ajax({
-        url: "/api/login",
-        data: {
-          id : id,
-          username: username,
-          password: password,
-          position : "Client",
-        },
-        success: function (res) {
-          var result = JSON.parse(res).results;
-          var user = JSON.parse(res).reports;
-           if(result == 3){
-            Swal.fire({
-              toast: true,
-              position: "center",
-              icon: "success",
-              title: "Login Successful",
-              showConfirmButton: false,
-              timer: 3000,
-            }).then(function () {
-              window.location.replace("/ClientDashboard");
-            });
-          } else {
-            Swal.fire({
-              toast: true,
-              position: "center",
-              icon: "warning",
-              title: "Please Check your Email and Password!",
-              showConfirmButton: false,
-              timer: 3000,
-            });
-            $("#username1").val("");
-            $("#password1").val("");
-          }
-        },
-      });
+            url: "/api/login",
+            data: {
+              id: id,
+              username: username,
+              password: password,
+              position: "Client",
+            },
+            success: function (res) {
+              var result = JSON.parse(res).results;
+              var user = JSON.parse(res).reports;
+              if (result == 3) {
+                Swal.fire({
+                  toast: true,
+                  position: "center",
+                  icon: "success",
+                  title: "Login Successful",
+                  showConfirmButton: false,
+                  timer: 3000,
+                }).then(function () {
+                  window.location.replace("/ClientDashboard");
+                });
+              } else {
+                Swal.fire({
+                  toast: true,
+                  position: "center",
+                  icon: "warning",
+                  title: "Please Check your Email and Password!",
+                  showConfirmButton: false,
+                  timer: 3000,
+                });
+                $("#username1").val("");
+                $("#password1").val("");
+              }
+            },
+          });
         }
       }
 
-      function Show(){
-        var id  = localStorage.getItem("Gym")
+      function Show() {
+        var id = localStorage.getItem("Gym")
         $.get("/api/get_user", function (index) {
           var result = JSON.parse(index).item;
           $.each(result, function (_, v) {
             if (v.ID == id) {
-              $("#gymname1").html("(" +  " " +  v.Name + " " + ")");
+              $("#gymname1").html("(" + " " + v.Name + " " + ")");
             }
           });
         });
       }
 
     </script>
-<script>
-let map;
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-  zoom: 16,
-  center: new google.maps.LatLng(6.9214, 122.0790),
-  mapTypeId: "roadmap",
-  });
+    <script>
+      let map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 16,
+          center: new google.maps.LatLng(6.9214, 122.0790),
+          mapTypeId: "roadmap",
+        });
 
-  const iconBase = "https://maps.google.com/mapfiles/kml/shapes/";
-  const icons = {
-  parking: {
-    name: "Parking",
-    icon: iconBase + "parking_lot_maps.png",
-  },
-  library: {
-    name: "Library",
-    icon: iconBase + "library_maps.png",
-  },
-  info: {
-    name: "Info",
-    icon: iconBase + "info-i_maps.png",
-  },
-  };
+        const iconBase = "https://maps.google.com/mapfiles/kml/shapes/";
+        const icons = {
+          parking: {
+            name: "Parking",
+            icon: iconBase + "parking_lot_maps.png",
+          },
+          library: {
+            name: "Library",
+            icon: iconBase + "library_maps.png",
+          },
+          info: {
+            name: "Info",
+            icon: iconBase + "info-i_maps.png",
+          },
+        };
 
- 
-  $.get("/api/get_user", function (index) {
+
+        $.get("/api/get_user", function (index) {
           var result = JSON.parse(index).item;
           $.each(result, function (_, v) {
-           
-              const features = [
-                  {
-                    position: new google.maps.LatLng(v.Lat,v.Long),
-                    type: "info",
-                  },
-                  ];
 
-                  features.forEach((feature) => {
-                    console.log(feature.position)
-                  new google.maps.Marker({
-                    position: feature.position,
-                    icon: icons[feature.type].icon,
-                    map: map,
-                  });
-                  });
-            
+            const features = [
+              {
+                position: new google.maps.LatLng(v.Lat, v.Long),
+                type: "info",
+              },
+            ];
+
+            features.forEach((feature) => {
+              console.log(feature.position)
+              new google.maps.Marker({
+                position: feature.position,
+                icon: icons[feature.type].icon,
+                map: map,
+              });
+            });
+
           });
         });
-}
+      }
 
-window.initMap = initMap;
-</script>
+      window.initMap = initMap;
+    </script>
 
-  </body>
+</body>
+
 </html>

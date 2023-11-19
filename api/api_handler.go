@@ -174,6 +174,11 @@ func APIHandler(w http.ResponseWriter, r *http.Request) {
 		EditClient(w, r)
 		return
 	}
+	if strings.HasPrefix(r.URL.Path, "delete_client") {
+		DeleteClient(w, r)
+		return
+	}
+
 
 
 	if strings.HasPrefix(r.URL.Path, "booking") {
@@ -195,6 +200,52 @@ func APIHandler(w http.ResponseWriter, r *http.Request) {
 		DeleteBooking(w, r)
 		return
 	}
+
+	if strings.HasPrefix(r.URL.Path, "plan") {
+		CreatePlan(w, r)
+		return
+	}
+
+	if strings.HasPrefix(r.URL.Path, "get_plan") {
+		GetPlan(w, r)
+		return
+	}
+
+	if strings.HasPrefix(r.URL.Path, "edit_plan") {
+		EditPlan(w, r)
+		return
+	}
+
+	if strings.HasPrefix(r.URL.Path, "delete_plan") {
+		DeletePlan(w, r)
+		return
+	}
+
+	if strings.HasPrefix(r.URL.Path, "payment") {
+		EditPayment(w, r)
+		return
+	}
+
+	if strings.HasPrefix(r.URL.Path, "ment") {
+		CreateAnnouncement(w, r)
+		return
+	}
+
+	if strings.HasPrefix(r.URL.Path, "get_ment") {
+		GetAnnouncement(w, r)
+		return
+	}
+
+	if strings.HasPrefix(r.URL.Path, "edit_ment") {
+		EditAnnouncement(w, r)
+		return
+	}
+
+	if strings.HasPrefix(r.URL.Path, "delete_ment") {
+		DeleteAnnouncement(w, r)
+		return
+	}
+	
 	
 	
 	
