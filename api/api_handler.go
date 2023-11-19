@@ -250,6 +250,11 @@ func APIHandler(w http.ResponseWriter, r *http.Request) {
 		UpdateBooking(w, r)
 		return
 	}
+
+	if strings.HasPrefix(r.URL.Path, "email") {
+		Email(w, r)
+		return
+	}
 	
 	
 	

@@ -63,7 +63,7 @@
 
             <div class="col text-end">
               <!-- Simple link -->
-              <a href="#!">Forgot password?</a>
+              <a href="#!" onclick="Forgot()">Forgot password?</a>
             </div>
           </div>
 
@@ -121,6 +121,35 @@
         </div>
       </div>
     </div>
+
+
+    <div class="modal fade" id="forgotModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              Forgot Password
+            </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+              onclick="Closed1()"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="form-floating mb-3">
+
+                <input type="email" id="pass_email" placeholder="Email">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn-primary text-white shadow-sm" onclick="Submit()">
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -147,6 +176,10 @@
   $(document).ready(function () {
     Modal()
   });
+
+  function Forgot() {
+    $("#forgotModal").modal("show");
+  }
 
   function Modal() {
     $("#deleteModal").modal("show");
@@ -222,10 +255,76 @@
     window.location.replace("/")
   }
 
+  function Closed1() {
+    $("#forgotModal").modal("hide");
+  }
+
   function Select() {
     var test = $('input[name="fav_language"]:checked').val()
     localStorage.setItem("pos", test)
     $("#deleteModal").modal("hide");
+  }
+
+  function Submit() {
+    var pos = localStorage.getItem("pos")
+    var email = $("#pass_email").val()
+
+    if (email == "") {
+      Swal.fire({
+        toast: true,
+        position: "center",
+        icon: "warning",
+        title: "Please Complete Required Details",
+        showConfirmButton: false,
+        timer: 3000,
+      });
+    } else {
+      $.ajax({
+        url: "/api/email",
+        data: {
+          email: email,
+          position: pos,
+        },
+        success: function (res) {
+          var result = JSON.parse(res).results;
+          var user = JSON.parse(res).reports;
+          if (result == 1) {
+            Swal.fire({
+              toast: true,
+              position: "center",
+              icon: "success",
+              title: "Change Password Successful",
+              showConfirmButton: false,
+              timer: 3000,
+            }).then(function () {
+              window.location.replace("/Login");
+            });
+          } else if (result == 2) {
+            Swal.fire({
+              toast: true,
+              position: "center",
+              icon: "success",
+              title: "Change Password Successful",
+              showConfirmButton: false,
+              timer: 3000,
+            }).then(function () {
+              window.location.replace("/Login");
+            });
+          } else {
+            Swal.fire({
+              toast: true,
+              position: "center",
+              icon: "warning",
+              title: "Check your Email",
+              showConfirmButton: false,
+              timer: 3000,
+            }).then(function () {
+              window.location.replace("/Login");
+            });
+          }
+        },
+      });
+    }
   }
 </script>
 

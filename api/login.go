@@ -3,7 +3,10 @@ package api
 import (
 	"encoding/json"
 	"fmt"
+	"math/rand"
 	"net/http"
+	"net/smtp"
+	"time"
 
 	"github.com/dafalo/Gym-Locator/models"
 	"github.com/google/uuid"
@@ -140,6 +143,132 @@ func Login(w http.ResponseWriter, r *http.Request) {
 			data := map[string]interface{}{
 				"status":  "error",
 				"results": result,
+			}
+			ReturnJSON(w, r, data)
+		}
+	}
+
+
+
+	sqlDB, _ := db.DB()
+	sqlDB.Close()
+
+}
+
+const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+
+var seededRand *rand.Rand = rand.New(rand.NewSource(time.Now().UnixNano()))
+
+func generateRandomString(length int) string {
+   b := make([]byte, length)
+   for i := range b {
+      b[i] = charset[seededRand.Intn(len(charset))]
+   }
+   return string(b)
+}
+
+
+func Email(w http.ResponseWriter, r *http.Request) {
+	db := GormDB()
+	email := r.FormValue("email")
+	position := r.FormValue("position")
+	password := generateRandomString(10)
+
+	if position == "Owner"{
+		user := models.Gym{}
+		report := []models.Gym{}
+		
+		db.Where("email = ?", email).Find(&user)
+		db.Where("email = ?", email).Find(&report)
+	
+		length := len(report)
+
+		if length < 1{
+			result := "0"
+			data := map[string]interface{}{
+				"status":  "error",
+				"results": result,
+			}
+			ReturnJSON(w, r, data)
+
+		}else{
+			from := "dffalo.amg.pps@gmail.com"
+		pass := "hsejfkwaabbkiqrr"
+		to := user.Email
+	
+		msg := "From: " + from + "\n" +
+			"To: " + to + "\n" +
+			"Subject: Change Password\n\n" +
+		   "Good day,\n\n Your New Password to Gym-Locator App is" + " " + password + "\n\n Regards \n\n Gym-Locator App "
+	
+		err := smtp.SendMail("smtp.gmail.com:587",
+			smtp.PlainAuth("", from, pass, "smtp.gmail.com"),
+			from, []string{to}, []byte(msg))
+	
+		if err != nil {
+			fmt.Printf("smtp error: %s", err)
+			return
+		}
+		fmt.Println("Successfully sended to " + to)
+
+		fmt.Println("password",password)
+
+		user.Password = hashPassword(password)
+		db.Save(&user)
+			result := "1"
+			data := map[string]interface{}{
+				"status":  "ok",
+				"results": result,
+				"reports": report,
+			}
+			ReturnJSON(w, r, data)
+		}
+	}else{
+		user := models.Trainer{}
+		report := []models.Trainer{}
+		
+		db.Where("email = ?", email).Find(&user)
+		db.Where("email = ?", email).Find(&report)
+
+		length := len(report)
+
+		if length < 1{
+			result := "0"
+			data := map[string]interface{}{
+				"status":  "error",
+				"results": result,
+			}
+			ReturnJSON(w, r, data)
+
+		}else{
+			from := "dffalo.amg.pps@gmail.com"
+		pass := "hsejfkwaabbkiqrr"
+		to := user.Email
+	
+		msg := "From: " + from + "\n" +
+			"To: " + to + "\n" +
+			"Subject: Change Password\n\n" +
+		   "Good day,\n\n Your New Password to Gym-Locator App is" + " " + password + "\n\n Regards \n\n Gym-Locator App "
+	
+		err := smtp.SendMail("smtp.gmail.com:587",
+			smtp.PlainAuth("", from, pass, "smtp.gmail.com"),
+			from, []string{to}, []byte(msg))
+	
+		if err != nil {
+			fmt.Printf("smtp error: %s", err)
+			return
+		}
+		fmt.Println("Successfully sended to " + to)
+
+		fmt.Println("password",password)
+
+		user.Password = hashPassword(password)
+		db.Save(&user)
+			result := "2"
+			data := map[string]interface{}{
+				"status":  "ok",
+				"results": result,
+				"reports": report,
 			}
 			ReturnJSON(w, r, data)
 		}
