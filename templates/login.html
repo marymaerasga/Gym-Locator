@@ -92,7 +92,7 @@
 
     <div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
       aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-sm modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="staticBackdropLabel">
@@ -103,18 +103,18 @@
           </div>
           <div class="modal-body">
             <div class="row">
-              <div class="form-floating mb-3">
-                <label for="html">GYM Owner</label>
-                <input type="radio" id="html" name="fav_language" value="Owner">
+              <div class="form-check px-5">
+                <input type="radio" class="form-check-input" id="html" name="fav_language" value="Owner">
+                <label class="form-check-label" for="html">GYM Owner</label>
               </div>
-              <div class="form-floating mb-3">
-                <label for="html">Trainer</label>
-                <input type="radio" id="html" name="fav_language" value="Trainer">
+              <div class="form-check px-5">
+                <input type="radio" class="form-check-input" id="html" name="fav_language" value="Trainer">
+                <label  class="form-check-label" for="html">Trainer</label>
               </div>
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn-primary text-white shadow-sm" onclick="Select()">
+            <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm" onclick="Select()">
               Select
             </button>
           </div>
@@ -125,7 +125,7 @@
 
     <div class="modal fade" id="forgotModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
       aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-sm modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="staticBackdropLabel">
@@ -137,13 +137,12 @@
           <div class="modal-body">
             <div class="row">
               <div class="form-floating mb-3">
-
-                <input type="email" id="pass_email" placeholder="Email">
+                <input type="email" class="form-control" id="pass_email">
               </div>
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn-primary text-white shadow-sm" onclick="Submit()">
+            <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm" onclick="Submit()">
               Submit
             </button>
           </div>
