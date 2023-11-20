@@ -713,6 +713,7 @@
       // Display Data in onclick of Explore Button
       function Explore(id) {
         localStorage.setItem("Gym", id)
+        $("#member").val("")
         const cardGymDisplay = document.getElementById("cardGymDisplay");
         cardGymDisplay.style.display = "block";
 

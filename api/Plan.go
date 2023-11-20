@@ -34,7 +34,7 @@ func CreatePlan(w http.ResponseWriter, r *http.Request) {
 		isExisting = false
 
 		for _, users := range user {
-			if defaultUser[i].Name == users.Name {
+			if defaultUser[i].Name == users.Name && defaultUser[i].GymID == users.GymID  {
 				isExisting = true
 				data := map[string]interface{}{
 					"status": "Exist",
