@@ -354,7 +354,7 @@
 
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-md">
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="staticBackdropLabel">Modify Payment</h1>
@@ -417,14 +417,13 @@
         <div class="modal-body">
           <div class="row">
             <div class="form-floating mb-3">
-              <input type="hidden" class="form-control rounded-pill" id="c_id1" />
-              <input type="text" class="form-control rounded-pill" id="Name1" readonly />
-              <label for="Name1">Name</label>
+              <input type="hidden" class="form-control" id="c_id1" />
+              <input type="text" class="form-control" id="Name1" readonly />
             </div>
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn-primary text-white shadow-sm" onclick="Remove()">
+          <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary text-white shadow-sm" onclick="Remove()">
             Delete
           </button>
         </div>

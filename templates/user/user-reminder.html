@@ -87,9 +87,6 @@
                     <span>Announcements</span>
                 </a>
             </li>
-
-
-
             <hr class="sidebar-divider d-none d-md-block">
 
             <div class="text-center d-none d-md-inline">
@@ -421,8 +418,8 @@
                             } else {
 
                                 $("#update").append(`
-                                <div>
-                                   Membership is up to Date, Your 5 days notification will be on `+ date.toLocaleDateString() + ` 
+                                <div class="alert alert-success" role="alert">
+                                    Membership is up to date,expiration  will be on `+ date.toLocaleDateString() + ` .
                                 </div>
                                `)
                             }
